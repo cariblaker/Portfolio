@@ -1,0 +1,66 @@
+module johnson(
+	input cen,
+	input ud,
+	input rst,
+	input clk,
+	output [4:0]Q
+);
+
+
+	reg [4:0]count;
+
+	
+	always @(negedge clk or posedge rst)
+	begin
+		
+		if (rst)
+		begin
+		
+			Q <= 5'b00000;
+			count <= Q;
+			
+		end
+	
+		else 
+		begin
+			if (cen)
+			begin
+				if (ud)
+				begin
+				
+					count <= count + 1'b1;
+				
+				end	//end up if
+				
+				else
+				begin
+				
+					count <= count - 1'b1;
+					
+				end	//end down if
+				
+				
+			end		//end cen if
+			
+			else
+				count <= count;
+		
+		end		//encompassing else	
+	end
+	
+	
+
+	always @(negedge clk)
+	begin
+	
+		Q <= count;
+			
+			
+		end		//end encompassing else
+	
+	end
+
+
+
+
+endmodule

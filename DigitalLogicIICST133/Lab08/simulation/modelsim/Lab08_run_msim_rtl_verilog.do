@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab08 {C:/Users/carib/CST133/Lab08/traffic_fsm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab08 {C:/Users/carib/CST133/Lab08/ClkDivider.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab08 {C:/Users/carib/CST133/Lab08/Lab08.v}
+

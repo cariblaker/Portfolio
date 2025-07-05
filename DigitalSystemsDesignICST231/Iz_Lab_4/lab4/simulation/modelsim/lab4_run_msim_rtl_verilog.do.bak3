@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Raven/Documents/school/CST\ 231/lab/lab4 {C:/Users/Raven/Documents/school/CST 231/lab/lab4/seven_seg.v}
+

@@ -1,0 +1,29 @@
+|Lab3b
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+ena => ena.IN1
+r0 << encoder:E1.port2
+r1 << encoder:E1.port3
+valid << encoder:E1.port4
+
+
+|Lab3b|encoder:E1
+a[0] => w[0].IN1
+a[1] => w[2].IN1
+a[1] => w.IN1
+a[2] => w[3].IN0
+a[2] => w.IN0
+a[3] => r0.IN1
+a[3] => r1.IN1
+a[3] => w[3].IN1
+a[3] => w.IN1
+ena => valid.OUTPUTSELECT
+ena => r0.OUTPUTSELECT
+ena => r1.OUTPUTSELECT
+r0 <= r0.DB_MAX_OUTPUT_PORT_TYPE
+r1 <= r1.DB_MAX_OUTPUT_PORT_TYPE
+valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
+
+

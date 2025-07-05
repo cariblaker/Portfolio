@@ -1,0 +1,15 @@
+
+
+module test_ALU();
+
+	reg clk,
+	reg reset,
+	reg [3:0]Data,
+	reg [2:0]Opcode,
+	reg GO,
+	wire cout,
+	wire borrow,
+	wire [3:0] Result,
+	wire led_idle, led_wait, led_rdy, led_done
+
+ALU testy(clk, reset, Data, Opcode, GO, cout, borrow, Result, led_idle, led_wait, led_rdy, led_done);

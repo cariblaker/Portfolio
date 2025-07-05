@@ -1,0 +1,1558 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do digital_clock_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Final_2 {C:/Users/carib/CST 231/Final_2/seconds_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:14:36 on Mar 16,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Final_2" C:/Users/carib/CST 231/Final_2/seconds_counter.v 
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	seconds_counter
+# End time: 19:14:36 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do seconds_counter_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:15:41 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 19:15:41 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:15:41 on Mar 16,2023
+# vlog -reportprogress 300 hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 19:15:41 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.seconds_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 19:15:41 on Mar 16,2023
+# Loading work.seconds_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+do seconds_counter_tb.tcl
+# End time: 19:18:20 on Mar 16,2023, Elapsed time: 0:02:39
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:18:20 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 19:18:20 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:18:20 on Mar 16,2023
+# vlog -reportprogress 300 hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 19:18:20 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.seconds_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 19:18:20 on Mar 16,2023
+# Loading work.seconds_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+do clock_control_tb.tcl
+# End time: 21:38:10 on Mar 16,2023, Elapsed time: 2:19:50
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:10 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	clock_control
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 21:38:11 on Mar 16,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:11 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# ** Error: (vlog-13069) clock_control_tb.v(5): near ";": syntax error, unexpected ';', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# End time: 21:38:11 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./clock_control_tb.tcl line 8
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog *.v"
+do clock_control_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:44 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	clock_control
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 21:38:44 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:44 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# ** Error: (vlog-13069) clock_control_tb.v(5): near ";": syntax error, unexpected ';', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# End time: 21:38:44 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./clock_control_tb.tcl line 8
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog *.v"
+do clock_control_tb.tcl
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./clock_control_tb.tcl line 4
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib work"
+do clock_control_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:39:19 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	clock_control
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 21:39:19 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:39:20 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 21:39:20 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.clock_control_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 21:39:20 on Mar 16,2023
+# Loading work.clock_control_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+do clock_control_tb.tcl
+# End time: 21:48:42 on Mar 16,2023, Elapsed time: 0:09:22
+# Errors: 1, Warnings: 0
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./clock_control_tb.tcl line 4
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib work"
+do clock_control_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:49:15 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	clock_control
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 21:49:16 on Mar 16,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:49:16 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 21:49:16 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.clock_control_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 21:49:16 on Mar 16,2023
+# Loading work.clock_control_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+do clock_control_tb.tcl
+# End time: 21:52:06 on Mar 16,2023, Elapsed time: 0:02:50
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:52:06 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	clock_control
+# 	hours_counter
+# 	minutes_counter
+# 	seconds_counter
+# End time: 21:52:06 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:52:06 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 21:52:06 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.clock_control_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 21:52:06 on Mar 16,2023
+# Loading work.clock_control_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+do counting_tb.tcl
+# End time: 22:30:23 on Mar 16,2023, Elapsed time: 0:38:17
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:24 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 22:30:24 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:24 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module counting_tb
+# -- Compiling module clock_control_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	counting_tb
+# 	clock_control_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 22:30:24 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.clock_control_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 22:30:24 on Mar 16,2023
+# Loading work.clock_control_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error: (vish-4014) No objects found matching '/counting_tb/clk'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 3
+# ** Error: (vish-4014) No objects found matching '/counting_tb/clk_1hz'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 4
+# ** Error: (vish-4014) No objects found matching '/counting_tb/rst'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 5
+# ** Error: (vish-4014) No objects found matching '/counting_tb/set'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 6
+# ** Error: (vish-4014) No objects found matching '/counting_tb/set_h'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 7
+# ** Error: (vish-4014) No objects found matching '/counting_tb/set_m'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 8
+# ** Error: (vish-4014) No objects found matching '/counting_tb/hours'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 11
+# ** Error: (vish-4014) No objects found matching '/counting_tb/minutes'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 12
+# ** Error: (vish-4014) No objects found matching '/counting_tb/seconds'.
+# Executing ONERROR command at macro ./clock_control_tb.do line 13
+do counting_tb.tcl
+# Cannot open macro file: counting_tb.tcl
+do counting_tb.tcl
+# Cannot open macro file: counting_tb.tcl
+do counter_tb (1).do
+# Cannot open macro file: counter_tb
+do counting_tb.tcl
+# End time: 22:35:19 on Mar 16,2023, Elapsed time: 0:04:55
+# Errors: 31, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:19 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 22:35:19 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:19 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 22:35:19 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 22:35:19 on Mar 16,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+do counting_tb.tcl
+# End time: 22:36:58 on Mar 16,2023, Elapsed time: 0:01:39
+# Errors: 5, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:36:58 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 22:36:59 on Mar 16,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:36:59 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 22:36:59 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 22:36:59 on Mar 16,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+do counting_tb.tcl
+# End time: 22:41:05 on Mar 16,2023, Elapsed time: 0:04:06
+# Errors: 5, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:41:05 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 22:41:06 on Mar 16,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:41:06 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 22:41:06 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 22:41:06 on Mar 16,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+do counting_tb.tcl
+# End time: 23:00:46 on Mar 16,2023, Elapsed time: 0:19:40
+# Errors: 5, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:46 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 23:00:46 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:46 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# ** Error: counting_tb.v(14): 'T1' already declared in this scope.
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# End time: 23:00:47 on Mar 16,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./counting_tb.tcl line 8
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog *.v"
+do counting_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:01:10 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 23:01:10 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:01:10 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 23:01:11 on Mar 16,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 23:01:12 on Mar 16,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-3053) counting_tb.v(12): Illegal output or inout port connection for port 'setting'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T2 File: ../../clock_control.v
+# ** Error (suppressible): (vsim-3053) counting_tb.v(12): Illegal output or inout port connection for port 'setting_h'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T2 File: ../../clock_control.v
+# ** Error (suppressible): (vsim-3053) counting_tb.v(12): Illegal output or inout port connection for port 'setting_m'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T2 File: ../../clock_control.v
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./counting_tb.tcl PAUSED at line 10
+do counter_tb (1).do
+# Cannot open macro file: counter_tb
+do counting_tb.v
+# ** Error: invalid command name "`timescale"
+# Error in macro ./counting_tb.v line 1
+# invalid command name "`timescale"
+#     while executing
+# "`timescale 1ns / 1ps"
+do counting_tb.tcl
+# End time: 23:02:45 on Mar 16,2023, Elapsed time: 0:01:33
+# Errors: 12, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:02:45 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 23:02:45 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:02:45 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 23:02:45 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 23:02:45 on Mar 16,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+do counting_tb.tcl
+# End time: 23:06:42 on Mar 16,2023, Elapsed time: 0:03:57
+# Errors: 9, Warnings: 0
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./counting_tb.tcl line 4
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib work"
+do counting_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:44 on Mar 16,2023
+# vlog -reportprogress 300 ../../clk_dv.v ../../clock_control.v ../../counting.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v 
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# 
+# Top level modules:
+# 	clk_dv
+# 	counting
+# End time: 23:06:44 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:45 on Mar 16,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 23:06:45 on Mar 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 23:06:45 on Mar 16,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+do counting_tb.tcl
+# End time: 00:29:30 on Mar 18,2023, Elapsed time: 25:22:45
+# Errors: 9, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:29:31 on Mar 18,2023
+# vlog -reportprogress 300 ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 00:29:31 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:29:31 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 00:29:31 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 00:29:32 on Mar 18,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: Missing signal name or pattern.
+# Executing ONERROR command at macro ./counting_tb.do line 10
+do clock_control_tb.tcl
+# End time: 00:31:54 on Mar 18,2023, Elapsed time: 0:02:22
+# Errors: 12, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:31:55 on Mar 18,2023
+# vlog -reportprogress 300 ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 00:31:55 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:31:55 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 00:31:55 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.clock_control_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 00:31:55 on Mar 18,2023
+# Loading work.clock_control_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+do minutes_counter_tb.tcl
+# End time: 16:03:27 on Mar 18,2023, Elapsed time: 15:31:32
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:27 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 16:03:28 on Mar 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:28 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 16:03:28 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.minutes_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 16:03:28 on Mar 18,2023
+# Loading work.minutes_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error: (vish-4014) No objects found matching '/minutes_counter_tb/project_clk'.
+# Executing ONERROR command at macro ./minutes_counter_tb.do line 3
+# ** Error: (vish-4014) No objects found matching '/minutes_counter_tb/T1/state'.
+# Executing ONERROR command at macro ./minutes_counter_tb.do line 8
+do minutes_counter_tb.tcl
+# End time: 16:05:02 on Mar 18,2023, Elapsed time: 0:01:34
+# Errors: 7, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:02 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 16:05:03 on Mar 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:05:03 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 16:05:03 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.minutes_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 16:05:03 on Mar 18,2023
+# Loading work.minutes_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error: (vish-4014) No objects found matching '/minutes_counter_tb/T1/state'.
+# Executing ONERROR command at macro ./minutes_counter_tb.do line 9
+do hours_counter_tb.tcl
+# End time: 16:25:56 on Mar 18,2023, Elapsed time: 0:20:53
+# Errors: 4, Warnings: 0
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./hours_counter_tb.tcl line 4
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib work"
+do hours_counter_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:26:13 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 16:26:13 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:26:13 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 16:26:14 on Mar 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.hours_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 16:26:14 on Mar 18,2023
+# Loading work.hours_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Warning: (vsim-3015) hours_counter_tb.v(10): [PCDPC] - Port size (6) does not match connection size (4) for port 'hours'. The port definition is at: ../../hours_counter.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /hours_counter_tb/T1 File: ../../hours_counter.v
+do minutes_counter_tb.tcl
+# End time: 16:28:40 on Mar 18,2023, Elapsed time: 0:02:26
+# Errors: 1, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:28:41 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 16:28:41 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:28:41 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 16:28:41 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.minutes_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 16:28:41 on Mar 18,2023
+# Loading work.minutes_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+do hours_counter_tb.tcl
+# End time: 16:31:57 on Mar 18,2023, Elapsed time: 0:03:16
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:31:57 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 16:31:57 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:31:57 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 16:31:57 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.hours_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 16:31:57 on Mar 18,2023
+# Loading work.hours_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Warning: (vsim-3015) hours_counter_tb.v(10): [PCDPC] - Port size (6) does not match connection size (4) for port 'hours'. The port definition is at: ../../hours_counter.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /hours_counter_tb/T1 File: ../../hours_counter.v
+do minutes_counter_tb.tcl
+# End time: 16:35:55 on Mar 18,2023, Elapsed time: 0:03:58
+# Errors: 1, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:35:55 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 16:35:55 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:35:56 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 16:35:56 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.minutes_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 16:35:56 on Mar 18,2023
+# Loading work.minutes_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+do counting_tb.tcl
+# End time: 17:07:29 on Mar 18,2023, Elapsed time: 0:31:33
+# Errors: 1, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# couldn't create error file for command: permission denied
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:07:30 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 17:07:30 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 17:07:30 on Mar 18,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3037) ../../counting.v(18): Missing instance name in instantiation of 'ampm'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T1 File: ../../counting.v
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ampm
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./counting_tb.tcl PAUSED at line 10
+do counting_tb.tcl
+# End time: 17:08:52 on Mar 18,2023, Elapsed time: 0:01:22
+# Errors: 12, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:08:52 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 17:08:53 on Mar 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:08:53 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 17:08:53 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 17:08:53 on Mar 18,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3037) ../../counting.v(18): Missing instance name in instantiation of 'ampm'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T1 File: ../../counting.v
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ampm
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./counting_tb.tcl PAUSED at line 10
+do counting_tb.tcl
+# End time: 17:11:25 on Mar 18,2023, Elapsed time: 0:02:32
+# Errors: 12, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:11:26 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 17:11:26 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:11:26 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 17:11:26 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 17:11:26 on Mar 18,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3037) ../../counting.v(18): Missing instance name in instantiation of 'ampm'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T1 File: ../../counting.v
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ampm
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./counting_tb.tcl PAUSED at line 10
+do counting_tb.tcl
+# End time: 17:13:34 on Mar 18,2023, Elapsed time: 0:02:08
+# Errors: 12, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:13:34 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 17:13:34 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:13:34 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 17:13:35 on Mar 18,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 17:13:35 on Mar 18,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3037) ../../counting.v(18): Missing instance name in instantiation of 'ampm'.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T1 File: ../../counting.v
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ampm
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./counting_tb.tcl PAUSED at line 10
+do counting_tb.tcl
+# End time: 17:14:18 on Mar 18,2023, Elapsed time: 0:00:43
+# Errors: 12, Warnings: 0
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:14:19 on Mar 18,2023
+# vlog -reportprogress 300 ../../ampm.v ../../bin2bcd.v ../../clk_dv.v ../../clock_control.v ../../counting.v ../../digital_clock.v ../../display.v ../../hours_counter.v ../../minutes_counter.v ../../seconds_counter.v ../../seg_7.v 
+# -- Compiling module ampm
+# -- Compiling module bin2bcd
+# -- Compiling module clk_dv
+# -- Compiling module clock_control
+# -- Compiling module counting
+# -- Compiling module digital_clock
+# -- Compiling module display
+# -- Compiling module hours_counter
+# -- Compiling module minutes_counter
+# -- Compiling module seconds_counter
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	digital_clock
+# End time: 17:14:19 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:14:19 on Mar 18,2023
+# vlog -reportprogress 300 clock_control_tb.v counting_tb.v hours_counter_tb.v minutes_counter_tb.v seconds_counter_tb.v 
+# -- Compiling module clock_control_tb
+# -- Compiling module counting_tb
+# -- Compiling module hours_counter_tb
+# -- Compiling module minutes_counter_tb
+# -- Compiling module seconds_counter_tb
+# 
+# Top level modules:
+# 	clock_control_tb
+# 	counting_tb
+# 	hours_counter_tb
+# 	minutes_counter_tb
+# 	seconds_counter_tb
+# End time: 17:14:19 on Mar 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.counting_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 17:14:19 on Mar 18,2023
+# Loading work.counting_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.counting
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.clock_control
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hours_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.minutes_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seconds_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ampm
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vsim-3017) counting_tb.v(12): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T1 File: ../../counting.v
+# ** Warning: (vsim-3722) counting_tb.v(12): [TFMPC] - Missing connection for port 'am_pm'.
+# ** Warning: (vsim-3015) ../../counting.v(15): [PCDPC] - Port size (6) does not match connection size (4) for port 'hours'. The port definition is at: ../../hours_counter.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T1/U2 File: ../../hours_counter.v
+# ** Warning: (vsim-3015) counting_tb.v(17): [PCDPC] - Port size (6) does not match connection size (4) for port 'hours'. The port definition is at: ../../hours_counter.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /counting_tb/T5 File: ../../hours_counter.v

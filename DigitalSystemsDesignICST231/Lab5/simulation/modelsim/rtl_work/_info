@@ -1,0 +1,154 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/Lab5/simulation/modelsim
+vclk_dv
+Z1 !s110 1678589569
+!i10b 1
+!s100 d[;m9;4FViXo<f?HJ63K90
+I2TAfKZOXVYQM[k;UB65l11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1678319152
+8../../clk_dv.v
+F../../clk_dv.v
+L0 20
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1678589569.000000
+Z5 !s107 ../../mux_tb.v|../../mux.v|../../clk_dv.v|../../UART_tx_tb.v|../../UART_tx.v|../../Lab5.v|
+Z6 !s90 -reportprogress|300|../../Lab5.v|../../UART_tx.v|../../UART_tx_tb.v|../../clk_dv.v|../../mux.v|../../mux_tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vLab5
+R1
+!i10b 1
+!s100 P>BQ1bBjcm;B_8Z<QV<Ih2
+I[Um8j@DabkP94mUWdBf<91
+R2
+R0
+w1678388501
+8../../Lab5.v
+F../../Lab5.v
+Z8 L0 21
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+n@lab5
+vmux
+R1
+!i10b 1
+!s100 =`iC9zf>72of8`n?96fKi0
+I1mIblCk19m_;oOiaB:fag2
+R2
+R0
+w1678319153
+8../../mux.v
+F../../mux.v
+L0 22
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vmux_tb
+R1
+!i10b 1
+!s100 `JPZJ@5Jc:Ua>=2TkYR7Y2
+I1;F9[Vcha<@^nPcHEZKcD3
+R2
+R0
+w1678318084
+8../../mux_tb.v
+F../../mux_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vUART_rx_tb
+R1
+!i10b 1
+!s100 =1njclB0okM]X2RC=JR3m1
+I>koU3MTg>lSN__`VF7eXE3
+R2
+R0
+w1678588036
+8UART_tx_tb.v
+FUART_tx_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 UART_tx_tb.v|
+!s90 -reportprogress|300|UART_tx_tb.v|
+!i113 1
+R7
+n@u@a@r@t_rx_tb
+vUART_tx
+R1
+!i10b 1
+!s100 [H`RZRj4V?g56NgSi[CYa2
+I;B5CfHcXo[17WmeiXI`kk2
+R2
+R0
+w1678325147
+8../../UART_tx.v
+F../../UART_tx.v
+R8
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+n@u@a@r@t_tx
+vUART_tx_tb
+R1
+!i10b 1
+!s100 C4BlfG6a^oUnMD^Az>_RL2
+I[U[FH?GFKU<nXiAJSohkc1
+R2
+R0
+w1678588848
+8../../UART_tx_tb.v
+F../../UART_tx_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+n@u@a@r@t_tx_tb

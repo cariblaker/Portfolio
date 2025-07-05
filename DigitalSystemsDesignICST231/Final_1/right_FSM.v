@@ -1,0 +1,137 @@
+
+module right_FSM(
+	input clk,
+	input rst,
+	input ena,
+	output reg[2:0]right_leds
+);
+
+//-----------------------------------------------------------
+// Signal Declarations: localparam
+//-----------------------------------------------------------
+	localparam idle 	= 3'b000;
+	localparam A 		= 3'b100;
+	localparam B 		= 3'b110;
+	localparam C 		= 3'b111;
+	
+//-----------------------------------------------------------
+// Signal Declarations: reg
+//-----------------------------------------------------------
+	reg [8:0]count;
+	reg [2:0]state;
+
+
+	initial
+		begin
+			count <= 0;
+			right_leds <= 3'b000;
+			state <= idle;
+		end
+		
+		
+	always @(posedge clk or posedge rst)		//next state logic
+		begin
+			
+			if (rst)
+				begin
+					state <= idle;
+				end
+				
+			else
+				begin
+					
+					case (state)
+						idle :
+							begin
+								if (ena)
+									begin
+										state <= A;
+										count <= count + 1;
+									end
+								else
+									begin
+										state <= state;
+										count <= 0;
+									end
+							end
+						
+						A :
+							begin
+								if (ena)
+									begin
+										if (count >= 500)						//assumes a clock speed of 1khz to generate 1 hz blinkies
+											begin
+												count <= 0;
+												state <= B;
+											end
+										else
+											begin
+												state <= state;
+												count <= count + 1;
+											end
+									end
+								else
+									begin
+										state <= idle;
+									end
+							end
+							
+						B :
+							begin
+								if (ena)
+									begin
+										if (count >= 500)						//assumes a clock speed of 1khz to generate 1 hz blinkies
+											begin
+												count <= 0;
+												state <= C;
+											end
+										else
+											begin
+												state <= state;
+												count <= count + 1;
+											end
+									end
+								else
+									begin
+										state <= idle;
+									end
+							end
+							
+						C :
+							begin
+								if (ena)
+									begin
+										if (count >= 500)
+											begin
+												count <= 0;
+												state <= A;
+											end
+										else
+											begin
+												count <= count + 1;
+												state <= state;
+											end
+									end 
+								else
+									begin
+										state <= idle;
+									end
+							end
+							
+						default
+							begin
+								state <= idle;
+							end
+						endcase
+						
+				end
+			
+		end
+		
+		always @(state)										//output logic
+			begin
+				right_leds <= state;
+			end
+			
+		
+endmodule

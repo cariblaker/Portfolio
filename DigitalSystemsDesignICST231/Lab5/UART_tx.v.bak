@@ -1,0 +1,113 @@
+//-----------------------------------------------------------------------------    
+//   University: Oregon Institute of Technology – CSET Department
+//   Class: CST 231
+//   Author: Cari Blaker
+//   Lab: Lab 5
+//   Project: UART transmitter
+//   File Name: clk_dv.v
+//   List of other files used: 
+//-----------------------------------------------------------------------------     
+//   Description of the Code 
+//		this module is a state machine to transmit the bits of UART
+//-----------------------------------------------------------------------------    
+//   Date: 02/15/2023
+//   Version: 1.0
+//		Revision: 
+//			2/15/2023	- initial version
+//-----------------------------------------------------------------------------
+
+
+module UART_tx (
+	input clk,
+	input cntrl,
+	input [7:0]data,
+	output out
+);
+
+localparam start 	<= 5'b00001;
+localparam shift	<= 5'b00010;
+localparam parity <= 5'b00100;
+localparam stop 	<= 5'b01000;
+localparam idle 	<= 5'b10000;
+reg [4:0] state;
+reg [3:0] count;
+
+
+
+initial
+begin
+
+	state <= idle;
+	count <= 4'b0000;
+
+end
+ 
+ 
+ //next state logic
+ always @(posedge clk)
+ begin
+
+	
+	case(state)
+	
+		idle :
+		begin
+			if (cntrl)
+			begin
+				state <= start;
+			end
+		end
+		
+		start :
+		begin
+			state <= shift;
+		end
+		
+		shift :
+		begin
+			
+			if (count < 4'b1000)
+			begin
+				state <= state;
+				count = count + 1;
+			end
+			else
+			begin
+				state <= parity;
+				count <= 4'b0000;
+			end
+		
+		end
+		
+		parity :
+		begin
+			state <= stop;
+		end
+		
+		stop :
+		begin
+			state <= idle;
+		end
+	endcase
+			
+ 
+ end
+ 
+ 
+ always @(state)
+ begin
+ 
+	case(state)
+	idle : out <= 1'b1;
+	start : out <= 1'b0;
+	shift : out <= data[count];
+	parity : out <= 
+ 
+ 
+ end
+ 
+ 
+ 
+ endmodule
+ 
+ 

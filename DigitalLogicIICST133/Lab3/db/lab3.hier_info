@@ -1,0 +1,34 @@
+|lab3
+ena => ena.IN1
+p => p.IN1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+y[0] << decoder2x4:D1.port3
+y[1] << decoder2x4:D1.port3
+y[2] << decoder2x4:D1.port3
+y[3] << decoder2x4:D1.port3
+
+
+|lab3|decoder2x4:D1
+ena => y[3].OE
+ena => y[2].OE
+ena => y[1].OE
+ena => y[0].OE
+p => x[0].OUTPUTSELECT
+p => x[1].OUTPUTSELECT
+p => x[2].OUTPUTSELECT
+p => x[3].OUTPUTSELECT
+a[0] => w[1].IN0
+a[0] => w[3].IN0
+a[0] => w[2].IN0
+a[0] => w[0].IN0
+a[1] => w[2].IN1
+a[1] => w[3].IN1
+a[1] => w[1].IN1
+a[1] => w[0].IN1
+y[0] <= y[0].DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1].DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2].DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

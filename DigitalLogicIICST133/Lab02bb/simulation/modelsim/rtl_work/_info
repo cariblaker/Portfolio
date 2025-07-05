@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/Lab02bb/simulation/modelsim
+vadder_4_bit
+Z1 !s110 1670395391
+!i10b 1
+!s100 zzXbWXNaQ?nj;Lle92Si?0
+IfHPQSfn6c41P0ES`B]JW13
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665795932
+8C:/Users/carib/CST133/Lab02b/adder_4_bit.v
+FC:/Users/carib/CST133/Lab02b/adder_4_bit.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1670395391.000000
+!s107 C:/Users/carib/CST133/Lab02b/adder_4_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab02b|C:/Users/carib/CST133/Lab02b/adder_4_bit.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab02b
+Z7 tCvgOpt 0
+vFullAdder
+R1
+!i10b 1
+!s100 HQ]6Z5kEKEk3Z`Jilmh@o0
+I4@_kZU_RU2EB`A_jPD_zl0
+R2
+R0
+w1665793087
+8C:/Users/carib/CST133/Lab02b/FullAdder.v
+FC:/Users/carib/CST133/Lab02b/FullAdder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/Lab02b/FullAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab02b|C:/Users/carib/CST133/Lab02b/FullAdder.v|
+!i113 1
+R5
+R6
+R7
+n@full@adder
+vHalfAdder
+R1
+!i10b 1
+!s100 Y;;9Q:3hMKOWcGiW[oPS82
+I;O9j`l[l[f]0K?L?9O<m23
+R2
+R0
+w1665793086
+8C:/Users/carib/CST133/Lab02b/HalfAdder.v
+FC:/Users/carib/CST133/Lab02b/HalfAdder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/Lab02b/HalfAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab02b|C:/Users/carib/CST133/Lab02b/HalfAdder.v|
+!i113 1
+R5
+R6
+R7
+n@half@adder

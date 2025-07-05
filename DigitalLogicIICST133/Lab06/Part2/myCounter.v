@@ -1,0 +1,47 @@
+module myCounter(
+	input clk,
+	input [3:0]D,
+	input up_dn,
+	input reset,
+	input load,
+	output reg [3:0]Q
+);
+
+reg [3:0]count;
+
+	
+
+	always @(posedge clk)
+		begin
+			
+			if (reset)
+				count <= 4'b0000;
+				
+			else
+				begin
+					if (load)
+						count <= D;
+					else 
+						begin
+						
+							case (up_dn)
+								1'b0:	count <= count + 1'b1;
+								1'b1: count <= count - 1'b1;
+							endcase
+								
+						end		//end load else		
+					
+				end				//end encompassing else
+		
+		end						//end always
+
+		
+		
+		
+	always @(count)
+		begin
+			Q <= count;
+		end
+
+
+endmodule 

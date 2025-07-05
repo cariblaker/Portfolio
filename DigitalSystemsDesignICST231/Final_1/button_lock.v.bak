@@ -1,0 +1,76 @@
+
+module button_lock(
+	input clk,
+	input rst,
+	input button,
+	output signal
+);
+
+
+	
+	localparam idle;
+	localparam pressed;
+	localparam unpressed;
+	
+	reg [1:0] state;
+	reg button_pressed;
+
+
+	initial
+		begin
+			signal <= 1'b0;
+			state <= idle;
+		end
+		
+		
+	always @(posedge clk or posedge rst)
+		begin
+			if (rst)
+				begin
+					state <= idle;
+				end
+			else
+				begin
+					case (state)
+						idle :
+							begin
+								if (button)
+									state <= pressed;
+								else
+									state <= state;
+							end
+						pressed :
+							begin
+								if (!button)
+									state <= unpressed;
+								else
+									state <= state;
+							end
+						unpressed :
+							begin
+								if (button)
+									state <= pressed;
+								else
+									state <= state;
+							end
+						default :
+							begin
+								state <= idle;
+							end
+					endcase
+		end
+		
+		
+		always @(state)
+			begin
+			
+				case (state)
+					idle : signal <= 1'b0;
+					pressed : signal <= ~signal;
+					unpressed : signal <= signal;
+					default : signal <= signal;
+				endcase
+			
+			end
+		
+endmodule

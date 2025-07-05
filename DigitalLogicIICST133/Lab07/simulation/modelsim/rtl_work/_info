@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/Lab07/simulation/modelsim
+vjohnson
+!s110 1669176944
+!i10b 1
+!s100 o>2FJJC2T2I8Hd=oIEF]I3
+I^:5TTkWON3>f>z:9BGiS@1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1669176651
+8C:/Users/carib/CST133/Lab07/johnson.v
+FC:/Users/carib/CST133/Lab07/johnson.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1669176944.000000
+!s107 C:/Users/carib/CST133/Lab07/johnson.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab07|C:/Users/carib/CST133/Lab07/johnson.v|
+!i113 1
+Z3 o-vlog01compat -work work
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab07
+Z5 tCvgOpt 0
+vJohnsontoSevenSeg
+!s110 1669785677
+!i10b 1
+!s100 `hbIGCa655VGHnzFKV;3F2
+IS2E:^OMnYWHh0<BO?K5mX0
+R1
+R0
+w1669785537
+8C:/Users/carib/CST133/Lab07/JohnsontoSevenSeg.v
+FC:/Users/carib/CST133/Lab07/JohnsontoSevenSeg.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1669785677.000000
+!s107 C:/Users/carib/CST133/Lab07/JohnsontoSevenSeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab07|C:/Users/carib/CST133/Lab07/JohnsontoSevenSeg.v|
+!i113 1
+R3
+R4
+R5
+n@johnsonto@seven@seg

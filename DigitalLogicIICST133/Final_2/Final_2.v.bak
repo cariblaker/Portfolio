@@ -1,0 +1,20 @@
+//and this puts them both together to see them working at the same time in a simulation
+
+module Final_2(
+	input updn,
+	input m,
+	input cen,
+	input rst,
+	input clk,
+	output reg [2:0]Q
+
+);
+
+
+	counter c1(updn, m, cen, rst, clk, Q);
+	
+	counter c2(updn, m, cen, rst, clk, Q);
+	
+	
+	
+endmodule

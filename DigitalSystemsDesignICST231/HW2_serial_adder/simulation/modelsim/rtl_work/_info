@@ -1,0 +1,143 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/HW2_serial_adder/simulation/modelsim
+vadder_controller
+Z1 !s110 1676186708
+!i10b 1
+!s100 kkH;1I<3o?961[aMV7@EV1
+I5i?ke=@QVBnPWJb2PkK4X0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1676186622
+8C:/Users/carib/CST 231/HW2_serial_adder/adder_controller.v
+FC:/Users/carib/CST 231/HW2_serial_adder/adder_controller.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1676186707.000000
+!s107 C:/Users/carib/CST 231/HW2_serial_adder/adder_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW2_serial_adder|C:/Users/carib/CST 231/HW2_serial_adder/adder_controller.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/carib/CST 231/HW2_serial_adder}
+Z7 tCvgOpt 0
+vcarry_FF
+Z8 !s110 1676186707
+!i10b 1
+!s100 2C7U0kKK5W1Ea7z>nW<G52
+I][MHm`Mn3[fLlWoTTEJb[1
+R2
+R0
+w1676175181
+8C:/Users/carib/CST 231/HW2_serial_adder/carry_FF.v
+FC:/Users/carib/CST 231/HW2_serial_adder/carry_FF.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST 231/HW2_serial_adder/carry_FF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW2_serial_adder|C:/Users/carib/CST 231/HW2_serial_adder/carry_FF.v|
+!i113 1
+R5
+R6
+R7
+ncarry_@f@f
+vfull_adder
+R8
+!i10b 1
+!s100 Pf3z?9K=cJiz;;8YS=3@D3
+IC0Fmh7a9N34BgDOHOoT620
+R2
+R0
+w1676076498
+8C:/Users/carib/CST 231/HW2_serial_adder/full_adder.v
+FC:/Users/carib/CST 231/HW2_serial_adder/full_adder.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST 231/HW2_serial_adder/full_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW2_serial_adder|C:/Users/carib/CST 231/HW2_serial_adder/full_adder.v|
+!i113 1
+R5
+R6
+R7
+vserial_adder
+R1
+!i10b 1
+!s100 djm:PKYk2a=3fZ4mmXP]Z0
+I`DVDgVTQjNZD7HV2zR@7k0
+R2
+R0
+w1676183235
+8C:/Users/carib/CST 231/HW2_serial_adder/serial_adder.v
+FC:/Users/carib/CST 231/HW2_serial_adder/serial_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1676186708.000000
+!s107 C:/Users/carib/CST 231/HW2_serial_adder/serial_adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW2_serial_adder|C:/Users/carib/CST 231/HW2_serial_adder/serial_adder.v|
+!i113 1
+R5
+R6
+R7
+vshift_data
+R8
+!i10b 1
+!s100 G[J_3<Afo^;LS^C[BS1>e3
+IMM7LAmO>kG3eXgiD?Eg2P1
+R2
+R0
+w1676095322
+8C:/Users/carib/CST 231/HW2_serial_adder/shift_data.v
+FC:/Users/carib/CST 231/HW2_serial_adder/shift_data.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST 231/HW2_serial_adder/shift_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW2_serial_adder|C:/Users/carib/CST 231/HW2_serial_adder/shift_data.v|
+!i113 1
+R5
+R6
+R7
+vshift_out
+R8
+!i10b 1
+!s100 ESUDl_UgOVQdcdieZOWIo3
+IH7C5LW=QWaKIVmCaORnSZ3
+R2
+R0
+w1676186012
+8C:/Users/carib/CST 231/HW2_serial_adder/shift_out.v
+FC:/Users/carib/CST 231/HW2_serial_adder/shift_out.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST 231/HW2_serial_adder/shift_out.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW2_serial_adder|C:/Users/carib/CST 231/HW2_serial_adder/shift_out.v|
+!i113 1
+R5
+R6
+R7

@@ -1,0 +1,133 @@
+module traffic_fsm(
+	input clk,
+	input sen,
+	input reset,
+	output [2:0]highway,
+	output [2:0]farmroad
+);
+
+
+	reg [2:0]count; 
+	reg start = 1'b0;
+	reg stop = 1'b0;
+	
+	reg [1:0]state;
+	
+	parameter [1:0] 
+		stateA = 2'b00,
+		stateB = 2'b01,
+		stateC = 2'b10,
+		stateD = 2'b11;
+		
+	
+	parameter [2:0]
+		red = 3'b100,
+		yellow = 3'b001,
+		green = 3'b010,
+		zero_count = 3'b000;
+		
+		
+	always @(negedge sen)
+	begin
+	
+		start <= 1'b1;
+	
+	end
+	
+	
+	
+	always @(negedge reset or posedge clk or negedge sen)	//keeps track of count, transitions through states, resets
+	begin
+	
+		if (~reset) begin
+		
+			highway <= green;
+			farmroad <= red;
+			count <= zero_count;
+			
+		end 		//end reset if
+		
+		
+		else begin
+			if (start)	begin
+				if (~stop) begin
+		
+					case (state)
+			
+						stateA: 
+							state <= stateB;
+							count <= zero_count;	//highway green on until ~sen
+							stop <= 1'b0;
+							
+						stateB: 
+							if (count < 4)				//highway yellow for 4 seconds
+								count <= count + 1;
+							else begin
+								count <= zero_count;
+								state <= stateC;
+							end
+					
+						stateC:
+							if (count < 6)				//highway red/farm green for 6 seconds
+								count <= count + 1;
+							else begin
+								count <= zero_count;
+								state <= stateD;
+							end
+							
+						stateD:
+							if (count < 4)				//farm yellow for 4 seconds
+								count <= count + 1;
+							else begin
+								count <= zero_count;
+								state <= stateA;
+								stop <= 1'b1;
+							end
+							
+						default: 
+							count <= zero_count;
+							state <= stateA;
+				
+					endcase 
+				
+				end			// end if ~stop
+			
+			end			// end if start
+				
+		end 			//end else (reset)
+			
+	end			//end always
+
+	
+	
+	
+	always @(state)
+	begin
+		
+		case (state)
+			stateA: 
+				highway <= 3'b010;
+				farmroad <= 3'b100;
+			stateB:
+				highway <= 3'b001;
+				farmroad <= 3'b100;
+			stateC:
+				highway <= 3'b100;
+				farmroad <= 3'b010;
+			stateD:
+				highway <= 3'b100;
+				farmroad <= 3'b001;
+			default :
+				highway <= 3'b010;
+				farmroad <= 3'b100;
+			
+		endcase
+		
+		
+		
+	end	//output always
+	
+
+
+
+endmodule

@@ -1,0 +1,16 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do HW2a_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./HW2a_run_msim_rtl_verilog.do line 6
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vmap" line 29)
+#     invoked from within
+# "vmap work rtl_work"
+# Load canceled

@@ -1,0 +1,19 @@
+module errthang(
+	input clk,
+	input set,
+	input clr,
+	//input [2:0] D,
+	output reg [2:0]Q
+);
+
+	wire W1 = (Q[0] & Q[1]);
+	wire W2 = ~(W1 ^ Q[0] ^ Q[2]);
+	wire W3;
+	
+
+	flip_flop FF0(clk, W2, clr, W3, Q[0]);
+	flip_flop FF1(clk, Q[0], clr, W3, Q[1]);
+	flip_flop FF2(clk, Q[1], clr, sset, Q[2]);
+
+
+endmodule 

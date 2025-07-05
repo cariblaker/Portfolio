@@ -1,0 +1,50 @@
+
+
+UART_rx_tb();
+
+	reg clk, rst, in;
+	wire[7:0]out;
+	wire error, ready;
+
+	UART_rx U1(clk, rst, in, out, error, ready);
+	
+	
+	initial
+		begin
+			clk <= 1'b0;
+			rst <= 1'b0;
+			in <= 1'b1;
+			
+		end
+		
+		
+	always
+		begin
+			#10 clk <= ~clk;
+		end
+		
+		
+	always
+		begin
+			#10 in <= 1'b0;								//start bit
+			#10 in <= 1'b0;								//this would be a B... but output should be 01000010
+			#10 in <= 1'b1;
+			#10 in <= 1'b0;
+			#10 in <= 1'b0;
+			#10 in <= 1'b0;
+			#10 in <= 1'b0;
+			#10 in <= 1'b1;
+			#10 in <= 1'b0;
+			#10 in <= 1'b0;								//parity bit
+			#10 in <= 1'b1;								//stop bit
+			
+			#50 in <= 1'b1;								//have it hold its value for a bit before switching things up
+			
+			#10 rst <= 1'b1;
+			#10 rst <= 1'b0;
+			
+		end
+		
+		
+		
+endmodule

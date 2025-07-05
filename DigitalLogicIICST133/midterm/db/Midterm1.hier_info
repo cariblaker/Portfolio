@@ -1,0 +1,10 @@
+|temp_cntrl
+c1 => U1.IN0
+c1 => U2.IN0
+c1 => heat.DATAIN
+c2 => U2.IN1
+c3 => U1.IN1
+heat <= c1.DB_MAX_OUTPUT_PORT_TYPE
+cool <= U3.DB_MAX_OUTPUT_PORT_TYPE
+
+

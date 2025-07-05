@@ -1,0 +1,296 @@
+#pragma once
+#include <iostream>
+#include <functional>
+#include "Node.h"
+#include "Exception.h"
+
+using std::cout;
+
+
+template <typename U>
+class BST
+{
+private:
+	Node<U>* root;
+	int height;
+
+public:
+	BST() : root{ nullptr }, height{ NULL } {}			//default ctor
+	BST(U data) : height{ 0 }							//parameterized ctor
+	{
+		Node<U>* temp = new Node<U>;
+		temp->n_data = data;
+		root = temp;
+		root->left = nullptr;
+		root->right = nullptr;
+	}
+
+	~BST()
+	{
+		Purge(root);
+	}
+
+	BST(const BST& copy)								//copy constructor
+	{
+		root = new Node<U>(*copy.root);					//this should copy the whole list over, because of the node's copy xtor...
+	}
+	
+	BST(BST&& move) noexcept							//move constructor
+	{
+		*this = move;
+	}
+
+	BST<U>& operator =(const BST& copy)					//copy assignment op =
+	{
+		root = new Node<U>(*copy.root);
+		return *this;
+	}
+
+	BST<U>& operator =(const BST&& move) noexcept		//move assignment op =
+	{
+		*this = move;
+		return *this;
+	}
+
+	Node<U>* getRoot()
+	{
+		return root;
+	}
+
+	void Insert(const U data)
+	{                                               
+		if (root == nullptr)
+		{
+			Node<U>* temp = new Node<U>;
+			temp->n_data = data;
+			root = temp;                                        
+			root->left = nullptr;
+			root->right = nullptr;
+		}
+
+		else
+		{
+			Insert(root, data);
+		}
+	}
+
+	Node<U>* Insert(Node<U>* current, const U data)
+	{
+		if (current == nullptr)
+		{
+			current = new Node<U>;
+			current->n_data = data;
+		}
+
+		else if (data < current->n_data)
+			current->left = Insert(current->left, data);
+
+		else if (data > current->n_data)
+			current->right = Insert(current->right, data);
+
+		else if (data == current->n_data)
+			throw Exception("Error: the data is already in the list!");
+
+		return current;
+
+	}
+
+	void Delete(U data)																//deletes specified data from tree
+	{
+		if (root == nullptr)
+			throw(Exception("Error: Tree is empty"));
+
+		else
+			Delete(root, data);
+
+	}
+
+	Node<U>* Delete(Node<U>* current, const U data)
+	{
+		if (current == nullptr)
+			throw Exception("Error: data is not in list");
+			
+		if (data < current->n_data)
+			current->left = Delete(current->left, data);
+		else if (data > current->n_data)
+			current->right = Delete(current->right, data);
+		else if (data == current->n_data)					//current is now the node to be deleted
+		{
+			//No child
+			if (current->right == nullptr && current->left == nullptr)		//if it has no chilren, it can just be deleted.
+			{
+				delete current;
+				current = nullptr;
+			}
+			//left child 
+			else if (current->right == nullptr)								//if it only has a child to the left, it is replaced by it
+			{
+				Node<U>* temp = current;
+				current = current->left;
+				if (temp == root)
+					root = current;
+				delete temp;
+			}
+			//right child
+			else if (current->left == nullptr)								//if it only has a child to the right, it is replaced by it
+			{
+				Node<U>* temp = current;
+				current = current->right;
+				if (temp == root)
+					root = current;
+				delete temp;
+			}
+			//two childrenses
+			else
+			{
+				Node<U>* temp = current->left;						//chose to bring the furthest right value of its left branch up to replace the node to be deleted
+				while (temp->right != nullptr)						//in the case where the node to be deleted has two children.
+				{
+					temp = temp->right;
+				}
+				current->n_data = temp->n_data;
+
+				current->left = Delete(current->left, temp->n_data);
+				delete temp;
+			}
+		}		
+	}
+		
+	void Purge()
+	{
+		Node<U>* current = root;
+		if (current == nullptr)
+			throw(Exception("Error: list is already empty"));
+		else
+		{
+			Purge(current);
+			//delete root;
+		}
+	}
+
+	void Purge(Node<U>* node)
+	{
+		if (node != nullptr)
+		{
+			Purge(node->left);
+			Purge(node->right);
+			delete node;
+			node == nullptr;
+		}
+	}
+
+	void inOrder(void (*func)(U))
+	{
+		if (root == nullptr)
+			throw(Exception("Error: list is empty"));
+		else
+			inOrder(root, func);
+	}
+
+	void inOrder(Node<U>* node, void (*Display)(U))
+	{
+		if (node == nullptr)
+			return;
+
+		inOrder(node->left, Display);
+
+		Display(node->n_data);
+
+		inOrder(node->right, Display);
+
+		
+	}
+
+	void preOrder(void (*func)(U))
+	{
+		if (root == nullptr)
+			throw(Exception("Error: Tree is empty"));
+		else
+			preOrder(root, func);
+	}
+
+	void preOrder(Node<U>* node, void (*Display)(U))
+	{
+		if (node == nullptr)
+			return;
+		
+		Display(node->n_data);
+		
+		preOrder(node->left, Display);
+
+		preOrder(node->right, Display);
+
+	}
+
+	void postOrder(void (*func)(U))
+	{
+		if (root == nullptr)
+			throw(Exception("Error: the tree is empty"));
+
+		else
+			postOrder(root, func);
+	}
+
+	void postOrder(Node<U>* node, void (*Display)(U))
+	{
+		if (node == nullptr)
+			return;
+
+		postOrder(node->left, Display);
+		postOrder(node->right, Display);
+		Display(node->n_data);
+	}
+
+	void breadthFirst(void (*func)(U))
+	{
+		if (root == nullptr)
+			throw(Exception("Error: list is empty"));
+
+		else
+			breadthFirst(root, func);
+	}
+
+	void breadthFirst(Node<U>* node, void (*Display)(U))
+	{
+		for (int i = 1; i <= Height(); i++)
+		{
+			currentLevel(node, i, Display);
+		}
+	}
+
+	void currentLevel(Node<U>* current, int k, void (*Display)(U))
+	{
+		if (current == nullptr)
+			return;
+
+		if (k == 1)
+			Display(current->n_data);
+		else if (k > 1)
+		{
+			currentLevel(current->left, k - 1, Display);
+			currentLevel(current->right, k - 1, Display);
+		}
+	}
+
+	int Height()
+	{
+		if (root == nullptr)
+			throw Exception("Error: the tree does not exist");
+
+		int height = Height(root, 0);
+		return height;
+	}
+
+	int Height(Node<U>* current, int curr_H)
+	{
+		if (current == nullptr)
+			return curr_H;
+		int leftHeight = Height(current->left, curr_H++);
+		int rightHeight = Height(current->right, curr_H++);
+
+		int height = (leftHeight > rightHeight) ? leftHeight : rightHeight;
+		return height;
+	}
+
+
+};

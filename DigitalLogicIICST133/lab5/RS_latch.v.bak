@@ -1,0 +1,15 @@
+ module RS_latch(
+ input R,
+ input S,
+ output Q0, Q1,
+ //output Q0_in, Q1_in
+ );
+ 
+ nor U1(Q0, R, Q1);
+ nor U2(Q1, S, Q0);
+ 
+ 
+ 
+ 
+ endmodule
+ 

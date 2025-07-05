@@ -1,0 +1,77 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab08_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab08 {C:/Users/carib/CST133/Lab08/traffic_fsm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:54:18 on Dec 06,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab08" C:/Users/carib/CST133/Lab08/traffic_fsm.v 
+# -- Compiling module traffic_fsm
+# 
+# Top level modules:
+# 	traffic_fsm
+# End time: 21:54:18 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab08 {C:/Users/carib/CST133/Lab08/ClkDivider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:54:18 on Dec 06,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab08" C:/Users/carib/CST133/Lab08/ClkDivider.v 
+# -- Compiling module ClkDivider
+# 
+# Top level modules:
+# 	ClkDivider
+# End time: 21:54:18 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab08 {C:/Users/carib/CST133/Lab08/Lab08.v}
+# couldn't create error file for command: permission denied
+# 
+vsim work.traffic_fsm
+# vsim work.traffic_fsm 
+# Start time: 21:54:33 on Dec 06,2022
+# Loading work.traffic_fsm
+add wave -position insertpoint  \
+sim:/traffic_fsm/stateC
+add wave sim:/traffic_fsm/*
+force -freeze sim:/traffic_fsm/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/traffic_fsm/sen 0 0
+force -freeze sim:/traffic_fsm/reset 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/traffic_fsm/reset St0 0
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 22:02:40 on Dec 06,2022, Elapsed time: 0:08:07
+# Errors: 0, Warnings: 0

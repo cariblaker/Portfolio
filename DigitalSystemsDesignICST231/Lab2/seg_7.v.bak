@@ -1,0 +1,14 @@
+module seg_7(
+	input [15:0]num,
+	output [7:0]ones,
+	output [7:0]tens,
+	output [7:0]hundreds,
+	output [7:0]thousands,
+	output [7:0]ten_thousands
+);
+
+	
+
+
+
+endmodule

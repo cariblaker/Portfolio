@@ -1,0 +1,93 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do tbird_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Final_1 {C:/Users/carib/CST 231/Final_1/left_FSM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:20:19 on Mar 15,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Final_1" C:/Users/carib/CST 231/Final_1/left_FSM.v 
+# -- Compiling module left_FSM
+# 
+# Top level modules:
+# 	left_FSM
+# End time: 20:20:19 on Mar 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do button_lock_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:20:29 on Mar 15,2023
+# vlog -reportprogress 300 ../../button_lock.v ../../haz.v ../../left_FSM.v ../../left_FSM_tb.v ../../main_FSM.v ../../main_FSM_tb.v ../../right_FSM.v 
+# -- Compiling module button_lock
+# ** Error: ../../button_lock.v(11): (vlog-2900) The localparam 'idle' is declared without a default value.
+# ** Error: ../../button_lock.v(12): (vlog-2900) The localparam 'pressed' is declared without a default value.
+# ** Error: ../../button_lock.v(13): (vlog-2900) The localparam 'unpressed' is declared without a default value.
+# -- Compiling module haz
+# -- Compiling module left_FSM
+# -- Compiling module left_FSM_tb
+# -- Compiling module main_FSM
+# -- Compiling module main_FSM_tb
+# -- Compiling module right_FSM
+# End time: 20:20:29 on Mar 15,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./button_lock_tb.tcl line 6
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ../../*.v"
+do button_lock_tb.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:33 on Mar 15,2023
+# vlog -reportprogress 300 ../../button_lock.v ../../haz.v ../../left_FSM.v ../../left_FSM_tb.v ../../main_FSM.v ../../main_FSM_tb.v ../../right_FSM.v 
+# -- Compiling module button_lock
+# -- Compiling module haz
+# -- Compiling module left_FSM
+# -- Compiling module left_FSM_tb
+# -- Compiling module main_FSM
+# -- Compiling module main_FSM_tb
+# -- Compiling module right_FSM
+# 
+# Top level modules:
+# 	button_lock
+# 	haz
+# 	left_FSM_tb
+# 	main_FSM_tb
+# 	right_FSM
+# End time: 20:21:33 on Mar 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:33 on Mar 15,2023
+# vlog -reportprogress 300 button_lock_tb.v haz_tb.v left_FSM_tb.v main_FSM_tb.v right_FSM_tb.v 
+# -- Compiling module button_lock_tb
+# -- Compiling module haz_tb
+# -- Compiling module left_FSM_tb
+# -- Compiling module main_FSM_tb
+# -- Compiling module right_FSM_tb
+# 
+# Top level modules:
+# 	button_lock_tb
+# 	haz_tb
+# 	left_FSM_tb
+# 	main_FSM_tb
+# 	right_FSM_tb
+# End time: 20:21:33 on Mar 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.button_lock_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 20:21:33 on Mar 15,2023
+# Loading work.button_lock_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.button_lock
+# ** Error: (vish-4014) No objects found matching 'Signals'.
+# Executing ONERROR command at macro ./button_lock_tb.do line 6
+# End time: 12:28:33 on Mar 16,2023, Elapsed time: 16:07:00
+# Errors: 4, Warnings: 0

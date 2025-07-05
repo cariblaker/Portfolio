@@ -1,0 +1,127 @@
+#pragma once
+
+//Cari Blaker
+//Lab 3
+//02/02/23
+
+template<typename U>class Stack {
+private:
+
+	List<U> m_stack;
+
+	int num_elements;
+
+public:
+	Stack();
+	Stack(const U data);
+	Stack(const Stack& copy);
+	Stack(Stack&& move) noexcept;
+	~Stack();
+
+	Stack& operator=(const Stack& copy);
+	Stack& operator=(Stack&& move) noexcept;
+
+	void Push(const U data);
+	U Pop();
+	U Peek() const;
+	bool isEmpty() const;
+	bool isFull() const;
+	int getNumElements() const;
+};
+
+template<typename U>
+Stack<U>::Stack() : num_elements(10) {} 										//default constructor
+
+
+//template<typename T>
+//Stack<T>::Stack(const T data)							//parameterized constructor
+//{
+//	m_stack.Prepend(data);					//add data to the list
+//}
+
+template<typename U>
+Stack<U>::Stack(const Stack& copy)					//copy constructor
+{
+	m_stack = copy.m_stack;
+	num_elements = copy.num_elements;
+}
+
+template<typename U>
+Stack<U>::Stack(Stack&& move) noexcept				//move constructor
+{
+	*this = move;
+}
+
+template<typename U>
+Stack<U>::~Stack()									//destructor
+{
+	m_stack.~List();
+}
+
+template<typename U>
+Stack<U>& Stack<U>::operator=(const Stack& copy)			//copy assignment operator
+{
+	m_stack = copy.m_stack;
+	num_elements = copy.num_elements;
+	return *this;
+}
+
+template<typename U>
+Stack<U>& Stack<U>::operator=(Stack&& move) noexcept		//move assignment operator
+{
+	*this = move;
+	return *this;
+}
+
+
+template<typename U>
+void Stack<U>::Push(const U data)						//push data onto the stack
+{
+	int count = m_stack.Size();
+	if (count >= num_elements)				//if the stack is full, throw an exception
+		throw Exception("The stack is full. Data could not be added");
+	m_stack.Prepend(data);						//AKA, add data to the front of the list
+}
+
+template<typename U>
+U Stack<U>::Pop()
+{
+	size_t size{ m_stack.Size() };
+	if (size == 0)
+		throw Exception("Cannot pop from an empty stack");
+	U first = m_stack.First();
+	m_stack.Extract(first);
+	return first;
+}
+
+template<typename U>
+U Stack<U>::Peek() const
+{
+	if (m_stack.Size() == 0)
+		throw Exception("The stack is empty");
+
+	U first { m_stack.First() };
+													//retrieve first value and return it
+	return first;
+}
+
+template<typename U>
+bool Stack<U>::isEmpty() const						//uses list isEmpty() function to return bool for whether the stack is empty or not
+{
+	bool pass{ m_stack.isEmpty() };
+	return pass;
+}
+
+template<typename U>
+bool Stack<U>::isFull() const
+{
+	int count = (m_stack.Size());
+	bool pass = (count == num_elements ? true : false);
+	return pass;
+}
+
+template<typename U>
+int Stack<U>::getNumElements() const
+{
+	return num_elements;
+}

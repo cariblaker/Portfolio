@@ -1,0 +1,96 @@
+module myShiftRegister(
+	input [3:0]D,
+	input sin,
+	input load,
+	input l_r,
+	input clk,
+	input reset,
+	output reg [3:0]Q,
+	output reg sout
+);
+
+	reg [3:0]temp_D;
+	reg [3:0]D_ops; 	
+	
+	
+	always @(D) //if D changes, update D's temporary register
+		begin
+			temp_D <= D;
+		end
+	
+		
+	always @(posedge reset or posedge clk)
+		begin
+			
+			if (reset)
+				Q <= 4'b0000;  //when reset hits, nothing else matters, outputs 0's
+				
+			else
+				begin
+				
+					if (load)
+						begin
+						
+							if (D_ops == D)	//if D has not been shifted, load D straight
+								Q <= D;
+							else
+								Q <= D_ops;	//if D has been shifted, load its operated version
+								
+						end 		//end load if
+							
+					else			//the not load case----where shifting can happennnnn
+						begin		
+						
+							if (sin)
+								begin
+								
+									if (l_r)			//shift left
+										begin 
+											sout <= temp_D[0];
+											D_ops[3:0] <= {temp_D[2:0], 1'b0};
+										end			//end left shift
+
+									else 
+										begin 
+											sout <= temp_D[3];
+											D_ops[3:0] <= {1'b0, temp_D[3:1]};
+										end			//end right shift
+
+									
+								end	//end sin if
+								
+							else		//if not shifted, then we can give D_ops D's value
+								D_ops <= D;
+							
+						end	//end second else
+					
+				end 		//end encompassing else
+			
+//			else if (~reset && load)
+//				Q <= temp_D; 			//if load is high, load that shiz
+//				
+//			else if (~reset && ~load && sin)		//only if the shift thing is chosen...
+//				begin
+//					if (l_r)			//shift left
+//						begin
+//							sout <= temp_D[0];
+//							D_ops[3:0] <= {temp_D[2:0], 1'b0};
+//							D <= D_ops;
+//						end 			//if
+//					
+//					else				//shift right
+//						begin	
+//							sout <= temp_D[3];
+//							D_ops[3:0] <= {1'b0, temp_D[3:1]};
+//						end 		//else
+//						
+//					  	//whether right shifted or left shifted, TempD gets updated with new shifty value
+//					
+//				end 				//else if
+				
+			
+		end						//always
+
+
+
+endmodule

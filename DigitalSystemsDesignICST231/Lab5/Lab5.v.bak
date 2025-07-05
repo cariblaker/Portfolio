@@ -1,0 +1,41 @@
+//-----------------------------------------------------------------------------    
+//   University: Oregon Institute of Technology – CSET Department
+//   Class: CST 231
+//   Author: Cari Blaker
+//   Lab: Lab 5
+//   Project: UART transmitter
+//   File Name: Lab5.v
+//   List of other files used: 
+//-----------------------------------------------------------------------------     
+//   Description of the Code 
+//		top-level module 
+//-----------------------------------------------------------------------------    
+//   Date: 02/15/2023
+//   Version: 1.0
+//		Revision: 
+//			2/15/2023	- initial version
+//-----------------------------------------------------------------------------
+
+
+module Lab5(
+	input clk,
+	input [1:0]cntrl,
+	input [7:0]data_in,
+	output out
+);
+
+
+wire clk_9600hz, UART_cntrl;
+wire [7:0]data_out;
+
+
+clk_dv #(10417)U1(clk, clk_9600hz);
+reg8 U2(clk_9600hz, cntrl, data_in, data_out, UART_cntrl);
+UART_tx U3(clk_9600hz, UART_cntrl, data_out, out);
+
+
+
+endmodule
+
+
+

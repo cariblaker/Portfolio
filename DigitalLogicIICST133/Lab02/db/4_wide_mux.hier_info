@@ -1,0 +1,48 @@
+|lab2
+a[0] => a[0].IN4
+a[1] => a[1].IN4
+a[2] => a[2].IN4
+a[3] => a[3].IN4
+b[0] => b[0].IN4
+b[1] => b[1].IN4
+b[2] => b[2].IN4
+b[3] => b[3].IN4
+sel => sel.IN4
+y[0] <= mux2_1b:M1.port3
+y[1] <= mux2_1b:M2.port3
+y[2] <= mux2_1b:M3.port3
+y[3] <= mux2_1b:M4.port3
+
+
+|lab2|mux2_1b:M1
+a => U2.IN0
+b => U3.IN0
+sel => U3.IN1
+sel => U2.IN1
+x <= U4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|mux2_1b:M2
+a => U2.IN0
+b => U3.IN0
+sel => U3.IN1
+sel => U2.IN1
+x <= U4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|mux2_1b:M3
+a => U2.IN0
+b => U3.IN0
+sel => U3.IN1
+sel => U2.IN1
+x <= U4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|mux2_1b:M4
+a => U2.IN0
+b => U3.IN0
+sel => U3.IN1
+sel => U2.IN1
+x <= U4.DB_MAX_OUTPUT_PORT_TYPE
+
+

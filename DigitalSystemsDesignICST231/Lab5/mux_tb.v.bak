@@ -1,0 +1,24 @@
+
+
+module mux_tb();
+
+	reg clk, reset, ready, button_0, button_1;
+	reg [7:0]data_sw;
+	wire [7:0]data_out;
+	wire enable;
+
+initial
+	begin
+	
+	
+	end
+	
+	
+always
+	begin
+		#10 clk <= ~clk;
+	end
+
+
+
+endmodule

@@ -1,0 +1,11 @@
+module adder(
+	input [3:0]num1,
+	input [3:0]num2,
+	output [3:0]total
+
+);
+
+	assign total = num1 + num2;
+
+
+endmodule

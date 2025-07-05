@@ -1,0 +1,42 @@
+module JohnsontoSevenSeg(
+	input [4:0]Q,
+	output [6:0]lil_digit,
+	output [6:0]big_digit
+);
+
+
+	always @(*)
+	begin
+	
+		case(Q)
+			5'b00000 :	begin lil_digit <= 7'b1000000;
+									big_digit <= 7'b1000000;
+							end
+			5'b00001 :	begin	lil_digit <= 7'b1111001;
+									big_digit <= 7'b1000000;
+							end
+			5'b00010 :	begin	lil_digit <= 7'b0100100;
+									big_digit <= 7'b1000000;
+							end
+			5'b00011 :	begin	lil_digit <= 7'b0110000;
+									big_digit <= 7'b1000000;
+							end
+			5'b00100 :	begin	lil_digit <= 7'b0011001;
+									big_digit <= 7'b1000000;
+							end
+			5'b00101 :	begin	lil_digit <= 7'b0010010;
+									big_digit <= 7'b1000000;
+							end
+			5'b00110 :	begin	lil_digit <= 7'b0000010;
+									big_digit <= 7'b1000000;
+							end
+	
+		endcase
+	
+	
+	
+	end
+
+
+
+endmodule 

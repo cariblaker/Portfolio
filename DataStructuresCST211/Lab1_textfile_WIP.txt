@@ -1,0 +1,221 @@
+//custom array class code by Cari Blaker for Lab1 CST 211
+
+#ifndef ARRAYTEMPLATE_H
+#define ARRAYTEMPLATE_H
+
+#include <iostream>
+#include <string>
+#include "Exception.h"
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+
+template <typename T>
+class Array {
+private:
+	T* m_array;
+	int m_start_index;
+	int m_length;
+	int m_newArray;
+
+public:
+	Array() : m_array(nullptr), m_start_index(0), m_length(0) {};	//default constructor
+	Array(int length, int start_index = 0);							//constructor
+	Array(const Array<T>& copy);									//copy constructor
+	Array(Array<T>&& move) noexcept;								//move constructor
+
+	~Array();														//destructor
+
+	Array<T>& operator = (const Array<T>& copy);					//overloaded copy assignment operator 
+	Array<T>& operator = (Array<T>&& move) noexcept;				//overloaded move assignment operator
+	T& operator [] (const int);										//overloaded subscript operator
+
+	const int getStartIndex();						//gets start index
+	void setStartIndex(const int start_index);		//sets start index
+	const int getLength();							//gets length of array
+	void setLength(int length);						//sets length of array
+};
+
+template<typename T>								
+Array<T>::Array(int length, int start_index)								//paramaterized constructor
+{
+	m_length = length;
+	m_start_index = start_index;
+	m_array = new * T[m_length];
+	for (int i = m_start_index; i < (m_length + m_start_index); i++)
+	{
+		m_array[i] = NULL;													//fill the new array with null values 
+	}
+}
+
+template<typename T>
+Array<T>::Array(const Array<T>& copy)										//copy constructor
+{
+	m_length = copy.m_length;
+	m_start_index = copy.m_start_index;
+	m_newArray = copy.m_newArray;
+	for (int i = m_start_index; i < (m_length + m_start_index); i++)		//copy entire array
+	{
+		m_array[i] = copy.m_array[i];
+	}
+}
+
+template<typename T>														//move constructor
+Array<T>::Array(Array<T>&& move) noexcept
+{
+	*this = move;
+}
+
+template<typename T>
+Array<T>::~Array()															//deconstructor
+{
+	for (int i = m_start_index; i < (m_start_index + m_length); i++)		//deletes the entire array
+	{
+		delete m_array[i];
+	}
+}
+
+template<typename T>
+Array<T>& Array<T>::operator = (const Array<T>& copy) : m_array(new T[m_size])			//copy assignment operator
+{
+	if (copy != this)																	//avoid self-assignment
+	{
+		if (m_size != copy.m_size)
+		{
+			delete[] m_array;
+			m_size = copy.m_size;
+			m_array = new * T[m_size];			
+		}
+
+		for (int i = m_start_index; i < (m_size + m_start_index); i++)
+			m_array[i] = copy.m_array[i];
+	}
+
+	return *this;
+}
+
+template<typename T>
+Array<T>& Array<T>::operator = (Array<T>&& move) noexcept				//move assignment operator
+{
+	return move;
+}
+
+template<typename T>
+T& Array<T>::operator [] (const int index)
+{
+	if ( (index > (m_length + m_start_index) ) || (index < m_start_index) )
+		throw Exception("Index out of range");								//throw exception for out of bounds
+
+	return m_array[index];													//returns copy of info at index
+}
+
+template<typename T>
+const int Array<T>::getStartIndex()											//m_start_index getter
+{
+	return m_start_index;
+}
+
+template<typename T>
+void Array<T>::setStartIndex(const int start_index)		//m_start_index setter
+{
+	m_start_index = start_index;
+}
+
+template<typename T>
+const int Array<T>::getLength()							//m_length getter
+{
+	return m_length;
+}
+
+template<typename T>
+void Array<T>::setLength(int length)					//m_length setter
+{
+	m_length = length;
+}
+
+#endif //ARRAY_TEMPLATE_H
+
+
+
+
+
+
+
+
+
+
+//Exception class by Cari Blaker for Lab1 CST211
+
+
+#ifndef EXCEPTION_H
+#define EXCEPTION_H
+
+#include <string>
+#include <iostream>
+#include <exception>
+
+using std::string;
+using std::exception;
+using std::ostream;
+
+class Exception : public exception {
+
+	string m_msg;
+
+public:
+	Exception() noexcept : m_msg("Unknown Error") {};						//default constructor
+	Exception(const string& msg) : m_msg(msg) {};							//constructor with parameters
+	Exception(const Exception& move) noexcept : m_msg(move.m_msg) {};		//copy constructor
+	Exception(Exception&& copy) noexcept;									//move constructor
+
+	Exception& operator = (const Exception& move) noexcept;					//copy assignment operator
+	Exception& operator = (Exception&& copy) noexcept;						//move assignment operator
+
+	const string getMessage() { return m_msg; }								//gets exception message
+	void setMessage(const string& message) { m_msg = message; }				//sets exception message
+
+	friend std::ostream& operator << (std::ostream&, const Exception&);		//overloaded output operator 
+};
+
+Exception::Exception(Exception&& copy) noexcept								//copy constructor
+{
+	m_msg = copy.m_msg;
+}
+
+Exception& Exception::operator = (const Exception& move) noexcept			//copy assignment operator
+{
+	m_msg = move.m_msg;
+	return *this;
+}
+
+Exception& Exception::operator = (Exception&& copy) noexcept
+{
+	return copy;
+}
+
+ostream& operator << (ostream& out, const Exception& except)
+{
+	out << except.m_msg;
+	return out;
+}
+
+#endif //EXCEPTION_H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

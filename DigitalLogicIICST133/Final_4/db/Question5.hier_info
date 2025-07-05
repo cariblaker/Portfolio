@@ -1,0 +1,38 @@
+|Question5
+clk => ~NO_FANOUT~
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+updn => next.OUTPUTSELECT
+emg => next.zero.OUTPUTSELECT
+emg => next.one.OUTPUTSELECT
+emg => next.two.OUTPUTSELECT
+emg => next.three.OUTPUTSELECT
+emg => next.four.OUTPUTSELECT
+emg => next.five.OUTPUTSELECT
+emg => next.six.OUTPUTSELECT
+emg => next.seven.OUTPUTSELECT
+emg => next.eight.OUTPUTSELECT
+emg => next.nine.OUTPUTSELECT
+emg => next.ten.OUTPUTSELECT
+emg => next.eleven.OUTPUTSELECT
+emg => next.twelve.OUTPUTSELECT
+emg => next.fourteen.OUTPUTSELECT
+emg => next.fifteen.OUTPUTSELECT
+floor[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+floor[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+floor[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+floor[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

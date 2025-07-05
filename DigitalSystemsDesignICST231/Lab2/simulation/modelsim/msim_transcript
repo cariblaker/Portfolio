@@ -1,0 +1,43 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab2 {C:/Users/carib/CST 231/Lab2/seg_7.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:12:08 on Jan 18,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Lab2" C:/Users/carib/CST 231/Lab2/seg_7.v 
+# -- Compiling module seg_7
+# ** Warning: C:/Users/carib/CST 231/Lab2/seg_7.v(87): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/carib/CST 231/Lab2/seg_7.v(102): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/carib/CST 231/Lab2/seg_7.v(117): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	seg_7
+# End time: 13:12:08 on Jan 18,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# 
+vsim work.seg_7
+# vsim work.seg_7 
+# Start time: 13:12:14 on Jan 18,2023
+# Loading work.seg_7
+add wave sim:/seg_7/*
+force -freeze sim:/seg_7/num 1010100011001010 0
+run
+force -freeze sim:/seg_7/num 0000000000001010 0
+run
+force -freeze sim:/seg_7/num 0000000001100011 0
+run
+force -freeze sim:/seg_7/num 0011000000111001 0
+run
+force -freeze sim:/seg_7/num 1111111111111111 0
+run
+# End time: 13:23:31 on Jan 18,2023, Elapsed time: 0:11:17
+# Errors: 0, Warnings: 0

@@ -1,0 +1,141 @@
+//Cari Blaker
+//Lab 4
+//02/09/23
+#include <iostream>
+#include <crtdbg.h>
+#include <conio.h>
+#include <string>
+#include "Array.h"
+#include "Exception.h"
+#include "Circular_Q.h"
+
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRTDBG_MAP_ALLOC
+
+// Strings to test
+const string NAMES[] = { "Kyle", "Brit", "Seth", "Alex", "Josh", "Kian",
+"Kate", "Terry", "Ann", "Elaine" };
+const string TOO_MANY_NAMES[] = { "Kyle", "Brit", "Seth", "Alex", "Josh", "Kian",
+"Kate", "Terry", "Ann", "Elaine", "Stephanie", "Wanda", "Oscar",
+"Oliver", "Tobey" };
+
+const int NUM_NAMES = 10;
+const int TOO_MANY_NUM = 15;
+const int NUM_SIZE = 10;
+
+typedef bool(*FunctionPointer)();  // Define a funtion pointer type
+
+
+// Test function declaration
+bool test_default_ctor()						//tests default constructor and getSize with empty queue
+{
+	bool pass = true;
+
+	Queue<int> queue_test;
+
+	if (queue_test.getSize() != 0 ||| queue_test.front != -1 || queue_test.back != -1)
+		pass = false;
+
+	cout << "Default ctor test ";
+
+	return pass;
+}
+
+//tests copy consstructor
+bool test_copy_ctor()
+{
+	bool pass = true;
+
+	Queue<int> test_Q;
+	for (int i = 0; i < NUM_SIZE; ++i)
+		test_Q.Enqueue(i);
+
+	Queue<int> Q_test(test_Q);
+
+	// Check data integrity
+	for (int i = 0; i < NUM_SIZE; ++i)
+	{
+		if (Q_test.Peek() != test_Q.Peek())
+			pass = false;
+		Q_test.Dequeue();
+		test_Q.Dequeue();
+	}
+}
+
+bool test_move_ctor();
+bool test_op_equal();
+bool test_move_op_equal();
+bool test_is_empty();
+bool test_pop_with_value();
+bool test_pop_empty_stack();
+bool test_peek_empty_stack();
+bool multiple_value_test();
+bool test_is_full();
+
+bool test_copy_ctor_complex();
+bool test_move_ctor_complex();
+bool test_op_equal_complex();
+bool test_move_op_equal_complex();
+bool test_is_empty_complex();
+bool test_is_full_complex();
+bool test_peek_with_value_complex();
+bool test_peek_empty_stack_complex();
+
+bool test_pop_empty_stack_complex();
+bool test_push_complex();
+bool test_pop_empty_complex();
+bool test_multiple_value_complex();
+
+
+// Test functions for moves
+Queue<int> ReturnIntStack();
+Queue<string> ReturnStrStack();
+
+// Array of test functions
+FunctionPointer test_functions[] = { test_default_ctor,
+test_copy_ctor/*, test_move_ctor, test_op_equal, test_move_op_equal, test_is_empty,
+test_pop_with_value, test_pop_empty_stack, test_peek_empty_stack,
+multiple_value_test, test_is_full, test_copy_ctor_complex, test_move_ctor_complex, test_op_equal_complex,
+test_move_op_equal_complex, test_is_empty_complex, test_is_full_complex,
+test_peek_empty_stack_complex, test_peek_with_value_complex, test_pop_empty_stack_complex,
+test_push_complex, test_pop_empty_complex,
+test_multiple_value_complex*/ };
+
+int main()
+{
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
+	int failed_tests = 0;
+
+	// Run the test functions
+	for (FunctionPointer func : test_functions)
+	{
+		if (func())
+		{
+			cout << "passed" << endl;
+		}
+		else
+		{
+			failed_tests++;
+			cout << "***** failed *****" << endl;
+		}
+	}
+
+	if (failed_tests > 0)
+		cout << endl << "You have " << failed_tests << " failed tests";
+	else
+		cout << endl << "All tests passed! Good job!";
+
+	cout << endl;
+	system("pause");
+	cout << "Exiting..." << endl;
+
+	return 0;
+}
+
+

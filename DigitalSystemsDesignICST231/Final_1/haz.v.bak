@@ -1,0 +1,52 @@
+
+module haz(
+	input clk,
+	input rst,
+	input ena,
+	output [5:0]leds
+);
+
+
+	reg [8:0] count;
+
+	initial
+		begin
+			leds <= 0;
+			count <= 500;
+		end
+		
+	always @(posedge clk or posedge rst)
+		begin
+		
+			if (rst)
+				begin
+					leds <= 0;
+					count <= 500;
+				end
+			
+			else
+				begin
+					if (ena)
+						begin
+							if (count >= 500)
+								begin
+									leds <= ~leds;
+									count <= 0;
+								end
+							else
+								begin
+									leds <= leds;
+									count <= count + 1;
+								end
+						end
+							
+					else
+						begin
+							count <= 500;
+							leds <= 0;
+						end
+		
+		end
+
+
+endmodule

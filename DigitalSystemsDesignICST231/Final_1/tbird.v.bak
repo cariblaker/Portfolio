@@ -1,0 +1,30 @@
+
+
+module tbird(
+	input clk,
+	input rst,
+	input b3, b2, b1, b0,
+	output [5:0]leds
+);
+
+//-----------------------------------------------------------
+// Signal Declarations: wire
+//-----------------------------------------------------------
+	wire b0_locked, b2_locked, b3_locked, L, H, R;
+	wire [2:0] left_in, right_in;
+	wire [5:0] haz_in;
+	
+
+	clk_dv 		#(25000)	U1(clk, rst, clk_1khz);
+	button_lock				U2(clk, rst, b0, b0_locked);
+	button_lock				U3(clk, rst, b2, b2_locked);
+	button_lock				U4(clk, rst, b3, b3_locked);
+	
+	main_FSM					U5(clk, rst, b3_locked, b2_locked, b1, b0_locked, left_in, haz_in, right_in, L, H, R, leds);
+	left_FSM					U6(clk, rst, L, left_in);
+	right_FSM				U7(clk, rst, R, right_in);
+	haz						U8(clk, rst, H, haz_in);
+
+
+
+endmodule

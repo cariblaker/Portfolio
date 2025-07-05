@@ -1,0 +1,145 @@
+//-----------------------------------------------------------------------------    
+//   University: Oregon Institute of Technology – CSET Department
+//   Class: CST 231
+//   Author: Cari Blaker
+//   Lab: Lab 6
+//   Project: UART receiver
+//   File Name: UART_rx.v
+//   List of other files used: clk_dv.v, Lab5.v, mux.v, button_lockout.v
+//-----------------------------------------------------------------------------     
+//   Description of the Code 
+//		this module is a state machine to transmit the bits of UART
+//-----------------------------------------------------------------------------    
+//   Date: 02/15/2023
+//   Version: 1.0
+//		Revision: 
+//			3/8/2023	- initial version
+//-----------------------------------------------------------------------------
+
+
+module UART_rx(
+	input clk,
+	input rst,
+	input in,
+	output reg [7:0]out,
+	output reg error,
+	output reg ready
+	);
+	
+//-----------------------------------------------------------
+// Parameter Declarations: localparam
+//-----------------------------------------------------------
+	localparam parity = 3'b100;
+	localparam data 	= 3'b010;
+	localparam idle 	= 3'b001;
+	
+//-----------------------------------------------------------
+// Signal Declarations: reg
+//-----------------------------------------------------------
+	reg [7:0]data_out;				//stores the data to be put out
+	reg [2:0]state;					//holds state
+	reg [3:0]count;					//holds count for output index
+
+	
+	initial
+		begin
+			ready <= 1'b1;
+			out <= 0;
+			error <= 0;
+			state <= idle;
+		end
+		
+	always @(posedge clk)			//state transition
+		begin
+			if (rst)
+				begin
+					state <= idle;
+				end
+			else
+				begin
+					case(state)
+						idle :
+							begin
+								if (in == 1'b0)						//start bit received, move to data state
+									state <= data;
+								else
+									state <= state;
+							end
+						data :
+							begin
+								if (count < 4'b1000)					//until count reaches 7, continue inputting data
+									begin
+										state <= state;
+										data_out[count] <= in;
+										count <= count + 1;
+									end
+								else
+									begin
+										state <= parity;				//once count reaches 7, transition to parity
+										count <= 0;
+									end
+							end
+						parity :
+							begin											//move to stop state
+								state <= stop;
+							end
+						stop :
+							begin
+								if (in == 1'b1)
+									state <= idle;
+								else
+									state <= state;
+							end
+						default :
+							begin
+								state <= idle;
+							end
+						endcase
+				end
+		end
+		
+		
+		always @(posedge clk)										//output logic
+			begin
+				
+				case(state)
+					idle :
+						begin
+							ready <= 1'b1;
+							out <= 0;
+						end
+					data :
+						begin
+							error <= 1'b0;
+							ready <= 1'b0;
+							if (count == 4'b0111)
+								out <= data_out;
+							else
+								out <= out;
+						end
+					parity :
+						begin
+							if (in == data_out[0] ^ data_out[1] ^ data_out[2] ^ data_out[3] ^ data_out[4] ^ data_out[5] ^ data_out[6] ^ data_out[7])
+								error <= 1'b0;
+							else
+								error <= 1'b0;
+							ready <= 1'b0;
+							out <= out;
+						end
+					stop :
+						begin
+							ready <= 1'b0;
+							out <= 0;
+						end
+					default :
+						begin
+							out <= 0;
+							ready <= 1'b1;
+							error <= 1'b0;
+						end
+					endcase
+					
+			end
+	
+	endmodule
+	

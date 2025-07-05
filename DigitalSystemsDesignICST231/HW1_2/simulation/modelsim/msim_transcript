@@ -1,0 +1,45 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do bcd_sum_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/HW1_2 {C:/Users/carib/CST 231/HW1_2/bcd_sum.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:08:52 on Jan 21,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/HW1_2" C:/Users/carib/CST 231/HW1_2/bcd_sum.v 
+# -- Compiling module bcd_sum
+# 
+# Top level modules:
+# 	bcd_sum
+# End time: 01:08:52 on Jan 21,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.bcd_sum
+# vsim work.bcd_sum 
+# Start time: 01:10:50 on Jan 21,2023
+# Loading work.bcd_sum
+add wave sim:/bcd_sum/*
+force -freeze sim:/bcd_sum/num1 0000 0
+force -freeze sim:/bcd_sum/num2 0001 0
+run
+force -freeze sim:/bcd_sum/num1 0001 0
+run
+force -freeze sim:/bcd_sum/num1 0101 0
+run
+force -freeze sim:/bcd_sum/num2 0101 0
+run
+force -freeze sim:/bcd_sum/num1 0110 0
+run
+force -freeze sim:/bcd_sum/num2 1001 0
+run
+force -freeze sim:/bcd_sum/num1 1001 0
+run
+# End time: 01:16:43 on Jan 21,2023, Elapsed time: 0:05:53
+# Errors: 0, Warnings: 0

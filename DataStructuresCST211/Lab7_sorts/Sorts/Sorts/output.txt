@@ -1,0 +1,48 @@
+Brute force bubble sort w/ standard array: 1453864 microseconds.
+ Last value: 9999
+Brute force bubble sort w/ standard vector: 5413182 microseconds
+Last value: 9999
+Brute force bubble sort w/ standard vector: 4232967 microseconds
+Last value: 9999
+Flagged bubble sort standard array: 38 microseconds
+Last value: 9999
+Flagged bubble sort vector: 3346478 microseconds
+Last value: 9999
+Flagged bubble sort custom Array class: 4211781 microseconds
+: Last Value: 9999
+Selection sort standard array: 208122 microseconds
+Last value: 9999
+Selection sort vector: 1766249 microseconds
+Last value: 9999
+Selection sort custom Array class: 2393706 microseconds
+Last value: 9999
+Insertion sort standard array: 40 microseconds
+ Last value: 9999
+Insertion sort vector: 1402111 microseconds
+Last value: 9999
+Insertion sort custom Array: 1773355 microseconds
+Last value: 9999
+Shell sort standard array: 503 microseconds
+Last value: 9999
+Shell sort vector: 13386 microseconds
+Last value: 9999
+Shell sort custom Array class: 18657 microseconds
+Last value: 9999
+Heap sort standard array: 6237 microseconds
+Last value: 9999
+Heap sort vector: 17637 microseconds
+Last value: 9999
+Heap sort custom Array class: 4789 microseconds
+Last value: 7763
+Merge sort standard array: 5609 microseconds
+Last value: 9999
+Merge sort vector: 10445 microseconds
+Last value: 9999
+Merge sort custom Array class: 11769 microseconds
+Last value: 9999
+Quick sort standard array: 2412705 microseconds
+Last value: 9999
+Quick sort vector : 15340 microseconds
+Last value: 9999
+Quick sort custom Array class: 15638 microseconds
+Last value: 9999

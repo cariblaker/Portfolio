@@ -1,0 +1,35 @@
+module shift_out(
+	input clk,
+	input ShR,
+	input clr,
+	input in,
+	output [3:0]sum
+);
+
+reg sum_reg[3:0];
+
+	
+always @(posedge clk or posedge clr)
+	begin
+
+		if (clr)
+			sum_reg <= 4'b0000;
+			
+		else if (ShR)
+			sum_reg <= {sum_reg[0], sum_reg[3:1]};
+			
+		else
+			sum_reg[0] <= in;
+	
+	end
+	
+always @(posedge clk)
+	begin
+	
+		if (
+	
+	end
+
+
+
+endmodule

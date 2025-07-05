@@ -1,0 +1,87 @@
+
+
+module hours_counter(
+	input project_clk, seconds_clk, rst, set,
+	output reg [3:0]hours
+);
+
+	localparam count_seconds 	= 0;
+	localparam count_hours 		= 1;
+	
+	reg state;
+	
+	reg [11:0] count;								//3600 seconds in an hour, requires 12 bits : 1110 0001 0000
+
+
+	initial
+		begin
+			hours <= 4'b1100;
+			count <= 0;
+		end
+	
+	
+	
+	always @(posedge project_clk or posedge rst)						//state logic
+		begin
+		
+			if (rst)
+				state <= count_seconds;
+			else
+				begin
+					case (set)
+						0 : state <= count_seconds;
+						1 : state <= count_hours;
+				end
+		
+		end
+		
+		
+	always @(posedge seconds_clk or posedge rst)						//output logic
+		begin
+		
+			if (rst)
+				begin
+					count <= 0;
+					hours <= 4'b1100;
+				end
+				
+			else
+				begin
+					case (state)
+						count_seconds:
+							begin
+								if (count < 3600)								//if it's been less than an hour, keep counting seconds
+									begin
+										count <= count + 1;
+										hours <= hours;
+									end
+								else
+									begin
+										count <= 0;								//if it's been an hour, restart the count, increment the hour
+										if (hours < 12)
+											hours <= hours + 1;
+										else
+											hours <= 4'b0001;
+									end
+							end
+						
+						count_hours:
+							begin
+								count <= count;								//the seconds will stay the same on the Digital clock, so should they here.
+								if (hours < 12)
+									hours <= hours + 1;
+								else
+									hours <= 4'b0001;
+							end
+							
+						default:
+							begin
+								count <= count;
+								hours <= hours;
+							end
+						endcase
+				end			
+		end
+		
+	endmodule
+

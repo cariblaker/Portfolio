@@ -1,0 +1,23 @@
+
+module sensor_FSM(
+	input clk,
+	input rst,
+	input sens1,
+	input sens2,
+	output reg increment,
+	output reg decrement
+);
+
+
+localparam idle <= 2'b00;
+localparam car_in <= 2'b01;
+localparam car_out <= 2'b10;
+
+reg [1:0]state, prev_state;
+reg car_maybe, prev_sens1, prev_sens2;
+
+
+
+
+
+endmodule

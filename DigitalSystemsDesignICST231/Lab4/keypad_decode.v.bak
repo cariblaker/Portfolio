@@ -1,0 +1,58 @@
+//-----------------------------------------------------------------------------    
+//   University: Oregon Institute of Technology – CSET Department
+//   Class: CST 231
+//   Author: Cari Blaker
+//   Lab: Lab 4
+//   Project: Intro to Heirarchical Design
+//   File Name: keypad.v
+//   List of other files used: clk_dv.v, seg_7.v, kepad.v
+//-----------------------------------------------------------------------------    
+//   Description of the Code 
+//		this module receives keypad input and outputs the correct button pressed
+//-----------------------------------------------------------------------------    
+//   Date: 2/3/2023
+//   Version: 1.2
+//		Revision: 
+//			2/1/23	- initial version
+//-----------------------------------------------------------------------------
+
+
+
+module keypad_decode(
+	input [1:0] row,
+	input [1:0] column,
+	output [3:0] press
+);
+
+initial
+	begin
+	
+		press <= 4'bzzzz;
+	
+	end
+
+always @(column)					//because of previous module setup, only when the column changes do we want to output the number
+	begin
+	
+		case( {row, column} )
+			3, 3 : press = 1;
+			3, 2 : press = 2;
+			3, 1 : press = 3;
+			3, 0 : press = 10;
+			2, 3 : press = 4;
+			2, 2 : press = 5;
+			2, 1 : press = 6;
+			2, 0 : press = 11;
+			1, 3 : press = 7;
+			1, 2 : press = 8;
+			1, 1 : press = 9;
+			1, 0 : press = 12;
+			0, 3 : press = 14;		//reset star
+			0, 2 : press = 0;
+			0, 1 : press = 15;		//pound key, "enter"
+			0, 0 : press = 13
+	
+	end
+
+
+endmodule

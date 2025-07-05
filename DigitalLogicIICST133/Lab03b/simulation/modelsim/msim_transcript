@@ -1,0 +1,56 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab3b_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# couldn't create error file for command: permission denied
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab3b {C:/Users/carib/CST133/Lab3b/Lab3b.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:02:30 on Oct 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab3b" C:/Users/carib/CST133/Lab3b/Lab3b.v 
+# -- Compiling module Lab3b
+# 
+# Top level modules:
+# 	Lab3b
+# End time: 21:02:30 on Oct 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab3b {C:/Users/carib/CST133/Lab3b/encoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:02:30 on Oct 25,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab3b" C:/Users/carib/CST133/Lab3b/encoder.v 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 21:02:30 on Oct 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.Lab3b
+# vsim work.Lab3b 
+# Start time: 21:02:52 on Oct 25,2022
+# Loading work.Lab3b
+# Loading work.encoder
+add wave sim:/Lab3b/*
+force -freeze {sim:/Lab3b/a[3]} 0 0, 1 {50 ps} -r 100
+force -freeze {sim:/Lab3b/a[2]} 0 0, 1 {100 ps} -r 200
+force -freeze {sim:/Lab3b/a[1]} 0 0, 1 {200 ps} -r 400
+force -freeze {sim:/Lab3b/a[0]} 0 0, 1 {400 ps} -r 800
+force -freeze sim:/Lab3b/ena 0 0, 1 {800 ps} -r 1600
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

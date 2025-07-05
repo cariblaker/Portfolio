@@ -1,0 +1,20 @@
+
+
+module counting(
+	input project_clk, clk_1hz,
+	input rst, set, set_h, set_m,
+	output reg [3:0] hours,
+	output reg [5:0] minutes, seconds
+);
+
+	wire setting, setting_h, setting_m;
+
+	clock_control U1(project_clk, rst, set, set_h, set_m, setting, setting_h, setting_m);
+
+	hours_counter U2(project_clk, clk_1hz, rst, setting_h, setting, hours);
+	minutes_counter U3(project_clk, clk_1hz, rst, setting_m, setting, minutes);
+	seconds_counter U4(clk_1hz, rst, setting, seconds);
+	
+	
+
+endmodule

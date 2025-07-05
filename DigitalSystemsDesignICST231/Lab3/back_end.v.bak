@@ -1,0 +1,22 @@
+module back_end
+#(parameter BIT_COUNT = 12)(
+	input [BIT_COUNT - 1 : 0]cnt,
+	input clk,
+	input updn,
+	input rst,
+	input ena,
+	output reg [BIT_COUNT + (BIT_COUNT - 4)/3 : 0] bcd
+);
+
+	wire clk_2hz;
+	
+	wire [BIT_COUNT - 1 :0]cnt
+
+	clk_dv U1#(12500000)(clk, rst, clk_2hz);
+
+	counter U2(clk, updn, rst, ena, cnt);
+	
+	bin2bcd(cnt, bcd);
+
+
+endmodule

@@ -1,0 +1,697 @@
+//Cari Blaker
+//Lab 5
+//02/12/23
+#include <iostream>
+#include <crtdbg.h>
+#include <conio.h>
+#include <string>
+#include "BST.h"
+
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRTDBG_MAP_ALLOC
+
+// Strings to test
+const string NAMES[] = { "Kyle", "Brit", "Seth", "Alex", "Josh", "Kian",
+"Kate", "Terry", "Ann", "Elaine", "Stephanie", "Wanda", "Oscar", "Oliver", "Tobey" };
+
+//numbers to test
+const int NUMS[] = { 44, 12, 37, 99, 18, 88, 4, 100, 98, 6 };
+
+const int NUM_NUMS = 10;
+const int NUM_NAMES = 15;
+
+
+typedef bool(*FunctionPointer)();  // Define a function pointer type
+
+
+bool test_default_ctor()						//tests default constructor using Height()
+{
+	bool pass = false;
+
+	BST<int> BST_test;
+	
+	try
+	{
+		BST_test.Height();
+	}
+	catch (Exception& exception)
+	{
+		pass = true;
+	}
+
+	cout << "Default ctor test ";
+
+	return pass;
+}
+
+
+bool test_param_ctor()								//tests param ctor, using height function
+{
+	bool pass = true;
+	int h;
+	BST<int> tree(10);
+
+	try {h = tree.Height(); }
+	catch (Exception& exception)
+	{
+		pass = false;
+	}
+
+	if (h != 1)
+		pass = false;
+
+	cout << "Parameterize constructor test ";
+
+	return pass;
+}
+
+//tests copy constructor
+bool test_copy_ctor()								//tests copy ctor with insert, copy(), getRoot(), and Height
+{
+	bool pass = true;
+
+	BST<int> test_BST;
+	for (int i = 0; i < NUM_NUMS; ++i)
+		test_BST.Insert(NUMS[i]);
+
+	BST<int> BST_test(test_BST);
+
+	Node<int>* BT = BST_test.getRoot();
+	Node<int>* TB = test_BST.getRoot();
+
+	if (BT->Value() != TB->Value())
+		pass = false;
+
+	if (test_BST.Height() != BST_test.Height())
+		pass = false;
+
+	for (int i = 0; i < test_BST.Height(); i++)
+	{
+		if (BT->Next() != nullptr)
+		{
+			BT = BT->Next();
+			TB = TB->Next();
+		}
+		if (BT->Previous() != nullptr)
+		{
+			BT = BT->Previous();
+			TB = TB->Previous();
+		}
+		if (BT->Value() != TB->Value() || BT->Value() != TB->Value())
+			pass = false;
+	}
+
+	cout << "Copy constructor test ";
+
+	return pass;
+}
+
+BST<int> ReturnIntBST();
+
+bool test_move_ctor()								//tests the move constructor by ensuring a moved BST and a BST with the same value created
+													//within the testing function end up with the same values
+{
+	bool pass = true;
+
+	BST<int> test_BST(ReturnIntBST());
+	BST<int> BST_test;
+
+	// Check data integrity
+	for (int i = 0; i < NUM_NUMS; i++)
+	{
+		BST_test.Insert(NUMS[i]);
+	}
+
+	Node<int>* BT= BST_test.getRoot();
+	Node<int>* TB = test_BST.getRoot();
+
+	if (BT->Value() != TB->Value())
+		pass = false;
+
+	if (test_BST.Height() != BST_test.Height())
+		pass = false;
+	
+	for (int i = 0; i < test_BST.Height(); i++)
+	{
+		if (BT->Next() != nullptr)
+		{
+			BT = BT->Next();
+			TB = TB->Next();
+		}
+		if (BT->Previous() != nullptr)
+		{
+			BT = BT->Previous();
+			TB = TB->Previous();
+		}
+		if (BT->Value() != TB->Value() || BT->Value() != TB->Value())
+			pass = false;
+	}
+
+	cout << "Move ctor test ";
+
+	return pass;
+}
+
+
+bool test_op_equal()									//tests op =
+{
+	bool pass = true;
+
+	BST<int> test_BST;
+	for (int i = 0; i < NUM_NUMS; ++i)
+	{
+		test_BST.Insert(NUMS[i]);
+	}
+
+	BST<int> BST_test;
+	BST_test = test_BST;									//	Op =
+
+	Node<int>* BT = BST_test.getRoot();
+	Node<int>* TB = test_BST.getRoot();
+
+	// Check data integrity
+	for (int i = 0; i < NUM_NUMS; ++i)
+	{
+		if (BT->Next() != nullptr)
+		{
+			BT = BT->Next();
+			TB = TB->Next();
+		}
+		if (BT->Previous() != nullptr)
+		{
+			BT = BT->Previous();
+			TB = TB->Previous();
+		}
+		if (BT->Value() != TB->Value() || BT->Value() != TB->Value())
+			pass = false;
+	}
+
+	cout << "Op equals test ";
+
+	return pass;
+}
+
+bool test_move_op_equal()							//tests move op = by moving an =ing a BST, an comparing to the exact
+{													//same BST create within this function.
+	bool pass = true;
+
+	BST<int> test_BST;
+	test_BST = ReturnIntBST();							//Op =
+
+	BST<int> BST_test;
+
+	// Check data integrity
+	for (int i = 0; i < NUM_NUMS; i++)
+	{
+		BST_test.Insert(NUMS[i]);
+	}
+
+	Node<int>* BT = BST_test.getRoot();
+	Node<int>* TB = test_BST.getRoot();
+
+	if (BT->Value() != TB->Value())							//tests root value
+		pass = false;
+
+	if (test_BST.Height() != BST_test.Height())
+		pass = false;
+
+	for (int i = 0; i < test_BST.Height(); i++)
+	{
+		if (BT->Next() != nullptr)
+		{
+			BT = BT->Next();
+			TB = TB->Next();
+		}
+		if (BT->Previous() != nullptr)
+		{
+			BT = BT->Previous();
+			TB = TB->Previous();
+		}
+		if (BT->Value() != TB->Value() || BT->Value() != TB->Value())
+			pass = false;
+	}
+
+	cout << "Move operator = test ";
+
+	return pass;
+}
+
+bool test_Height_empty()				//tests the Height() function with an empty BST
+{
+	bool pass = false;
+
+	BST<int> emptyBST;
+
+	try 
+	{
+		emptyBST.Height();
+	}
+	catch (Exception& exception)
+	{
+		pass = true;
+	}
+
+	cout << "Height on empty test ";
+	return pass;
+
+}
+
+bool test_Height()						//tests Height with integers
+{
+	bool pass = false;
+
+	BST<int> tree;
+
+	for (int i = 0; i < NUM_NUMS; i++)
+	{
+		tree.Insert(NUMS[i]);
+	}
+
+	int h = tree.Height();
+
+	if (h == 4)
+		pass = true;
+
+	cout << "Height with integers test ";
+
+	return pass;
+
+}
+//
+//bool test_deBST_empty()							//tests deBSTing an empty BST
+//{
+//	bool pass = false;
+//
+//	BST<int> emptyBST;
+//
+//	try
+//	{
+//		emptyBST.DeBST();
+//	}
+//	catch (Exception& exception)
+//	{
+//		pass = true;
+//	}
+//
+//	cout << "Empty BST DeBST test ";
+//
+//	return pass;
+//
+//}
+//
+//bool test_peek_empty_BST()								//tests the peek function with an empty BST
+//{
+//	bool pass = false;
+//	BST<int> emptyBST;
+//
+//	try
+//	{
+//		emptyBST.Peek();
+//	}
+//	catch (Exception& exception)
+//	{
+//		pass = true;
+//	}
+//
+//	cout << "Empty BST Peek test ";
+//
+//	return pass;
+//}
+//
+//bool multiple_value_test()					//Tests deBST and enBST with ints from empty to full
+//{
+//	bool pass = false;
+//	BST<int> test_BST;
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(i);
+//	}
+//
+//	int TBST;
+//
+//	// Check data integrity
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		TBST = test_BST.DeBST();
+//		if (i == TBST);
+//		pass = true;
+//	}
+//
+//	cout << "Multiple value test ";
+//
+//	return pass;
+//}
+//
+//bool test_is_full()									//tests the isFull() function
+//{
+//	bool pass = false;
+//	BST<int> test_BST;
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(i);
+//	}
+//
+//	if (test_BST.isFull())
+//		pass = true;
+//
+//	cout << "BST is full test ";
+//
+//	return pass;
+//}
+//
+//bool test_copy_ctor_complex()						//tests the copy constructor with strings
+//{
+//	bool pass = true;
+//
+//	BST<string> test_BST;
+//	for (int i = 0; i < NUM_NAMES; ++i)
+//		test_BST.EnBST(NAMES[i]);
+//
+//	BST<string> BST_test{ test_BST };
+//
+//	if (BST_test.Peek() != test_BST.Peek())
+//		pass = false;
+//
+//	// Check data integrity
+//	for (int i = 0; i < NUM_NAMES; ++i)
+//	{
+//		if (BST_test.DeBST() != test_BST.DeBST())
+//			pass = false;
+//	}
+//
+//	cout << "Copy ctor test complex ";
+//
+//	return pass;
+//}
+//
+//BST<string> ReturnStrBST();
+//
+//bool test_move_ctor_complex()								//tests the move constructor with strings
+//{
+//	bool pass = true;
+//
+//	BST<string> BST_test{ ReturnStrBST() };
+//
+//	// Check data integrity
+//	for (int i = 0; i < NUM_NAMES; ++i)
+//	{
+//		if (BST_test.DeBST() != NAMES[i])
+//			pass = false;
+//	}
+//
+//	cout << "Move ctor test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_op_equal_complex()						//tests op = with strings
+//{
+//	bool pass = true;
+//
+//	BST<string> test_BST;
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(NAMES[i]);
+//	}
+//
+//	BST<string> BST_test;
+//	BST_test = test_BST;									//	Op =
+//
+//	// Check data integrity
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		string BSTT = BST_test.DeBST();
+//		string TBST = test_BST.DeBST();
+//		if (BSTT != TBST)
+//			pass = false;
+//	}
+//
+//	cout << "Op equals test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_move_op_equal_complex()					//tests move op = with strings
+//{
+//	bool pass = true;
+//
+//	BST<string> test_BST;
+//	test_BST = ReturnStrBST();							//Op =
+//
+//	// Check data integrity
+//	for (int i = 0; i < 10; i++)
+//	{
+//		string val = test_BST.DeBST();
+//		if (NAMES[i] != val)
+//			pass = false;
+//	}
+//
+//	cout << "Move op equals test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_is_empty_complex()						//tests isEmpty() function with strings
+//{
+//	bool pass = true;
+//	BST<string> emptyBST;
+//	BST<string> notEmptyBST;
+//
+//	for (int i = 0; i < 5; i++)
+//	{
+//		notEmptyBST.EnBST(NAMES[i]);
+//	}
+//
+//	if (!emptyBST.isEmpty() || notEmptyBST.isEmpty())
+//		pass = false;
+//
+//	cout << "Test is empty test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_is_full_complex()									//tests isFull() function with strings
+//{
+//	bool pass = false;
+//	BST<string> test_BST;
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(NAMES[i]);
+//	}
+//
+//	if (test_BST.isFull())
+//		pass = true;
+//
+//	cout << "BST is full test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_with_value_complex()					//tests enBST and deBST with strings
+//{
+//	bool pass = false;
+//	BST<string> test_BST;
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(NAMES[i]);
+//	}
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		if (test_BST.DeBST() == NAMES[i])
+//			pass = true;
+//	}
+//
+//	cout << "BST peek test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_peek_empty_BST_complex()
+//{
+//	bool pass = false;
+//
+//	BST<string> test_BST;
+//
+//	try
+//	{
+//		test_BST.Peek();
+//	}
+//	catch (Exception& exception)
+//	{
+//		pass = true;
+//	}
+//
+//	cout << "Peek empty complex test ";
+//
+//	return pass;
+//}
+//
+//bool test_peek_full_complex()							//tests peek throughout an entire deBSTing of a full BST
+//{
+//	bool pass = true;
+//	BST<string> test_BST, BST_test;
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(NAMES[i]);
+//		BST_test.EnBST(NAMES[i]);
+//	}
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		if (test_BST.Peek() != BST_test.Peek() || test_BST.Peek() != NAMES[i] || BST_test.Peek() != NAMES[i])
+//			pass = false;
+//		test_BST.DeBST();
+//		BST_test.DeBST();
+//	}
+//
+//	cout << "BST peek test complex ";
+//
+//	return pass;
+//}
+//
+//bool test_print_complex()						//tests printing with a full BST
+//{
+//	bool pass = true;
+//	BST<string> test_BST;
+//
+//	for (int i = 0; i < NUM_SIZE; ++i)
+//	{
+//		test_BST.EnBST(NAMES[i]);
+//	}
+//	try
+//	{
+//		test_BST.Print();					//should print the list of names
+//	}
+//	catch (Exception& exception)
+//	{
+//		pass = false;
+//	}
+//
+//	cout << "As long as all the names are above this line, the complex print function test ";
+//
+//	return pass;
+//}
+//
+//bool test_print_empty()									//tests printing with an empty BST
+//{
+//	bool pass = false;
+//
+//	BST<int> BST;
+//
+//	try {
+//		BST.Print();
+//	}
+//
+//	catch (Exception& exception)
+//	{
+//		pass = true;
+//	}
+//
+//	cout << "Print with empty BST test ";
+//
+//	return pass;
+//
+//}
+//
+
+
+// Array of test functions
+FunctionPointer test_functions[] = { test_default_ctor, test_param_ctor, test_copy_ctor, test_move_ctor,
+test_op_equal, test_move_op_equal, test_Height_empty/*, test_one_value, test_deBST_empty,
+test_peek_empty_BST, multiple_value_test, test_is_full, test_copy_ctor_complex,
+test_move_ctor_complex, test_op_equal_complex, test_move_op_equal_complex,
+test_is_empty_complex, test_is_full_complex, test_peek_empty_BST_complex,
+test_with_value_complex, test_peek_full_complex, test_print_complex, test_print_empty,*/ };
+
+
+BST<int> ReturnIntBST()							//int stack creating func for move constructor
+{
+	BST<int> tempBST;
+	for (int i = 0; i < NUM_NUMS; ++i)
+		tempBST.Insert(NUMS[i]);
+
+	return tempBST;
+}
+
+
+BST<string> ReturnStrBST()						//string stack creating func for move constructor
+{
+	BST<string> tempBST;
+	for (int i = 0; i < NUM_NAMES; ++i)
+		tempBST.Insert(NAMES[i]);
+	return tempBST;
+}
+
+
+template <typename U>
+void Display(U data)
+{
+	cout << data << endl;
+}
+
+
+int main()
+{
+	
+		_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
+		int failed_tests = 0;
+
+		// Run the test functions
+		for (FunctionPointer func : test_functions)
+		{
+			if (func())
+			{
+				cout << "passed" << endl;
+			}
+			else
+			{
+				failed_tests++;
+				cout << "***** failed *****" << endl;
+			}
+		}
+
+		if (failed_tests > 0)
+			cout << endl << "You have " << failed_tests << " failed tests";
+		else
+			cout << endl << "All tests passed! Good job!";
+
+		cout << endl;
+		system("pause");
+		cout << "Exiting..." << endl;
+
+		return 0;
+	//}
+	//BST<int> test_tree(10);
+
+	//for (int i = 0; i < 10; i++)
+	//	test_tree.Insert(i);
+
+	//for (int i = 11; i < 20; i++)
+	//	test_tree.Insert(i);
+
+	//test_tree.breadthFirst(Display);
+	//test_tree.inOrder(Display);
+	//test_tree.postOrder(Display);
+	//test_tree.preOrder(Display);
+
+	//BST<int> tree_test = test_tree;
+
+	//tree_test.preOrder(Display);
+
+	//return 0;
+}
+
+
+

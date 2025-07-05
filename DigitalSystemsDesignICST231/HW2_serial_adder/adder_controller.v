@@ -1,0 +1,88 @@
+module adder_controller(
+	input clk,
+	input reset,
+	output reg clr,
+	output reg ShR,
+	output reg load,
+	output reg done
+);
+
+
+localparam reset_state = 2'b00;
+localparam load_state = 2'b01;
+localparam shift_state = 2'b10;
+localparam done_state = 2'b11;
+
+reg [1:0]state;
+reg [2:0]count;
+
+initial
+	begin
+	
+		state <= reset_state;
+		count <= 2'b00;
+	
+	end
+
+	
+//next state logic
+always @(posedge clk)
+	begin
+	
+		if (reset)
+			begin
+				state <= reset_state;
+				count <= 2'b00;
+			end
+			
+		else
+			begin
+			
+				case (state)
+				
+					reset_state : 
+						begin
+							state <= load_state;
+						end
+					load_state : 
+						begin
+							if (count < 4)
+								state <= shift_state;
+							else
+								state <= done_state;
+						end
+					shift_state :
+						begin
+							state <= load_state;
+							count <= count + 1;
+						end
+					done_state :
+						begin
+							state <= state;
+							count <= 4'b0000;
+						end
+					default : state <= state;
+				endcase
+				
+			end
+	
+	end
+	
+	
+//output logic
+always @(state)
+	begin
+	
+		case (state)
+			reset_state : {clr, load, ShR, done} <= 4'b1000;
+			load_state : {clr, load, ShR, done} <= 4'b0100;
+			shift_state : {clr, load, ShR, done} <= 4'b0010;
+			done_state : {clr, load, ShR, done} <= 4'b0001;
+			default : {clr, load, ShR, done} <= 4'b0000;
+		endcase
+		
+	end
+
+
+
+endmodule

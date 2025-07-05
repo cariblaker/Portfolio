@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/hw4_2/simulation/modelsim
+verrthang
+Z1 !s110 1668197413
+!i10b 1
+!s100 96A]9_k@lmZIg>TcJYR3W1
+I_[o^j?DXdml<`gk3D2n[I1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1668197203
+8C:/Users/carib/CST133/hw4_2/errthang.v
+FC:/Users/carib/CST133/hw4_2/errthang.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1668197413.000000
+!s107 C:/Users/carib/CST133/hw4_2/errthang.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/hw4_2|C:/Users/carib/CST133/hw4_2/errthang.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/hw4_2
+Z7 tCvgOpt 0
+vflip_flop
+R1
+!i10b 1
+!s100 c20`e685kX4VF>hJ>U?GE3
+IU@S_<eU]I6KZ29=<W3LMX3
+R2
+R0
+w1668195815
+8C:/Users/carib/CST133/hw4_2/flip_flop.v
+FC:/Users/carib/CST133/hw4_2/flip_flop.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/hw4_2/flip_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/hw4_2|C:/Users/carib/CST133/hw4_2/flip_flop.v|
+!i113 1
+R5
+R6
+R7

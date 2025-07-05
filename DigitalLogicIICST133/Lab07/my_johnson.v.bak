@@ -1,0 +1,16 @@
+module my_johnson(
+	input cen,
+	input ud,
+	input rst,
+	input clk,
+	output reg [6:0]lil_digit,
+	output reg [6:0]big_digit
+)
+	
+	johnson U1(cen, ud, rst, clk, Q);
+	JohnsontoSevenSeg U2(Q, lil_digit, big_digit);
+
+
+
+
+endmodule

@@ -1,0 +1,53 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do encoder_for_loop_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# couldn't create error file for command: permission denied
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/HW3b {C:/Users/carib/CST133/HW3b/encoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:18 on Oct 29,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/HW3b" C:/Users/carib/CST133/HW3b/encoder.v 
+# -- Compiling module encoder
+# 
+# Top level modules:
+# 	encoder
+# End time: 00:01:18 on Oct 29,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.encoder
+# vsim work.encoder 
+# Start time: 00:01:24 on Oct 29,2022
+# Loading work.encoder
+add wave sim:/encoder/*
+force -freeze sim:/encoder/a 000000001 0
+run
+force -freeze sim:/encoder/a 0000000010 0
+run
+force -freeze sim:/encoder/a 0000000100 0
+run
+force -freeze sim:/encoder/a 0000001000 0
+run
+force -freeze sim:/encoder/a 0000010000 0
+run
+force -freeze sim:/encoder/a 0000100000 0
+run
+force -freeze sim:/encoder/a 0001000000 0
+run
+force -freeze sim:/encoder/a 0010000000 0
+force -freeze sim:/encoder/a 0010000000 0
+run
+force -freeze sim:/encoder/a 0100000000 0
+run
+force -freeze sim:/encoder/a 1000000000 0
+run
+# End time: 14:37:24 on Nov 01,2022, Elapsed time: 86:36:00
+# Errors: 0, Warnings: 0

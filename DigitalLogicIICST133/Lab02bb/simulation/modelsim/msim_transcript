@@ -1,0 +1,127 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab02bb_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# couldn't create error file for command: permission denied
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab02b {C:/Users/carib/CST133/Lab02b/HalfAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:43:11 on Dec 06,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab02b" C:/Users/carib/CST133/Lab02b/HalfAdder.v 
+# -- Compiling module HalfAdder
+# 
+# Top level modules:
+# 	HalfAdder
+# End time: 22:43:11 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab02b {C:/Users/carib/CST133/Lab02b/FullAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:43:11 on Dec 06,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab02b" C:/Users/carib/CST133/Lab02b/FullAdder.v 
+# -- Compiling module FullAdder
+# 
+# Top level modules:
+# 	FullAdder
+# End time: 22:43:11 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab02b {C:/Users/carib/CST133/Lab02b/adder_4_bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:43:11 on Dec 06,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab02b" C:/Users/carib/CST133/Lab02b/adder_4_bit.v 
+# -- Compiling module adder_4_bit
+# 
+# Top level modules:
+# 	adder_4_bit
+# End time: 22:43:11 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.adder_4_bit
+# vsim work.adder_4_bit 
+# Start time: 22:43:20 on Dec 06,2022
+# Loading work.adder_4_bit
+# Loading work.HalfAdder
+# Loading work.FullAdder
+add wave sim:/adder_4_bit/*
+force -freeze {sim:/adder_4_bit/a[0]} 0 0, 1 {50 ps} -r 100
+force -freeze {sim:/adder_4_bit/a[1]} 0 0, 1 {100 ps} -r 200
+force -freeze {sim:/adder_4_bit/a[2]} 0 0, 1 {200 ps} -r 400
+noforce {sim:/adder_4_bit/a[3]}
+force -freeze {sim:/adder_4_bit/a[3]} 1 0, 0 {400 ps} -r 800
+force -freeze {sim:/adder_4_bit/a[3]} 0 0, 1 {400 ps} -r 800
+force -freeze {sim:/adder_4_bit/b[0]} 0 0, 1 {800 ps} -r 1600
+force -freeze {sim:/adder_4_bit/b[1]} 0 0, 1 {1600 ps} -r 3200
+force -freeze {sim:/adder_4_bit/b[2]} 0 0, 1 {3200 ps} -r 6400
+force -freeze {sim:/adder_4_bit/b[3]} 0 0, 1 {6400 ps} -r 12800
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 22:50:55 on Dec 06,2022, Elapsed time: 0:07:35
+# Errors: 0, Warnings: 0

@@ -1,0 +1,21 @@
+module control(
+	input clk,
+	output [1:0]cntrl
+);
+
+initial
+	begin
+	
+	cntrl <= 2'b00;
+	
+	end
+
+always @(posedge clk)
+	begin
+	
+		cntrl <= cntrl + 1;
+	
+	end
+
+
+endmodule

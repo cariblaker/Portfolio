@@ -1,0 +1,73 @@
+module my_encoder(
+	input enable,
+	input [6:0]a,
+	output [2:0]yout
+);
+
+//wire y0, y1, y2;
+
+
+always @(*)
+begin
+	if (enable == 1)
+		begin
+			yout[2] = 1b'z;
+			yout[1] = 1b'z;
+			yout[0] = 1b'z;
+		end
+	else
+		casex (a)
+			7'b1xxxxxx :
+				begin
+					yout[2] = 1;
+					yout[1] = 1;
+					yout[0] = 1;
+				end
+			7'b01xxxxx :
+				begin
+					yout[2] = 1;
+					yout[1] = 1;
+					yout[0] = 0;
+				end
+			7'b001xxxx :
+				begin
+					yout[2] = 1;
+					yout[1] = 0;
+					yout[0] = 1;
+				end
+			7'b0001xxx :
+				begin
+					yout[2] = 1;
+					yout[1] = 0;
+					yout[0] = 0;
+				end
+			7'b00001xx :
+				begin
+					yout[2] = 0;
+					yout[1] = 1;
+					yout[0] = 1;
+				end
+			7'b000001x :
+				begin
+					yout[2] = 0;
+					yout[1] = 1;
+					yout[0] = 0;
+				end
+			7'b0000001 :
+				begin
+					yout[2] = 0;
+					yout[1] = 0;
+					yout[0] = 1;
+				end
+			7'b0000000 :
+				begin
+					yout[2] = 0;
+					yout[1] = 0;
+					yout[0] = 0;
+				end
+
+end
+
+
+
+endmodule

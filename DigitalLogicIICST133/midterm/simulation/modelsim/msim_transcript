@@ -1,0 +1,14 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do midterm2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./midterm2_run_msim_rtl_verilog.do line 5
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib rtl_work"

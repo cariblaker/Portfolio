@@ -1,0 +1,8 @@
+C:/Users/carib/CST133/HW2b/HW2bSIM.v {1 {vlog -work work -stats=none {C:\Users\carib\CST133\HW2b\HW2bSIM.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module HW2b
+
+Top level modules:
+	HW2b
+
+} {} {}}

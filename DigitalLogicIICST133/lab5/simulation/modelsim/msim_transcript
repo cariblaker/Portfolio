@@ -1,0 +1,79 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab05_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# couldn't create error file for command: permission denied
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab5 {C:/Users/carib/CST133/lab5/dlatch_BH.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:46 on Nov 08,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab5" C:/Users/carib/CST133/lab5/dlatch_BH.v 
+# -- Compiling module dlatch_BH
+# 
+# Top level modules:
+# 	dlatch_BH
+# End time: 17:43:46 on Nov 08,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab5 {C:/Users/carib/CST133/lab5/dff_pos_BH.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:46 on Nov 08,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab5" C:/Users/carib/CST133/lab5/dff_pos_BH.v 
+# -- Compiling module dff_pos_BH
+# 
+# Top level modules:
+# 	dff_pos_BH
+# End time: 17:43:46 on Nov 08,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab5 {C:/Users/carib/CST133/lab5/dff_neg_BH.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:46 on Nov 08,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab5" C:/Users/carib/CST133/lab5/dff_neg_BH.v 
+# -- Compiling module dff_neg_BH
+# 
+# Top level modules:
+# 	dff_neg_BH
+# End time: 17:43:46 on Nov 08,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab5 {C:/Users/carib/CST133/lab5/dstorage.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:46 on Nov 08,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab5" C:/Users/carib/CST133/lab5/dstorage.v 
+# -- Compiling module dstorage
+# 
+# Top level modules:
+# 	dstorage
+# End time: 17:43:46 on Nov 08,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.dstorage
+# vsim work.dstorage 
+# Start time: 17:43:55 on Nov 08,2022
+# Loading work.dstorage
+# Loading work.dlatch_BH
+# Loading work.dff_pos_BH
+# Loading work.dff_neg_BH
+add wave sim:/dstorage/*
+force -freeze sim:/dstorage/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/dstorage/D 0 0, 1 {100 ps} -r 200
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/dstorage/D 0 0, 1 {15 ps} -r 30
+run
+run
+run
+run
+# End time: 17:47:15 on Nov 08,2022, Elapsed time: 0:03:20
+# Errors: 0, Warnings: 0

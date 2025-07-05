@@ -1,0 +1,62 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do sequential_ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Midterm/Q1 {C:/Users/carib/CST 231/Midterm/Q1/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:25 on Feb 28,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Midterm/Q1" C:/Users/carib/CST 231/Midterm/Q1/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:03:25 on Feb 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do ALU.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:51 on Feb 28,2023
+# vlog -reportprogress 300 ../../ALU.v ../../DE1_SOC_golden_top.v ../../test_ALU.v 
+# -- Compiling module ALU
+# -- Compiling module DE1_SOC_golden_top
+# -- Compiling module test_ALU
+# 
+# Top level modules:
+# 	DE1_SOC_golden_top
+# 	test_ALU
+# End time: 23:03:51 on Feb 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:51 on Feb 28,2023
+# vlog -reportprogress 300 test_ALU.v 
+# -- Compiling module test_ALU
+# 
+# Top level modules:
+# 	test_ALU
+# End time: 23:03:51 on Feb 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.test_ALU -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 23:03:51 on Feb 28,2023
+# Loading work.test_ALU
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ALU
+# ** Error: (vish-4014) No objects found matching '/test_ALU/state'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/test_ALU/A'.
+# Executing ONERROR command at macro ./wave.do line 17
+# ** Error: (vish-4014) No objects found matching '/test_ALU/B'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ** Error: (vish-4014) No objects found matching '/test_ALU/code'.
+# Executing ONERROR command at macro ./wave.do line 19
+# End time: 23:08:14 on Feb 28,2023, Elapsed time: 0:04:23
+# Errors: 13, Warnings: 0

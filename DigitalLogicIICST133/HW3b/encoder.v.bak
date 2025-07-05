@@ -1,0 +1,16 @@
+module encoder(
+	input [9:0]a,
+	output [3:0]y
+);
+
+	integer i;
+
+	for (i = 0; i < 9; i = i + 1)
+	begin
+		y = i;
+		
+	end
+
+
+
+endmodule

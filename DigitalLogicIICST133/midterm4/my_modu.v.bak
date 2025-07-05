@@ -1,0 +1,6 @@
+module my_modu(
+	input sx,
+	input a,
+	input b,
+	output m_out
+);

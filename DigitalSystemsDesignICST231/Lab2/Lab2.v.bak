@@ -1,0 +1,29 @@
+module Lab2(
+	input clk,
+	input rst,
+	input ena,
+	output [7:0]ones,
+	output [7:0]tens,
+	output [7:0]hundreds,
+	output [7:0]thousands,
+	output [7:0]ten_thousands,
+);
+
+wire clk_100M, clk_200M, clk_400M, clk_800M, clk_1600M;
+reg [15:0]count;
+
+clk_dv U1(clk, rst, clk_100M);
+clk_dv U2(clk_100M, rst, clk_200M);
+clk_dv U3(clk_200M, rst, clk_400M);
+clk_dv U4(clk_400M, rst, clk_800M);
+clk_dv U5(clk_800M, rst, clk_1600M);
+
+counter U6(clk_1600M, rst, ena, count);
+
+
+
+
+
+
+
+endmodule

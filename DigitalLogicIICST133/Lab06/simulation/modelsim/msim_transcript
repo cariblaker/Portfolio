@@ -1,0 +1,100 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do ShiftRegister_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab06 {C:/Users/carib/CST133/Lab06/myShiftRegister.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:38:08 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab06" C:/Users/carib/CST133/Lab06/myShiftRegister.v 
+# -- Compiling module myShiftRegister
+# 
+# Top level modules:
+# 	myShiftRegister
+# End time: 23:38:08 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.myShiftRegister
+# vsim work.myShiftRegister 
+# Start time: 23:38:14 on Nov 15,2022
+# Loading work.myShiftRegister
+# **** Error: LoadCompleteQ cmd: Transcript::ViewSimPanes sim
+# ****        Bad sequence in.main_pane.structure.interior.cs.body.struct.lwchildsite.clipper.canvas.sfchildsite.tree, aborting query. (2)
+# Bad sequence in.main_pane.structure.interior.cs.body.struct.lwchildsite.clipper.canvas.sfchildsite.tree, aborting query. (2)
+#     while executing
+# "Structure::CreateWindow $dataset_name"
+#     (procedure "Transcript::ViewSimPanes" line 28)
+#     invoked from within
+# "Transcript::ViewSimPanes sim"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $p $tankNamespace "
+add wave sim:/myShiftRegister/*
+force -freeze sim:/myShiftRegister/D 0010 0
+force -freeze sim:/myShiftRegister/sin 0 0
+force -freeze sim:/myShiftRegister/load 0 0
+force -freeze sim:/myShiftRegister/l_r 0 0
+force -freeze sim:/myShiftRegister/clk 0 0, 1 {50 ps} -r 100
+force -freeze sim:/myShiftRegister/reset 0 0
+run
+run
+run
+force -freeze sim:/myShiftRegister/load 1 0
+run
+run
+force -freeze sim:/myShiftRegister/sin 1 0
+force -freeze sim:/myShiftRegister/load 0 0
+run
+force -freeze sim:/myShiftRegister/load 1 0
+run
+force -freeze sim:/myShiftRegister/load 0 0, 1 {100 ps} -r 200
+run
+run
+run
+run
+force -freeze sim:/myShiftRegister/D 1000 0
+run
+run
+force -freeze sim:/myShiftRegister/l_r 1 0
+run
+run
+run
+run
+run
+run
+force -freeze sim:/myShiftRegister/D 0001 0
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/myShiftRegister/reset 1 0
+run
+force -freeze sim:/myShiftRegister/reset 0 0
+run
+run
+run
+run
+run
+force -freeze sim:/myShiftRegister/D 1111 0
+run
+run
+run
+force -freeze sim:/myShiftRegister/l_r 0 0
+run
+run
+run
+run
+run
+# End time: 16:52:12 on Nov 16,2022, Elapsed time: 17:13:58
+# Errors: 1, Warnings: 0

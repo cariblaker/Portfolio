@@ -1,0 +1,26 @@
+
+
+
+module display(
+	input [3:0] hours,
+	input [5:0] mins,
+	input [5:0] secs,
+	output [6:0] seg_h_tens, seg_h_ones, seg_m_tens, seg_m_ones, seg_s_tens, seg_s_ones
+);
+
+	wire [3:0] bcd_h_tens, bcd_h_ones, bcd_m_tens, bcd_m_ones, bcd_s_tens, bcd_s_ones;
+
+
+	bin2bcd #(4) U1(hours, bcd_h_tens, bcd_h_ones);
+	bin2bcd #(7) U2(mins, bcd_m_tens, bcd_m_ones);
+	bin2bcd #(7) U3(secs, bcd_s_tens, bcd_s_ones);
+	
+	seg_7 U4(bcd_h_tens, seg_h_tens);
+	seg_7 U5(bcd_h_ones, seg_h_ones);
+	seg_7 U6(bcd_m_tens, seg_m_tens);
+	seg_7 U7(bcd_m_ones, seg_m_ones);
+	seg_7 U8(bcd_s_tens, seg_s_tens);
+	seg_7 U9(bcd_s_ones, seg_s_ones);
+
+
+endmodule

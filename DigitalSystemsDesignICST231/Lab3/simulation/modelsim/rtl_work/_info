@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/Lab3/simulation/modelsim
+vseg_7
+!s110 1675212599
+!i10b 1
+!s100 H2c`^:DkZzc^=TfjAAIc[1
+I[`?]nb0oLg?dUe[`Z1TcJ2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1675212543
+8C:/Users/carib/CST 231/Lab3/seg_7.v
+FC:/Users/carib/CST 231/Lab3/seg_7.v
+L0 23
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1675212599.000000
+!s107 C:/Users/carib/CST 231/Lab3/seg_7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/Lab3|C:/Users/carib/CST 231/Lab3/seg_7.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+C:/Users/carib/CST 231/Lab3}
+tCvgOpt 0

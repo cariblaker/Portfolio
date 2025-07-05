@@ -1,0 +1,204 @@
+//Cari Blaker
+//Lab 6
+//03/02/23
+
+#pragma once
+#include <vector>
+#include <list>
+#include <utility>
+#include "Exception.h"
+
+template<typename K, typename V>
+class Hash {
+public:
+    Hash() : size(100), count(0), hashfn(nullptr), data(size) {}
+    Hash(int s) : size(s), count(0), hashfn(nullptr), data(size) {}
+    ~Hash() {}
+
+    Hash(const Hash& copy);
+    Hash(Hash&& move);
+    Hash<K, V>& operator=(const Hash& copy);
+    Hash<K, V>& operator=(const Hash&& move);
+    bool operator==(const Hash& other) const;
+    bool operator!=(const Hash& other) const;
+    V operator[](K key);
+    void operator[](const std::pair<K, V>& keyValuePair);
+    void Add(const K& key, const V& value);
+    void Remove(const K& key);
+    void setHash(int (*hashfn)(K key));
+    void rehash(int new_size);
+    void Traverse(void (*visit)(V value));
+    int getSize();
+
+private:
+    int size, count;
+    int (*hashfn)(K key);
+    std::vector<std::list<std::pair<K, V>>> data;
+};
+
+template<typename K, typename V>
+Hash<K, V>::Hash(const Hash& copy) {                                    //copy constructor
+    size = copy.size;
+    count = copy.count;
+    hashfn = copy.hashfn;
+    data = copy.data;
+}
+
+template<typename K, typename V>                                        //move constructor
+Hash<K, V>::Hash(Hash&& move) {
+    *this = move;
+}
+
+template<typename K, typename V>
+Hash<K, V>& Hash<K, V>::operator=(const Hash& copy) {                    //copy assignment operator
+    size = copy.size;
+    count = copy.count;
+    hashfn = copy.hashfn;
+    data = copy.data;
+    return *this;
+}
+
+template<typename K, typename V>
+Hash<K, V>& Hash<K, V>::operator=(const Hash&& move) {                  //move assignment operator
+    *this = move;
+    return *this;
+}
+
+template<typename K, typename V>
+bool Hash<K, V>::operator==(const Hash& other) const {
+
+    if (size != other.size || hashfn != other.hashfn) {                 //if the size/hash function don't match, they ain't =
+        return false;
+    }
+
+    for (int i = 0; i < size; i++) {                                    //if the data don't match, they ain't =
+        if (data[i] != other.data[i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+template<typename K, typename V>
+bool Hash<K, V>::operator!=(const Hash& other) const {
+    return !(*this == other);                               //Just gonna use ^^that one to do this one XD
+}
+
+template<typename K, typename V>
+V Hash<K, V>::operator[](K key) {                           //read [] op
+    if (count > 0) {
+        int index{ hashfn(key) % size };
+
+
+
+        for (auto& it : data[index]) {                          //scrolls through all indexes
+            if (it.first == key) {                              //finds key
+                return it.second;                               //returns value
+            }
+        }
+
+        throw Exception("Error: key not found");                //if we get here, the key is not in the hash
+    }
+    else
+        throw Exception("Error: the hash is empty");
+}
+
+template<typename K, typename V>
+void Hash<K, V>::operator[](const std::pair<K, V>& keyValuePair) {                  //write []op
+    if (hashfn == nullptr)
+        throw Exception("Error: need hash function");
+    int index = hashfn(keyValuePair.first) % size;                                  //find the index of the given key with the current hash function
+
+    for (auto& it : data[index]) {
+        if (it.first == keyValuePair.first) {                                       //if the key is found, overwrite the value
+            it.second = keyValuePair.second;
+            return;
+        }
+    }
+
+    data[index].push_back(keyValuePair);                                            //if not found, add a new pair to the data vector list thingy
+    count++;
+}
+
+
+
+template<typename K, typename V>
+void Hash<K, V>::Add(const K& key, const V& value) {
+    if (hashfn == nullptr)
+        throw Exception("Error: need hash function");
+    
+    int index = hashfn(key) % size;
+
+    for (auto& it : data[index]) {                          //if the key already exists, its value is updated
+        if (it.first == key) {
+            it.second = value;
+            count++;                                        //update the count
+            return;
+        }
+    }
+
+    data[index].push_back(std::make_pair(key, value));      //otherwise a new pair is made with the specified key
+    count++;
+
+    if (count >= (0.75 * size)) {                              //if we've reached 75%, rehash & adjust size
+        size = size * 2;
+        rehash(size);
+    }
+}
+
+template<typename K, typename V>
+void Hash<K, V>::Remove(const K& key) {
+    if (hashfn == nullptr)
+        throw Exception("Error: need hash function");
+
+    int index = hashfn(key) % size;
+
+    for (auto it = data[index].begin(); it != data[index].end(); it++) {            //iterates through list to find key
+        if (it->first == key) {
+            data[index].erase(it);                                                  //if found, the pair is deleted
+            count--;
+            return;
+        }
+    }
+
+    throw Exception("Error: key not found");                                        //otherwise, an exception is thrown            
+}
+
+template<typename K, typename V>
+void Hash<K, V>::setHash(int (*hf)(K key)) {                //sets the hash function using new function passed as param
+    hashfn = hf;
+    rehash(size);
+}
+
+template<typename K, typename V>
+void Hash<K, V>::rehash(int new_size) {
+
+    if (hashfn == nullptr)
+        throw Exception("Error: need hash function");
+
+    std::vector<std::list<std::pair<K, V>>> new_data(new_size);
+    for (auto& index : data) {
+        for (auto& pair : index) {
+            int new_index = hashfn(pair.first) % new_size;
+            new_data[new_index].push_back(pair);
+        }
+    }
+    size = new_size;
+    data = std::move(new_data);
+}
+
+template<typename K, typename V>
+void Hash<K, V>::Traverse(void (*visit)(V value)) {
+    for (auto& list : data) {                                                       //through all the lists
+        for (auto& it : list) {                                                     //through all the pairs
+            visit(it.second);                                                       //sends the "visit" function the value at each key  
+        }
+    }
+}
+
+template<typename K, typename V>
+int Hash<K, V>::getSize() {
+    return size;
+}
+

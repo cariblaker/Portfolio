@@ -1,0 +1,129 @@
+
+module main_FSM(
+	input clk, rst, b3, b2, b1, b0,
+	input [2:0]left_in,
+	input [5:0]haz_in,
+	input [2:0]right_in,
+	output L, H, R,
+	output [5:0]leds
+	);
+	
+	
+	localparam idle 	= 4'b0001;
+	localparam hazard = 4'b0010;
+	localparam left 	= 4'b0100;
+	localparam right 	= 4'b1000;
+	
+	reg [1:0] state;
+	
+	initial
+		begin
+			leds <= 0;
+			state <= idle;
+		end
+		
+	
+	always @(posedge clk or posedge rst)
+		begin
+			
+			if (rst)
+				begin
+					state <= idle;
+				end
+			else
+				begin
+				
+					case (state)
+						idle :
+							begin
+								if (b2)
+									state <= hazard;
+								else if (b1)
+									state <= left;
+								else if (b4)
+									state <= right;
+								else
+									state <= idle;
+							end
+						
+						hazard :
+							begin
+								if (!b2)
+									state <= idle;
+								else
+									state <= hazard;
+							end
+							
+						left :
+							begin
+								if (!b1)
+									state <= idle;
+								else
+									state <= left;
+							end
+						
+						right :
+							begin
+								if (!b4)
+									state <= idle;
+								else
+									state <= right;
+							end
+						default :
+							begin
+								state <= idle;
+							end
+							
+						endcase
+						
+				end
+		
+		end
+		
+		
+		always @(posedge clk)										//output logic
+			begin
+			
+				case (state)
+				
+					idle :
+						begin
+							{L, H, R} <= 3'b000;
+							if (b1)										//braking in idle
+								leds <= 6'b111111;
+							else
+								leds <= 6'b000000;
+						end
+						
+					hazard :
+						begin
+							{L, H, R} <= 3'b010;						//no brakes allowed
+							leds <= haz_in;		
+						end
+					
+					left :
+						begin
+							{L, H, R} <= 3'b100;
+							if (b1)										//braking w/left signal
+								leds <= {left_in, 3'b111};
+							else
+								leds <= {left_in, 3'b000};
+						end
+			
+					right :
+						begin
+							{L, H, R} <= 3'b001;
+							if (b1)
+								leds <= {3'b111, right_in};		//braking w/right signal
+							else
+								leds <= {3'b000, right_in};
+						end
+					default :
+						begin
+							{L, H, R} <= 3'b000;
+							leds <= 6'b000000;
+						end
+			
+			end
+		
+endmodule

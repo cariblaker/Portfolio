@@ -1,0 +1,27 @@
+module front_end(
+	input [15:0]bcd,
+	input clk,
+	output [3:0]pin,
+	output [6:0]seg_7
+);
+
+	wire [3:0] ones, tens, hundreds, thousands;
+	wire [1:0] control;
+	wire clk_2khz;
+
+	seg_7 U1([3:0]bcd, ones);
+	seg_7 U2([7:4]bcd, tens);
+	seg_7 U3([11:8]bcd, hundreds);
+	seg_7 U4([15:12]bcd, thousands);
+	
+	clk_dv U5(clk, clk_2khz);
+	
+	control U6(clk_2khz, control);
+	
+	mux U7(control, ones, tens, hundreds, thousands, seg_7);
+	
+	decoder U8(control, pin);
+	
+
+
+endmodule

@@ -1,0 +1,23 @@
+module ShiftRegister(
+	input [3:0]D,
+	input sin,
+	input load,
+	input l_r,
+	input clk,
+	input reset,
+	output [3:0]Q,
+	output sout
+);
+
+	
+		
+	always @(clr or posedge clk or posedge load)
+		begin
+			if (clr)
+			 
+		
+		end
+
+
+
+endmodule

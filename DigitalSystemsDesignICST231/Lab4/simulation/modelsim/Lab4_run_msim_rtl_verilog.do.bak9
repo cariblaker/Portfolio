@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab4 {C:/Users/carib/CST 231/Lab4/keypad.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab4 {C:/Users/carib/CST 231/Lab4/seg_7.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab4 {C:/Users/carib/CST 231/Lab4/keypad_decode.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab4 {C:/Users/carib/CST 231/Lab4/board_in_out.v}
+

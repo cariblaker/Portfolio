@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rows[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rows[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rows[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rows[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_four[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_three[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_two[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segment_one[6]",
+					"strict" : false
+				},
+				{
+					"name" : "error",
+					"strict" : false
+				},
+				{
+					"name" : "open",
+					"strict" : false
+				},
+				{
+					"name" : "unlocking",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "cols[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cols[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cols[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cols[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

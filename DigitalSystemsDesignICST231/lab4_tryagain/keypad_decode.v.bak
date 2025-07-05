@@ -1,0 +1,126 @@
+//-----------------------------------------------------------------------------    
+//   University: Oregon Institute of Technology – CSET Department
+//   Class: CST 231
+//   Author: Cari Blaker
+//   Lab: Lab 4
+//   Project: Intro to Heirarchical Design
+//   File Name: keypad_decode.v
+//   List of other files used: clk_dv.v, seg_7.v, input_code.v, lock_mechanism.v,
+//		Lab4.v, lockout.v
+//-----------------------------------------------------------------------------    
+//   Description of the Code 
+//		this module receives the row and column of the button pressed and outputs
+//		the number/symbol that was pressed as a four digit binary
+//-----------------------------------------------------------------------------    
+//   Date: 2/3/2023
+//   Version: 1.2
+//		Revision: 
+//			2/1/23	- initial version
+//			2/4/23	- added clock, adjusted always sensitivity list
+//			2/5/23	- adjusted case statement, this module now does
+//							all of the decoding
+//			3/13/23	- removed reset
+//-----------------------------------------------------------------------------
+
+
+
+module keypad_decode(
+	input clk,
+	input [3:0] column,
+	output reg [3:0] row,
+	output reg [3:0] press,
+	output reg key_press
+);
+
+
+initial
+	begin
+	
+		row <= 4'b1011;
+		press <= 4'b1111;
+	
+	end
+	
+	
+always @(posedge clk)							//cycle through rows
+	begin
+
+		row <= {row[0], row[3:1]};
+	
+	end
+
+
+always @(posedge clk)				
+	begin	
+	
+//		case {row, column} :
+//			8'b01110111 : {key_press, press} <= 5'b10001;
+//			8'b01111011 : {key_press, press} <= 5'b10010;
+//			8'b01111101 : {key_press, press} <= 5'b10011;
+//			8'b01111010 : {key_press, press} <= 5'b11010;
+//			
+
+		case (row)
+			4'b0111 :
+				begin
+					
+					case (column)
+						4'b0111: {key_press, press} <= 5'b10001;
+						4'b1011: {key_press, press} <= 5'b10010;
+						4'b1101: {key_press, press} <= 5'b10011;
+						4'b1110: {key_press, press} <= 5'b11010;
+						default: {key_press, press} <= {1'b0, press};
+					endcase
+					
+				end
+				
+			4'b1011 :
+				begin
+					
+					case (column)
+						4'b0111: {key_press, press} <= 5'b10100;
+						4'b1011: {key_press, press} <= 5'b10101;
+						4'b1101: {key_press, press} <= 5'b10110;
+						4'b1110: {key_press, press} <= 5'b11011;
+						default: {key_press, press} <= {1'b0, press};
+					endcase
+					
+				end
+			
+			4'b1101 :
+				begin
+					
+					case (column)
+						4'b0111: {key_press, press} <= 5'b10111;
+						4'b1011: {key_press, press} <= 5'b11000;
+						4'b1101: {key_press, press} <= 5'b11001;
+						4'b1110: {key_press, press} <= 5'b11100;
+						default: {key_press, press} <= {1'b0, press};
+					endcase
+					
+				end
+			
+			4'b1110 :
+				begin
+					
+					case (column)
+						4'b0111: {key_press, press} <= 5'b11110;
+						4'b1011: {key_press, press} <= 5'b10000;
+						4'b1101: {key_press, press} <= 5'b11111;
+						4'b1110: {key_press, press} <= 5'b11101;
+						default: {key_press, press} <= {1'b0, press};
+					endcase
+					
+				end
+			
+			default :
+				begin
+					{key_press, press} <= {1'b0, press};
+				end
+			
+			endcase
+
+	end
+
+
+endmodule

@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/final_5/simulation/modelsim
+vpadlock
+!s110 1671115222
+!i10b 1
+!s100 PJ?FT3=enX]9mLWf6ZKzb3
+IdoVQ3RUNial7Zg2o`oOQH3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1671115176
+8C:/Users/carib/CST133/final_5/padlock.v
+FC:/Users/carib/CST133/final_5/padlock.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1671115222.000000
+!s107 C:/Users/carib/CST133/final_5/padlock.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/final_5|C:/Users/carib/CST133/final_5/padlock.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/final_5
+tCvgOpt 0

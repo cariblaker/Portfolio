@@ -1,0 +1,95 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do myBCDAdder_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# couldn't create error file for command: permission denied
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab04 {C:/Users/carib/CST133/lab04/myBCDAdder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:13 on Nov 01,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab04" C:/Users/carib/CST133/lab04/myBCDAdder.v 
+# -- Compiling module myBCDAdder
+# 
+# Top level modules:
+# 	myBCDAdder
+# End time: 22:25:13 on Nov 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab04 {C:/Users/carib/CST133/lab04/Lab4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:13 on Nov 01,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab04" C:/Users/carib/CST133/lab04/Lab4.v 
+# -- Compiling module Lab4
+# 
+# Top level modules:
+# 	Lab4
+# End time: 22:25:13 on Nov 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab04 {C:/Users/carib/CST133/lab04/myBCDto7Seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:13 on Nov 01,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/lab04" C:/Users/carib/CST133/lab04/myBCDto7Seg.v 
+# -- Compiling module myBCDto7Seg
+# 
+# Top level modules:
+# 	myBCDto7Seg
+# End time: 22:25:13 on Nov 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.Lab4
+# vsim work.Lab4 
+# Start time: 22:25:21 on Nov 01,2022
+# Loading work.Lab4
+# Loading work.myBCDAdder
+# Loading work.myBCDto7Seg
+add wave sim:/Lab4/*
+force -freeze {sim:/Lab4/b[0]} 0 0, 1 {12 ps} -r 25
+force -freeze {sim:/Lab4/b[1]} 0 0, 1 {25 ps} -r 50
+force -freeze {sim:/Lab4/b[2]} 0 0, 1 {50 ps} -r 100
+force -freeze {sim:/Lab4/b[3]} 0 0, 1 {100 ps} -r 200
+force -freeze {sim:/Lab4/a[0]} 0 0, 1 {200 ps} -r 400
+force -freeze {sim:/Lab4/a[1]} 0 0, 1 {400 ps} -r 800
+force -freeze {sim:/Lab4/a[2]} 0 0, 1 {800 ps} -r 1600
+force -freeze {sim:/Lab4/a[3]} 0 0, 1 {1600 ps} -r 3200
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 23:20:30 on Nov 01,2022, Elapsed time: 0:55:09
+# Errors: 0, Warnings: 0

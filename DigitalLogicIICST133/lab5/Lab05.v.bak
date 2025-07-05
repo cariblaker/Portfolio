@@ -1,0 +1,13 @@
+module Lab05(
+input R,
+input S,
+output Q,
+output Q_not
+
+);
+
+RS_latch latch_struc(R, S, Q, Q_not);
+RS_latch_DF latch_DF(R,S, Q, Q_not);
+
+
+endmodule

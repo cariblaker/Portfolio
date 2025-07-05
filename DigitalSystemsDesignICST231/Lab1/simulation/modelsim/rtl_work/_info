@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/Lab1/simulation/modelsim
+vadder
+Z1 !s110 1673499486
+!i10b 1
+!s100 :kRNW=Z:[[kMK6O:^><F`2
+Ib_Hk>P?>f10NCKdXJ^0zA3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1673487022
+8C:/Users/carib/CST 231/Lab1/adder.v
+FC:/Users/carib/CST 231/Lab1/adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1673499486.000000
+!s107 C:/Users/carib/CST 231/Lab1/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/Lab1|C:/Users/carib/CST 231/Lab1/adder.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/carib/CST 231/Lab1}
+Z7 tCvgOpt 0
+vLab1
+R1
+!i10b 1
+!s100 S0@<kc5FN3<JbRm=i2hWc1
+IJCIaMfG]e=1mYe2=LPI^j0
+R2
+R0
+w1673494972
+8C:/Users/carib/CST 231/Lab1/Lab1.v
+FC:/Users/carib/CST 231/Lab1/Lab1.v
+L0 20
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST 231/Lab1/Lab1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/Lab1|C:/Users/carib/CST 231/Lab1/Lab1.v|
+!i113 1
+R5
+R6
+R7
+n@lab1
+vsegment_7
+!s110 1673499487
+!i10b 1
+!s100 R3LMR4_oKRI@<3E[o?WSR3
+Ii<OJHbYD31P9WQi85C6iS3
+R2
+R0
+w1673498558
+8C:/Users/carib/CST 231/Lab1/segment_7.v
+FC:/Users/carib/CST 231/Lab1/segment_7.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1673499487.000000
+!s107 C:/Users/carib/CST 231/Lab1/segment_7.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/Lab1|C:/Users/carib/CST 231/Lab1/segment_7.v|
+!i113 1
+R5
+R6
+R7

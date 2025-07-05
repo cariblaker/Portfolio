@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/carib/CST133/midterm4/question4.v
+source_file = 1, C:/Users/carib/CST133/midterm4/my_modu.v
+source_file = 1, C:/Users/carib/CST133/midterm4/db/midterm4.cbx.xml
+design_name = question4
+instance = comp, \tout~output , tout~output, question4, 1
+instance = comp, \sel~input , sel~input, question4, 1
+instance = comp, \en~input , en~input, question4, 1
+instance = comp, \G[1]~input , G[1]~input, question4, 1
+instance = comp, \G[2]~input , G[2]~input, question4, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, question4, 1

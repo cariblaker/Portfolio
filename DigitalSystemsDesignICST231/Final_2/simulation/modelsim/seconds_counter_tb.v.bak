@@ -1,0 +1,40 @@
+`timescale 1ns / 1ps
+
+module minutes_counter_tb;
+
+	reg project_clk, seconds_clk, rst, set;
+	wire [5:0]minutes;
+
+
+	minutes_counter T1(project_clk, seconds_clk, rst, set, minutes);
+	
+	
+	initial
+		begin
+			project_clk <= 1'b0;
+			seconds_clk <= 1'b0;
+			rst <= 1'b0;
+			set <= 1'b1;
+			
+			
+			#1400 set <= 1'b0;
+			
+			#14000 set <= 1'b1;
+			#10 rst <= 1'b1;
+			#10 rst <= 1'b0;
+			set <= 1'b0;
+		end
+		
+		
+	always
+		begin
+			#1 project_clk <= ~project_clk;
+		end
+		
+		always
+		begin
+			#10 seconds_clk <= ~seconds_clk;
+		end
+		
+		
+endmodule

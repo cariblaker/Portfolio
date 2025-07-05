@@ -1,0 +1,14 @@
+module dstorage(
+	input clk,
+	input D,
+	output Q1,
+	output Q2,
+	output Q3
+);
+
+	dlatch_BH U1(D, clk, Q1);
+	dff_pos_BH U2(D, clk, Q2);
+	dff_neg_BH U3(D, clk, Q3);
+	
+endmodule
+ 

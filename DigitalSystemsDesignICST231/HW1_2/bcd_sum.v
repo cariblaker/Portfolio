@@ -1,0 +1,132 @@
+module bcd_sum(				//brute force version... not sure why it would need two levels... or what that actually means?
+	input [3:0]num1,
+	input [3:0]num2,
+	output reg [3:0]sum,
+	output reg carry
+);
+
+reg [4:0]temp_sum;
+
+
+always @(num1, num2)
+	begin
+	
+		  temp_sum <= num1 + num2;
+		  
+	end
+	
+always @(temp_sum)
+	begin
+	
+		case (temp_sum)
+				0 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0000;
+					end
+				1 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0001;
+					end
+				2 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0010;
+					end
+				3 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0011;
+					end
+				4 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0100;
+					end
+				5 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0101;
+					end
+				6 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0110;
+					end
+				7 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0111;
+					end
+				8 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b1000;
+					end
+				9 :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b1001;
+					end
+				10 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0000;
+					end
+				11 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0001;
+					end
+				12 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0010;
+					end
+				13 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0011;
+					end
+				14 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0100;
+					end
+				15 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0101;
+					end
+				16 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0110;
+					end
+				17 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b0111;
+					end
+				18 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b1000;
+					end
+				19 :
+					begin
+						carry <= 1'b1;
+						sum <= 4'b1001;
+					end
+				default :
+					begin
+						carry <= 1'b0;
+						sum <= 4'b0000;
+					end
+			endcase
+	
+	end
+	
+	
+endmodule

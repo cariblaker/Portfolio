@@ -1,0 +1,43 @@
+module ALU(
+	input [3:0]a,
+	input [3:0]b,
+	input [2:0]select,
+	output reg [5:0]fout
+);
+
+reg [3:0]a_temp;
+
+always @(select)
+	begin
+		
+		case(select)
+			0 : fout = a > b;
+			1 : fout = b > a;
+			2 : fout = a > b;
+			3 : 
+			begin
+				a_temp = a;
+				a[0] = a_temp[3];
+				a[3] = a_temp[2];
+				a[2] = a_temp[1];
+				a[1] = a_temp[0];
+				fout = a;
+			end
+			4 :
+			begin
+				a_temp = a;
+				a[0] = a_temp[1];
+				a[3] = a_temp[0];
+				a[2] = a_temp[3];
+				a[1] = a_temp[2];
+				fout = a;
+			end
+			5 : fout = a + b;
+			6 : fout = a - b;
+			7 : fout = b << 1;
+			8 : fout = b >> 1;
+
+	end
+
+
+endmodule

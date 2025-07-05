@@ -1,0 +1,255 @@
+
+
+module input_code (
+	input clk,
+	input key_pressed,
+	input [3:0]key,
+	output reg [15:0]seg_out,
+	output reg [15:0]code_out,
+	output reg start 
+);
+
+	localparam idle = 2'b00;
+	localparam go 	 = 2'b01;
+	localparam stop = 2'b11;
+	localparam in 	 = 2'b10;
+
+	reg [5:0]count;
+	reg [1:0]state;
+	reg [11:0]count_sec;
+
+	
+	initial 
+		begin
+			count <= 0;
+			state <= idle;
+			count_sec <= 0;
+		end
+		
+	always @(posedge clk)
+		begin
+		
+			case (state)
+				idle:
+					begin
+						if (key_pressed)
+							state <= in;
+						else
+							state <= state;
+					end
+					
+				
+		
+		end
+
+		
+	always @(posedge clk)												//output logic
+	begin
+		case (state)
+			idle:
+				begin
+					seg_out <= 16'h0000;
+					code_out <= code_out;
+					start <= 1'b0;
+				end
+			
+			in:
+				begin
+					if (key_pressed)
+						begin
+							state <= go;
+						end						  	     
+					else if (count_sec == 3750)						//3750 clock cycles @ 250hz = 15 seconds til timeout
+						begin
+							state <= idle;
+							count_sec <= 0;
+						end
+						
+					else 
+						begin
+							count_sec <= count_sec + 1;
+						end
+				end
+			
+			go:
+				begin
+					if (key == 4'b1111)							//# hit, time to check
+						begin
+							code_out = seg_out;
+							start <= 1'b1;
+							state <= idle;
+						end
+						
+					else if (key == 4'b1110)					//* hit,  reset
+						begin
+							state <= idle;
+						end
+					else
+						begin
+							seg_out = {seg_out[12:0], key};
+							state <= stop;
+						end
+					
+				end
+				
+			stop:
+				begin
+					if (count < 6'b111111)
+						begin
+							count <= count + 1;
+						end
+					else 
+						begin
+							state <= in;
+							count <= 6'b000000;
+						end
+				end
+				
+			default:
+				begin
+					state <= idle;
+				end
+			endcase
+	end
+
+
+
+
+
+
+endmodule 
+
+
+
+
+
+
+
+
+
+module clock_control(
+	input clk,
+	input rst,
+	input set, set_h, set_m,					//going to try without inputs/outputs for actual numbers... if it doesn't sink, try taking the outputs from the counters and bringing them in as inputs here and outputting them from this module
+	output reg setting, 							//will stop all counts
+	output reg setting_h,						//will increase hours only
+	output reg setting_m							//will increase minutes only
+);
+
+
+	localparam run 			= 5'b00001;
+	localparam change_hrs 	= 5'b00100;
+	localparam change_mins 	= 5'b01000;
+
+	
+	reg [4:0] state;
+
+	
+	initial
+		begin
+			setting <= 0;
+			setting_h <= 0;
+			setting_m <= 0;
+			state <= run;
+		end
+
+	
+	always @(posedge clk)
+		begin
+			
+			casex (state) 					//active low buttons
+				run :	
+					begin
+						casex ({set, set_h, set_m})
+							3'b011 : state <= stop;
+							3'b1xx : state <= run;
+							3'b001 : state <= change_hrs;
+							3'b010 : state <= change_mins;
+							3'b000 : state <= change_both;
+							default : state <= run;
+						endcase
+//						if (!set)
+//							state <= stop;
+//						else
+//							state <= state;
+					end
+					
+				stop :
+					begin
+						casex ({set, set_h, set_m})
+							3'b011 : state <= stop;
+							3'b1xx : state <= run;
+							3'b001 : state <= change_hrs;
+							3'b010 : state <= change_mins;
+							3'b000 : state <= change_both;
+							default : state <= run;
+						endcase
+					end
+					
+				change_hrs :
+					begin
+						casex ({set, set_h, set_m})
+							3'b011 : state <= stop;
+							3'b1xx : state <= run;
+							3'b001 : state <= change_hrs;
+							3'b010 : state <= change_mins;
+							3'b000 : state <= change_both;
+							default : state <= run;
+						endcase
+					end
+					
+				change_mins :
+					begin
+						casex ({set, set_h, set_m})
+							3'b011 : state <= stop;
+							3'b1xx : state <= run;
+							3'b001 : state <= change_hrs;
+							3'b010 : state <= change_mins;
+							3'b000 : state <= change_both;
+							default : state <= run;
+						endcase
+					end
+					
+				change_both :
+					begin
+						casex ({set, set_h, set_m})
+							3'b011 : state <= stop;
+							3'b1xx : state <= run;
+							3'b001 : state <= change_hrs;
+							3'b010 : state <= change_mins;
+							3'b000 : state <= change_both;
+							default : state <= run;
+						endcase
+					end
+				
+				default : 	state <= run;
+			endcase
+		
+		end
+		
+	always @(posedge clk or posedge rst)
+		begin
+		
+			if (rst)
+				begin
+					{setting, setting_h, setting_m} <= 3'b000;
+				end
+				
+			else
+				begin
+				
+					case (state)
+						run 			: {setting, setting_h, setting_m} <= 3'b000;
+						stop 			: {setting, setting_h, setting_m} <= 3'b100;
+						change_mins : {setting, setting_h, setting_m} <= 3'b101;
+						change_hrs 	: {setting, setting_h, setting_m} <= 3'b110;
+						change_both : {setting, setting_h, setting_m} <= 3'b111;
+						default 		: {setting, setting_h, setting_m} <= 3'b000;
+					endcase
+					
+				end
+		
+		end
+
+
+endmodule

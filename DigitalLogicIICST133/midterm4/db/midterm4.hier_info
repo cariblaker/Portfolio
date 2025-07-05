@@ -1,0 +1,15 @@
+|question4
+G[1] => U2.IN0
+G[2] => U2.IN1
+sel => U3.IN1
+en => U4.OE
+tout <= U4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|question4|my_modu:U1
+sx => ~NO_FANOUT~
+a => ~NO_FANOUT~
+b => ~NO_FANOUT~
+m_out <= <GND>
+
+

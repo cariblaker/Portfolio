@@ -1,0 +1,20 @@
+module myBCDDecoder(
+	input [3:0]Q,
+	output [6:0]out
+);
+
+
+	always @(Q)
+		begin
+			case (Q)
+				4'b0000: 
+		
+		
+		end
+
+
+
+
+
+
+endmodule 

@@ -1,0 +1,20 @@
+module top_level
+#(parameter BIT_COUNT = 12)(
+	input clock,
+	input updn,
+	input reset,
+	input enable,
+	output reg [6:0]seg_7,
+	output [3:0]pin 
+);
+
+wire [BIT_COUNT - 1 : 0] bcd;
+
+back_end U1(clock, updn, reset, enable, bcd);
+
+front_end U2(bcd, clock, pin, seg_7);
+
+
+
+
+endmodule

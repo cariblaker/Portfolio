@@ -1,0 +1,58 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab5_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab5 {C:/Users/carib/CST 231/Lab5/UART_tx.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:51:20 on Mar 11,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Lab5" C:/Users/carib/CST 231/Lab5/UART_tx.v 
+# -- Compiling module UART_tx
+# 
+# Top level modules:
+# 	UART_tx
+# End time: 18:51:21 on Mar 11,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+do UART_tx.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:52:49 on Mar 11,2023
+# vlog -reportprogress 300 ../../Lab5.v ../../UART_tx.v ../../UART_tx_tb.v ../../clk_dv.v ../../mux.v ../../mux_tb.v 
+# -- Compiling module Lab5
+# -- Compiling module UART_tx
+# -- Compiling module UART_tx_tb
+# -- Compiling module clk_dv
+# -- Compiling module mux
+# -- Compiling module mux_tb
+# 
+# Top level modules:
+# 	Lab5
+# 	UART_tx_tb
+# 	mux_tb
+# End time: 18:52:49 on Mar 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:52:49 on Mar 11,2023
+# vlog -reportprogress 300 UART_tx_tb.v 
+# -- Compiling module UART_rx_tb
+# 
+# Top level modules:
+# 	UART_rx_tb
+# End time: 18:52:49 on Mar 11,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.UART_tx_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 18:52:49 on Mar 11,2023
+# Loading work.UART_tx_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.UART_tx
+# End time: 14:04:59 on Mar 13,2023, Elapsed time: 42:12:10
+# Errors: 1, Warnings: 0

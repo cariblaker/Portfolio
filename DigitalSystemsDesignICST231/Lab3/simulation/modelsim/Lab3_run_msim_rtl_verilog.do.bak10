@@ -1,0 +1,18 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/counter.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/seg_7.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/bin2bcd.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/back_end.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/decoder.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/mux.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/control.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/front_end.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/top_level.v}
+vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Lab3 {C:/Users/carib/CST 231/Lab3/clk_dv.v}
+

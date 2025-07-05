@@ -1,0 +1,36 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# ** Error: couldn't create error file for command: permission denied
+# Error in macro ./lab3_run_msim_rtl_verilog.do line 5
+# couldn't create error file for command: permission denied
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib rtl_work"
+do waveform.do
+# Cannot open macro file: waveform.do
+vsim work.decoder2x4
+# vsim work.decoder2x4 
+# Start time: 18:30:56 on Oct 25,2022
+# Loading work.decoder2x4
+add wave sim:/decoder2x4/*
+force -freeze {sim:/decoder2x4/a[0]} 0 0, 1 {50 ps} -r 100
+force -freeze {sim:/decoder2x4/a[1]} 0 0, 1 {100 ps} -r 200
+force -freeze sim:/decoder2x4/p 0 0, 1 {200 ps} -r 400
+force -freeze sim:/decoder2x4/ena 0 0, 1 {400 ps} -r 800
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:55:44 on Oct 25,2022, Elapsed time: 1:24:48
+# Errors: 0, Warnings: 0

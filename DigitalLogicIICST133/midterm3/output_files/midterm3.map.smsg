@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at my_encoder.v(12): always construct contains both blocking and non-blocking assignments File: C:/Users/carib/CST133/midterm3/my_encoder.v Line: 12

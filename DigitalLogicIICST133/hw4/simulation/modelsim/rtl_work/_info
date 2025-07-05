@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/hw6/simulation/modelsim
+vJohnson_Counter
+!s110 1668124313
+!i10b 1
+!s100 ]3:jZ]2c^HQX@n]1?j<U^2
+Idb2RTK9TbUjzL3iSmZjf`1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1668123983
+8C:/Users/carib/CST133/hw6/Johnson_Counter.v
+FC:/Users/carib/CST133/hw6/Johnson_Counter.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1668124313.000000
+!s107 C:/Users/carib/CST133/hw6/Johnson_Counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/hw6|C:/Users/carib/CST133/hw6/Johnson_Counter.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/hw6
+tCvgOpt 0
+n@johnson_@counter

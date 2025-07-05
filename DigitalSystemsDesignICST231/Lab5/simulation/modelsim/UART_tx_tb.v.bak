@@ -1,0 +1,39 @@
+`timescale 1ns / 1ps
+
+module UART_rx_tb;
+
+	reg clk, rst, cntrl;
+	wire [7:0] data;
+	wire out, ready;
+
+	UART_tx T1(clk, rst, cntrl, data, out, ready);
+	
+	
+	initial
+		begin
+			clk <= 1'b0;
+			rst <= 1'b0;
+			cntrl <= 1'b0;
+			data <= 0;
+			
+			#5	data <= 8'b01000010;
+			
+			#10 cntrl <= 1'b1;
+			#2 cntrl <= 1'b0;
+			#20 data <= 8'b00001110;
+			#1 cntrl <= 1'b1;
+			#5 cntrl <= 1'b0;
+			
+			
+			#2777 rst <= 1'b1;
+			#1 rst <= 1'b0;
+		end
+		
+		
+	always
+		begin
+			#1 clk <= ~clk;
+		end
+		
+		
+endmodule

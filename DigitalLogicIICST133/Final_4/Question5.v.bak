@@ -1,0 +1,40 @@
+module Question5(
+    input clk,
+    input updn,
+    input emg,
+    output reg [3:0] floor
+);
+
+
+
+reg [1:0]state;
+
+parameter ground = 2'b00, down = 2'b01, up = 2'b10, top = 2'b11;
+
+
+initial
+begin
+
+	floor <= 4'b000;
+	state <= ground;
+	
+end
+
+
+always @(posedge clk)
+begin
+	
+	
+
+
+
+end
+
+always @(state or posedge emg)
+begin
+
+
+end
+
+
+endmodule

@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/carib/CST133/HW2b
+vdecoder2x4
+!s110 1666401760
+!i10b 1
+!s100 mbK@Me5K8ND4oof7DZ?U90
+I8TCi4:mLWf5]9@n_dT0Nh1
+VDg1SIo80bB@j0V0VzS_@n1
+dC:/Users/carib/CST133/Lab3/simulation/modelsim
+w1666399664
+8C:/Users/carib/CST133/Lab3/decoder2x4.v
+FC:/Users/carib/CST133/Lab3/decoder2x4.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1666401760.000000
+!s107 C:/Users/carib/CST133/Lab3/decoder2x4.v|
+!s90 -reportprogress|300|-work|work|C:/Users/carib/CST133/Lab3/decoder2x4.v|
+!i113 1
+o-work work
+tCvgOpt 0

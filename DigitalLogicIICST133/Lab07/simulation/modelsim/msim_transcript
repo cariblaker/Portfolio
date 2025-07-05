@@ -1,0 +1,41 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab07_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# couldn't create error file for command: permission denied
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab07 {C:/Users/carib/CST133/Lab07/JohnsontoSevenSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:21:17 on Nov 29,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/Lab07" C:/Users/carib/CST133/Lab07/JohnsontoSevenSeg.v 
+# -- Compiling module JohnsontoSevenSeg
+# 
+# Top level modules:
+# 	JohnsontoSevenSeg
+# End time: 21:21:17 on Nov 29,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.JohnsontoSevenSeg
+# vsim work.JohnsontoSevenSeg 
+# Start time: 21:21:22 on Nov 29,2022
+# Loading work.JohnsontoSevenSeg
+add wave sim:/JohnsontoSevenSeg/*
+force -freeze {sim:/JohnsontoSevenSeg/Q[0]} 0 0, 1 {12 ps} -r 25
+force -freeze {sim:/JohnsontoSevenSeg/Q[1]} 0 0, 1 {25 ps} -r 50
+force -freeze {sim:/JohnsontoSevenSeg/Q[2]} 0 0, 1 {50 ps} -r 100
+force -freeze {sim:/JohnsontoSevenSeg/Q[3]} 0 0, 1 {100 ps} -r 200
+force -freeze {sim:/JohnsontoSevenSeg/Q[4]} 0 0, 1 {200 ps} -r 400
+run
+run
+run
+run
+# End time: 21:24:30 on Nov 29,2022, Elapsed time: 0:03:08
+# Errors: 0, Warnings: 0

@@ -1,0 +1,16 @@
+module myBCDto7Seg(
+	input [3:0]in,
+	output [1:0]a, [1:0]b, [1:0]c, [1:0]d, [1:0]e, [1:0]f, [1:0]g
+);
+
+always @(*)
+	begin
+		if (a == 4'b0000)
+				a, b, c, d, e, f = 1;
+		//if (a == 4'b0001)
+		
+	
+	
+	end //always
+
+endmodule

@@ -1,0 +1,8 @@
+
+
+module BCD_tens(
+	input clk,
+	input rst,
+	
+
+);

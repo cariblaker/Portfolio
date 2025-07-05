@@ -1,0 +1,21 @@
+
+
+module Lab6(
+	input clk,
+	input reset,
+	input serial_in,
+	output reg error_led,
+	output reg ready_led,
+	output reg [6:0]smaller_dig,
+	output reg [6:0]larger_dig
+);
+
+	wire [7:0]out;
+
+
+	UART_rx 	U1(clk, reset, serial_in, out, error_led, ready_led);
+	seg_7		U2(out[3:0], reset, smaller_dig);
+	seg_7		U3(out[7:4], reset, larger_dig);
+	
+	
+endmodule

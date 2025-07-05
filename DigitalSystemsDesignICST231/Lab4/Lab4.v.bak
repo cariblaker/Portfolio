@@ -1,0 +1,16 @@
+
+
+
+module Lab4(
+	input clk,
+	input [3:0]column,
+	output [3:0]row,
+	output [6:0]HEX0
+);
+
+
+board_in_out U1(clk, column, row, HEX0);
+
+
+endmodule
+

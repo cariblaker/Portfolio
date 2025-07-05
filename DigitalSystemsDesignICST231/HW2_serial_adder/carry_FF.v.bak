@@ -1,0 +1,22 @@
+
+module carry_FF(
+	input clk,
+	input clr,
+	input cin,
+	output cout
+);
+
+
+always @(posedge clk)
+	begin
+	
+		if (clr)
+			cout <= 0;
+			
+		else
+			cout <= cin;
+	
+	end
+
+
+endmodule

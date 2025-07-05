@@ -1,0 +1,239 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/lab5/simulation/modelsim
+vdff_neg_BH
+Z1 !s110 1667958226
+!i10b 1
+!s100 hCMih6RR?52F2bEASfMzg2
+IbTZAGi6JR0U1@WO5`4Xi@0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1667957811
+8C:/Users/carib/CST133/lab5/dff_neg_BH.v
+FC:/Users/carib/CST133/lab5/dff_neg_BH.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1667958226.000000
+!s107 C:/Users/carib/CST133/lab5/dff_neg_BH.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/dff_neg_BH.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/lab5
+Z7 tCvgOpt 0
+ndff_neg_@b@h
+vdff_pos_BH
+R1
+!i10b 1
+!s100 gg<Bh4^_]g;dzB7g;fe4l1
+ITU_?ToCEaNRj`]T5;_JJi3
+R2
+R0
+w1667957719
+8C:/Users/carib/CST133/lab5/dff_pos_BH.v
+FC:/Users/carib/CST133/lab5/dff_pos_BH.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/lab5/dff_pos_BH.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/dff_pos_BH.v|
+!i113 1
+R5
+R6
+R7
+ndff_pos_@b@h
+vdlatch_BH
+R1
+!i10b 1
+!s100 2DPWhc9UV?eU:n5nl0_bU3
+IMUSP?AG;<=gD=b9W]2@LO1
+R2
+R0
+w1667957690
+8C:/Users/carib/CST133/lab5/dlatch_BH.v
+FC:/Users/carib/CST133/lab5/dlatch_BH.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/lab5/dlatch_BH.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/dlatch_BH.v|
+!i113 1
+R5
+R6
+R7
+ndlatch_@b@h
+vdstorage
+R1
+!i10b 1
+!s100 QC`j4>o=JDkeSNT5f2R2S1
+I4Igbg^4XH_]?Af?DzMQLM0
+R2
+R0
+w1667958039
+8C:/Users/carib/CST133/lab5/dstorage.v
+FC:/Users/carib/CST133/lab5/dstorage.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/lab5/dstorage.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/dstorage.v|
+!i113 1
+R5
+R6
+R7
+vgated_D_latch
+Z8 !s110 1667956041
+!i10b 1
+!s100 Uej6MzV<hzSNNRA6KS5DV2
+IoBNak@H@zcNhb1I51gC6Y0
+R2
+R0
+w1667947438
+8C:/Users/carib/CST133/lab5/gated_D_latch.v
+FC:/Users/carib/CST133/lab5/gated_D_latch.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1667956041.000000
+!s107 C:/Users/carib/CST133/lab5/gated_D_latch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/gated_D_latch.v|
+!i113 1
+R5
+R6
+R7
+ngated_@d_latch
+vgated_RS
+Z10 !s110 1667949783
+!i10b 1
+!s100 9Ykoh;gK13H8d@_mn5JfF2
+IGJGn41iBVTg23no2`7_o80
+R2
+R0
+w1667945602
+8C:/Users/carib/CST133/lab5/gated_RS.v
+FC:/Users/carib/CST133/lab5/gated_RS.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z11 !s108 1667949783.000000
+!s107 C:/Users/carib/CST133/lab5/gated_RS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/gated_RS.v|
+!i113 1
+R5
+R6
+R7
+ngated_@r@s
+vLab05
+R10
+!i10b 1
+!s100 naHMd:c6j2=jUB7bO;PZ73
+IV>>]Z1EWTbEMA[UbnC1Z<3
+R2
+R0
+w1667948697
+8C:/Users/carib/CST133/lab5/Lab05.v
+FC:/Users/carib/CST133/lab5/Lab05.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/carib/CST133/lab5/Lab05.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/Lab05.v|
+!i113 1
+R5
+R6
+R7
+n@lab05
+vmaster_slave_FF
+R8
+!i10b 1
+!s100 zVk1UQTe9m<K[hXnmKO_>0
+IB1AV^M<0V`8WgVd4iX7jR2
+R2
+R0
+w1667955892
+8C:/Users/carib/CST133/lab5/master_slave_FF.v
+FC:/Users/carib/CST133/lab5/master_slave_FF.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/carib/CST133/lab5/master_slave_FF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/master_slave_FF.v|
+!i113 1
+R5
+R6
+R7
+nmaster_slave_@f@f
+vRS_latch
+R10
+!i10b 1
+!s100 gFMIzNzK5FHPVVl4`oCLm0
+I6U<j?zAk:?2PLF35V:8on2
+R2
+R0
+w1667845050
+8C:/Users/carib/CST133/lab5/RS_latch.v
+FC:/Users/carib/CST133/lab5/RS_latch.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/carib/CST133/lab5/RS_latch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/RS_latch.v|
+!i113 1
+R5
+R6
+R7
+n@r@s_latch
+vRS_latch_DF
+R10
+!i10b 1
+!s100 0n5z4<M0QVW18j28L5dV?3
+ICOV0mh4;XYl0J9MF0^COS0
+R2
+R0
+w1667948695
+8C:/Users/carib/CST133/lab5/RS_latch_DF.v
+FC:/Users/carib/CST133/lab5/RS_latch_DF.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/carib/CST133/lab5/RS_latch_DF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/lab5|C:/Users/carib/CST133/lab5/RS_latch_DF.v|
+!i113 1
+R5
+R6
+R7
+n@r@s_latch_@d@f

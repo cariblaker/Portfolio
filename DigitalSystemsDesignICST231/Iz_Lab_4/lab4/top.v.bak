@@ -1,0 +1,6 @@
+module top(
+	input clk,
+	input [3:0] cols,
+   output reg [3:0] key,
+	output reg [3:0] rows
+)

@@ -1,0 +1,84 @@
+
+
+module minutes_counter(
+	input project_clk,
+	input seconds_clk,
+	input rst,
+	input set,
+	output reg [4:0] minutes
+);
+
+	localparam count_seconds = 0;
+	localparam count_minutes = 1;
+
+	reg [4:0] count;
+	reg state;
+	
+	
+	initial
+		begin
+		
+			minutes <= 0;
+			count <= 0;
+		
+		end
+	
+
+	always @(posedge project_clk)
+		begin
+		
+			state <= set;
+		
+		end
+		
+		
+	always @(posedge seconds_clk or posedge rst)
+		begin
+		
+			if (rst)
+				begin
+					count <= 0;
+					minutes <= 0;
+				end
+			else
+				begin
+				
+					case (state)
+					
+						count_seconds :
+							begin
+								if (count < 60)
+									begin
+										count <= count + 1;
+										minutes <= minutes;
+									end
+								else
+									begin
+										count <= 0;
+										if (minutes < 60)
+											minutes <= minutes + 1;
+										else
+											minutes <= 0;
+									end
+							end
+						
+						count_minutes :
+							begin
+								if (minutes < 60)
+									minutes <= minutes + 1;
+								else
+									minutes <= 0;
+							end
+							
+						default :
+							begin
+								minutes <= minutes;
+								count <= count;
+							end
+							
+					endcase
+					
+				end
+		
+		end
+		

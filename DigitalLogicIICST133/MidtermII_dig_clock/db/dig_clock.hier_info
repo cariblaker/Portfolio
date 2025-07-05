@@ -1,0 +1,15 @@
+|dig_clock_counter
+clk => one_cnt[0]~reg0.CLK
+clk => one_cnt[1]~reg0.CLK
+clk => one_cnt[2]~reg0.CLK
+clk => ten_cnt~reg0.CLK
+reset => ten_cnt.OUTPUTSELECT
+reset => one_cnt.OUTPUTSELECT
+reset => one_cnt.OUTPUTSELECT
+reset => one_cnt.OUTPUTSELECT
+ten_cnt <= ten_cnt~reg0.DB_MAX_OUTPUT_PORT_TYPE
+one_cnt[0] <= one_cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+one_cnt[1] <= one_cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+one_cnt[2] <= one_cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

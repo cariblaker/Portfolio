@@ -1,0 +1,23 @@
+module shifter(
+	input sin,
+	input [3:0]A,
+	input [1:0]sel,
+	output [3:0]Y
+
+);
+
+
+
+	always @(sel)
+	begin
+	
+	
+	
+	
+	end
+
+
+
+
+
+endmodule 

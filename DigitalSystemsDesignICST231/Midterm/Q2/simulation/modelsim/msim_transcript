@@ -1,0 +1,115 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lot_counter_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Midterm/Q2 {C:/Users/carib/CST 231/Midterm/Q2/sensor_FSM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:35 on Mar 02,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Midterm/Q2" C:/Users/carib/CST 231/Midterm/Q2/sensor_FSM.v 
+# -- Compiling module sensor_FSM
+# 
+# Top level modules:
+# 	sensor_FSM
+# End time: 14:40:36 on Mar 02,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Midterm/Q2 {C:/Users/carib/CST 231/Midterm/Q2/BCD_ones.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:36 on Mar 02,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Midterm/Q2" C:/Users/carib/CST 231/Midterm/Q2/BCD_ones.v 
+# -- Compiling module BCD_ones
+# 
+# Top level modules:
+# 	BCD_ones
+# End time: 14:40:36 on Mar 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Midterm/Q2 {C:/Users/carib/CST 231/Midterm/Q2/BCD_tens.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:36 on Mar 02,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Midterm/Q2" C:/Users/carib/CST 231/Midterm/Q2/BCD_tens.v 
+# -- Compiling module BCD_tens
+# 
+# Top level modules:
+# 	BCD_tens
+# End time: 14:40:36 on Mar 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Midterm/Q2 {C:/Users/carib/CST 231/Midterm/Q2/lot_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:36 on Mar 02,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Midterm/Q2" C:/Users/carib/CST 231/Midterm/Q2/lot_counter.v 
+# -- Compiling module lot_counter
+# 
+# Top level modules:
+# 	lot_counter
+# End time: 14:40:36 on Mar 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST\ 231/Midterm/Q2 {C:/Users/carib/CST 231/Midterm/Q2/seg_7.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:36 on Mar 02,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST 231/Midterm/Q2" C:/Users/carib/CST 231/Midterm/Q2/seg_7.v 
+# -- Compiling module seg_7
+# 
+# Top level modules:
+# 	seg_7
+# End time: 14:40:36 on Mar 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do lot_counter.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:46 on Mar 02,2023
+# vlog -reportprogress 300 ../../BCD_ones.v ../../BCD_tens.v ../../lot_counter.v ../../seg_7.v ../../sensor_FSM.v 
+# -- Compiling module BCD_ones
+# -- Compiling module BCD_tens
+# -- Compiling module lot_counter
+# -- Compiling module seg_7
+# -- Compiling module sensor_FSM
+# 
+# Top level modules:
+# 	lot_counter
+# End time: 14:40:46 on Mar 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:40:46 on Mar 02,2023
+# vlog -reportprogress 300 BCD_ones_tb.v BCD_tens_tb.v lot_counter_tb.v sensor_FSM_tb.v 
+# -- Compiling module BCD_ones_tb
+# -- Compiling module BCD_tens_tb
+# -- Compiling module lot_counter_tb
+# -- Compiling module sensor_FSM_tb
+# 
+# Top level modules:
+# 	BCD_ones_tb
+# 	BCD_tens_tb
+# 	lot_counter_tb
+# 	sensor_FSM_tb
+# End time: 14:40:46 on Mar 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.lot_counter_tb -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivem_ver -L rtl_work -L work -voptargs=""+acc"" 
+# Start time: 14:40:47 on Mar 02,2023
+# Loading work.lot_counter_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.lot_counter
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.sensor_FSM
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.BCD_ones
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.BCD_tens
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.seg_7
+# ** Error (suppressible): (vsim-19) Failed to access library 'fiftyfivem_ver' at "fiftyfivem_ver".
+# No such file or directory. (errno = ENOENT)
+# End time: 14:41:20 on Mar 02,2023, Elapsed time: 0:00:33
+# Errors: 6, Warnings: 0

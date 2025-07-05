@@ -1,0 +1,78 @@
+module counter(
+	input updn,
+	input m,
+	input cen,
+	input rst,
+	input clk
+	output [2:0]Q
+);
+
+	(*syn_encoding = "sequential") parameter intit, state1, b2, b3, b4, b5, b6, b7;
+	(*syn_encoding = "gray") parameter g2 = 2, g3 = 3, g4 = 4, g5 = 5, g6 = 6, g7 = 7;
+	
+	reg [2:0]state;
+	
+	 
+	 always @(posedge clk or posedge rst)
+	 begin
+	 
+		if (rst)
+			state <= init;
+	 
+		else if (cen)
+			state <= state;
+		
+		else
+		begin
+		
+			if (m)				//gray code
+			begin
+			
+				if (updn)		//count up
+				begin
+					
+					case(state)
+						0 	:	state <= state1;
+						1 	:	state <= g2;
+						2	:	state <= g3;
+						3	:	state <= g4;
+						4	:  state <= g5;
+						5	: 	state <= g6;
+						6	:	state <= g7;
+						7	: 	state <= init;
+					endcase
+				
+				end 		//end updn if
+				
+				else
+				begin
+					
+					case(state)
+						7	:	state <= g6;
+						6	: 	state <=	g5;
+						5	:	state <= g4;
+						4	: 	state	<= g3;
+						3	:	state <= g2;
+						2	: 	state <= state1;
+						1	:	state <= init;
+						0	:	state <= g7;
+					endcase
+					
+						
+			
+			end	//end m if
+					
+			
+				
+			
+		
+		
+		end		//end rst/cen else
+	 
+	 end
+	
+	
+
+
+
+endmodule 

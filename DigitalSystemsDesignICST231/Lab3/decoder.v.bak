@@ -1,0 +1,22 @@
+module decoder(
+	input [1:0]cntrl,
+	output reg [3:0]pin
+);
+
+always @(cntrl)
+	begin
+
+		case (cntrl)
+			0: pin <= 4'b0001;
+			1: pin <= 4'b0010;
+			2: pin <= 4'b0100;
+			3: pin <= 4'b1000;
+		endcase
+
+	end	
+
+
+endmodule
+
+
+//control lines select which input of the mux is on the output. 

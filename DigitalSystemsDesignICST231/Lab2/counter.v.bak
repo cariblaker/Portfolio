@@ -1,0 +1,28 @@
+module counter(
+	input clk,
+	input rst,
+	input ena,
+	output reg [15:0]cnt
+);
+
+always @ (posedge clk or posedge rst)		//asynch reset
+	begin
+
+		if (rst)
+			cnt <= 0;
+		
+		else
+			begin
+	
+				if (ena)
+					cnt <= cnt + 1;
+				
+				else
+					cnt <= cnt;
+				
+			end
+
+	end
+
+
+endmodule

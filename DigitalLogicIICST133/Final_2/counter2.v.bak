@@ -1,0 +1,62 @@
+//this version takes the sequence of numbers in whichever code it switches to and continues counting from there, ignoring the decimal equivalents
+
+module counter2(
+	input updn,
+	input m,
+	input cen,
+	input rst,
+	input clk,
+	output reg [2:0]Q
+);
+
+	parameter init = 0, g1 = 1, g2 = 3'b011, g3 = 1'b010, g4 = 3'b110, g5 = 3'b111, g6 = 3'b101, g7 = 3'b100;
+	
+	(**)reg [2:0]state;
+	
+	initial
+	begin
+	
+		state <= init;
+	
+	end
+	
+	 
+	 always @(posedge clk or posedge rst)
+	 begin
+	 
+		if (rst)
+			state <= init;
+	 
+		else if (~cen)
+			state <= state;
+		
+		else
+		begin
+			case(updn)
+				0 :	state <= state - 1;
+				1 : 	state <= state + 1;
+				
+			endcase		// end m case 
+		
+		
+		end		//end encompassing else
+	 
+	 end		//end always
+	 
+	 always @(state)
+	 begin
+		case (m)
+		0: Q <= state;
+		1: begin
+			
+		
+		
+		end //m case
+			
+	 end	//always
+	
+	
+
+
+
+endmodule 

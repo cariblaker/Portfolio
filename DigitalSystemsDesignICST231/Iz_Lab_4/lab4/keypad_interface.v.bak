@@ -1,0 +1,41 @@
+module keypad_interface (
+	input clk,
+	input [3:0] cols,
+   output reg [3:0] rows,
+   output reg [3:0] key_out
+);
+
+reg [3:0] decoded_key;
+reg [3:0] current_row;
+
+// Scan each row one at a time
+always @ (posedge clk) 
+	begin
+		case (current_row)
+			4'b0001: rows <= 4'b1110; // set row 1 to '0'
+			4'b0010: rows <= 4'b1101; // set row 2 to '0'
+			4'b0100: rows <= 4'b1011; // set row 3 to '0'
+			4'b1000: rows <= 4'b0111; // set row 4 to '0'
+			default: rows <= 4'b1111; // all rows set to '1'
+    endcase
+		current_row <= current_row << 1;
+    if (current_row == 4'b10000) 
+		current_row <= 4'b0001;
+  end
+
+  // Decode the key from the columns
+always @ (cols) 
+	begin
+		case (cols)
+			4'b1110: decoded_key = 4'b0001; // key 1
+			4'b1101: decoded_key = 4'b0010; // key 2
+			4'b1011: decoded_key = 4'b0011; // key 3
+      // similarly decode all the keys
+			default: decoded_key = 4'b0000; // no key pressed
+		endcase
+	end
+  // Store the decoded key in the key_out signal
+always @ (posedge clk)
+	key_out <= decoded_key;
+
+endmodule 

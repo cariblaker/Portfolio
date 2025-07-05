@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/HW1/simulation/modelsim
+vShifter
+!s110 1674293024
+!i10b 1
+!s100 ^X7;HHf8Ci11S94iCO4<X0
+ICW^<_?gOEULPZ]i1<3c^<2
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1674286423
+8C:/Users/carib/CST 231/HW1/Shifter.v
+FC:/Users/carib/CST 231/HW1/Shifter.v
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1674293024.000000
+!s107 C:/Users/carib/CST 231/HW1/Shifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST 231/HW1|C:/Users/carib/CST 231/HW1/Shifter.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+C:/Users/carib/CST 231/HW1}
+tCvgOpt 0
+n@shifter

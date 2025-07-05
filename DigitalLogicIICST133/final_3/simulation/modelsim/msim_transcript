@@ -1,0 +1,51 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# do final_3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/carib/CST133/final_3 {C:/Users/carib/CST133/final_3/jkflipflop.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:09:19 on Dec 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/carib/CST133/final_3" C:/Users/carib/CST133/final_3/jkflipflop.v 
+# -- Compiling module jkflipflop
+# 
+# Top level modules:
+# 	jkflipflop
+# End time: 01:09:19 on Dec 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.jkflipflop
+# vsim work.jkflipflop 
+# Start time: 01:10:06 on Dec 15,2022
+# Loading work.jkflipflop
+# **** Error: LoadCompleteQ cmd: Transcript::ViewSimPanes sim
+# ****        Bad sequence in.main_pane.structure.interior.cs.body.struct.lwchildsite.clipper.canvas.sfchildsite.tree, aborting query. (2)
+# Bad sequence in.main_pane.structure.interior.cs.body.struct.lwchildsite.clipper.canvas.sfchildsite.tree, aborting query. (2)
+#     while executing
+# "Structure::CreateWindow $dataset_name"
+#     (procedure "Transcript::ViewSimPanes" line 28)
+#     invoked from within
+# "Transcript::ViewSimPanes sim"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $p $tankNamespace "
+add wave sim:/jkflipflop/*
+force -freeze sim:/jkflipflop/j 0 0, 1 {50 ps} -r 100
+force -freeze sim:/jkflipflop/k 0 0, 1 {100 ps} -r 200
+force -freeze sim:/jkflipflop/clk 0 0, 1 {25 ps} -r 50
+run
+run
+run
+run
+run
+run
+run
+# End time: 01:19:29 on Dec 15,2022, Elapsed time: 0:09:23
+# Errors: 1, Warnings: 0

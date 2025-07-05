@@ -1,0 +1,25 @@
+|padlock
+reset => Selector8.IN5
+reset => state~3.DATAIN
+reset => Selector5.IN5
+clk => state~1.DATAIN
+code[0] => Equal0.IN3
+code[0] => Equal1.IN3
+code[0] => Equal2.IN3
+code[0] => Equal3.IN0
+code[1] => Equal0.IN0
+code[1] => Equal1.IN2
+code[1] => Equal2.IN2
+code[1] => Equal3.IN3
+code[2] => Equal0.IN2
+code[2] => Equal1.IN0
+code[2] => Equal2.IN1
+code[2] => Equal3.IN2
+code[3] => Equal0.IN1
+code[3] => Equal1.IN1
+code[3] => Equal2.IN0
+code[3] => Equal3.IN1
+unlock <= unlock.DB_MAX_OUTPUT_PORT_TYPE
+err <= err.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,22 @@
+module gated_RS(
+input S,
+input clk,
+input R,
+output Q,
+output Q_not
+
+);
+
+
+
+wire W0, W1;
+
+W0 = ~(S & clk);
+W1 = ~(R & clk);
+
+Q = ~(W0 & Qnot);
+Q_not = ~(W1 & Q);
+
+
+
+endmodule 

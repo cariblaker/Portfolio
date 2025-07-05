@@ -1,0 +1,26 @@
+module Final_1(
+	input clk,
+	output reg [2:0]X
+
+);
+
+	wire D1, W2, W3;
+	wire [2:0]Q;
+	
+	
+	NOR U1(W3, Q[0], Q[1]);
+	XOR U2(W2, Q[1], Q[2]);
+	XOR U3(D1, W2, W3);
+
+
+	D_FF FF1(D1, clk, Q[0]);
+	D_FF FF2(Q[0], clk, Q[1]);
+	D_FF FF3(Q[1], clk, Q[2]);
+	
+	X[0] = Q[0];
+	X[1] = Q[1];
+	X[2] = Q[2];
+
+
+
+endmodule 

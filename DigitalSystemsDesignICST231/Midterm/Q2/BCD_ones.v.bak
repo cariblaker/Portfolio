@@ -1,0 +1,67 @@
+
+
+module BCD_ones(
+	input clk,
+	input rst,
+	input inc,
+	input dec,
+	output reg[3:0]num
+	output reg up,
+	output reg down
+);
+
+	reg [3:0]count;
+	
+	always @(posedge clk or posedge rst)
+		begin
+			if (rst)
+				count <= 0;
+			else 
+				begin
+				
+					if (inc)
+						begin
+							count <= count + 1;
+							if (count == 10)
+								begin
+									up <= 1'b1;
+									count <= 0;
+								end
+							else
+								up <= 1'b0;
+						end
+					
+					else if (dec)
+						begin
+							if (count == 0)
+								begin
+									down <= 1'b1;
+									count <= 9;
+								end
+							else
+								begin
+									count <= count - 1;
+								end
+						end
+						
+					else
+						begin
+							count <= count;
+						end
+		end
+
+
+
+	always @(posedge clk or posedge rst)
+		begin
+		
+			if (rst)
+				num <= 7'b0000000;
+			
+			else
+				num <= count;
+		
+		end
+		
+		
+endmodule

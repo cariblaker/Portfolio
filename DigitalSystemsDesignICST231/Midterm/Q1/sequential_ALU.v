@@ -1,0 +1,18 @@
+
+
+module sequential_ALU(
+	input clk,
+	input reset,
+	input [3:0]Data,
+	input [2:0]Opcode,
+	input GO,
+	output reg cout,
+	output reg borrow,
+	output reg [3:0]Result, 
+	output reg led_idle, led_wait, led_rdy, led_done
+);
+
+	ALU U1(clk, reset, Data, Opcode, GO, cout, borrow, Result, led_idle, led_wait, led_rdy, led_done);
+
+
+endmodule

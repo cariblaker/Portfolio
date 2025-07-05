@@ -1,0 +1,42 @@
+|encoder
+a[0] => y[3].IN0
+a[1] => y[3].IN1
+a[1] => y[0].DATAA
+a[2] => y[0].OUTPUTSELECT
+a[2] => y[3].IN1
+a[2] => y[1].DATAA
+a[3] => y[0].OUTPUTSELECT
+a[3] => y[1].OUTPUTSELECT
+a[3] => y[3].IN1
+a[4] => y[0].OUTPUTSELECT
+a[4] => y[1].OUTPUTSELECT
+a[4] => y[3].IN1
+a[4] => y[2].DATAA
+a[5] => y[0].OUTPUTSELECT
+a[5] => y[1].OUTPUTSELECT
+a[5] => y[2].OUTPUTSELECT
+a[5] => y[3].IN1
+a[6] => y[0].OUTPUTSELECT
+a[6] => y[1].OUTPUTSELECT
+a[6] => y[2].OUTPUTSELECT
+a[6] => y[3].IN1
+a[7] => y[0].OUTPUTSELECT
+a[7] => y[1].OUTPUTSELECT
+a[7] => y[2].OUTPUTSELECT
+a[7] => y[3].IN1
+a[8] => y[0].OUTPUTSELECT
+a[8] => y[1].OUTPUTSELECT
+a[8] => y[2].OUTPUTSELECT
+a[8] => y[3].IN1
+a[8] => y[3].DATAA
+a[9] => y[0].OUTPUTSELECT
+a[9] => y[1].OUTPUTSELECT
+a[9] => y[2].OUTPUTSELECT
+a[9] => y[3].IN1
+a[9] => y[3].OUTPUTSELECT
+y[0] <= y[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

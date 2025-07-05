@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST133/Lab3b/simulation/modelsim
+vencoder
+Z1 !s110 1666756950
+!i10b 1
+!s100 [[EeBl1MCXHIANG[AE4m?1
+IRgjXSzR`7`aFD4oC;l^?10
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1666756331
+8C:/Users/carib/CST133/Lab3b/encoder.v
+FC:/Users/carib/CST133/Lab3b/encoder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1666756950.000000
+!s107 C:/Users/carib/CST133/Lab3b/encoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab3b|C:/Users/carib/CST133/Lab3b/encoder.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/carib/CST133/Lab3b
+Z7 tCvgOpt 0
+vLab3b
+R1
+!i10b 1
+!s100 o==8G@<>8YmcgIJ0SW`Z;0
+IWi=S4[c_oFU^B12VVT9Un1
+R2
+R0
+w1666752442
+8C:/Users/carib/CST133/Lab3b/Lab3b.v
+FC:/Users/carib/CST133/Lab3b/Lab3b.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/carib/CST133/Lab3b/Lab3b.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/carib/CST133/Lab3b|C:/Users/carib/CST133/Lab3b/Lab3b.v|
+!i113 1
+R5
+R6
+R7
+n@lab3b

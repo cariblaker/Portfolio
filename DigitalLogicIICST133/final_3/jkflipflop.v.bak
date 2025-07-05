@@ -1,0 +1,9 @@
+module jkflipflop(
+    input j,
+    input k,
+    input set,
+    input reset,
+    input clk,
+    output reg q,
+    output qn
+);

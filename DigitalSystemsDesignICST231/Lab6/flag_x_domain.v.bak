@@ -1,0 +1,26 @@
+module flag_X_domain(
+	input clkA,
+	input flag_A,
+	input clkB,
+	output flag_B
+);
+
+
+	reg flag_toggle_A;
+	
+	always @(posedge clkA)
+		begin
+			flag_toggle_A <= flag_toggleA ^ flag_A;
+		end
+		
+	reg [2:0]sync;
+	
+	always @(posedge clkB)
+		begin
+			sync <= {sync[1:0], flag_toggleA};
+		end
+		
+	assign flag_B = (sync[2] ^ sync[1]);
+	
+	
+endmodule

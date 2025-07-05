@@ -1,0 +1,26 @@
+module mux(
+	input [1:0]cntrl;
+	input [6:0]ones,
+	input [6:0]tens,
+	input [6:0]hundreds,
+	input [6:0]thousands
+	output reg [6:0]seg_7
+);
+
+
+always @(cntrl)
+	begin
+	
+		case(cntrl)
+			0 : seg_7 <= ones;
+			1 : seg_7 <= tens;
+			2 : seg_7 <= hundreds;
+			3 : seg_7 <= thousands;
+			default : seg_7 <= 7'b1111111;
+		endcase
+	
+	end
+
+
+
+endmodule 

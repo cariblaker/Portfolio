@@ -1,0 +1,330 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/Final_2/simulation/modelsim
+vampm
+Z1 !s110 1679184859
+!i10b 1
+!s100 7f29XEgLnEOK?=fKzTRl70
+I3?^e@LL:N_3lYJ=RYOMDC1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1679132884
+8../../ampm.v
+F../../ampm.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1679184859.000000
+Z5 !s107 ../../seg_7.v|../../seconds_counter.v|../../minutes_counter.v|../../hours_counter.v|../../display.v|../../digital_clock.v|../../counting.v|../../clock_control.v|../../clk_dv.v|../../bin2bcd.v|../../ampm.v|
+Z6 !s90 -reportprogress|300|../../ampm.v|../../bin2bcd.v|../../clk_dv.v|../../clock_control.v|../../counting.v|../../digital_clock.v|../../display.v|../../hours_counter.v|../../minutes_counter.v|../../seconds_counter.v|../../seg_7.v|
+!i113 1
+Z7 tCvgOpt 0
+vbin2bcd
+R1
+!i10b 1
+!s100 M8ULhlS_X]bn_GA0fWU`K3
+IMeHzC9hkQj`=UcX:;h1jW2
+R2
+R0
+w1679074885
+8../../bin2bcd.v
+F../../bin2bcd.v
+L0 27
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vclk_dv
+R1
+!i10b 1
+!s100 R`ha7;2]mFcLP[bU<EhcX0
+I^hPJdGoIic9n=8gTG5@om2
+R2
+R0
+w1678996271
+8../../clk_dv.v
+F../../clk_dv.v
+L0 21
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vclock_control
+R1
+!i10b 1
+!s100 o7HPa;HKIJf`XMIi5WTRl1
+I4[Y<?HhX6ik[4aQnYoTkW3
+R2
+R0
+w1679130853
+8../../clock_control.v
+F../../clock_control.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vclock_control_tb
+R1
+!i10b 1
+!s100 CZ35dMb25C0@RoPO^g]kj1
+I3Lcz`hgXIYT8U;b2E<6lB2
+R2
+R0
+w1679028412
+8clock_control_tb.v
+Fclock_control_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+Z8 !s107 seconds_counter_tb.v|minutes_counter_tb.v|hours_counter_tb.v|counting_tb.v|clock_control_tb.v|
+Z9 !s90 -reportprogress|300|clock_control_tb.v|counting_tb.v|hours_counter_tb.v|minutes_counter_tb.v|seconds_counter_tb.v|
+!i113 1
+R7
+vcounting
+R1
+!i10b 1
+!s100 7BJ7A2[dXNdLM^8:Q:g_G3
+IkaMV?Rzc>HP@TC1RdBA`91
+R2
+R0
+w1679184852
+8../../counting.v
+F../../counting.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vcounting_tb
+R1
+!i10b 1
+!s100 3Q:o31_McHiZPN>lcFhoO0
+IzS[1aH9d]E11RffJ4z7M_0
+R2
+R0
+w1679184807
+8counting_tb.v
+Fcounting_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R9
+!i113 1
+R7
+vdigital_clock
+R1
+!i10b 1
+!s100 JPI238<c5me=;V`GVQ@H`0
+I=24?^f^J;1ODEnFZ=GiLm1
+R2
+R0
+w1679132308
+8../../digital_clock.v
+F../../digital_clock.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vdisplay
+R1
+!i10b 1
+!s100 P0OncQehX0L`aJ<;Ek>Tc2
+I3D_O3O`[0V[Q>Z;Am^V=g2
+R2
+R0
+w1679078347
+8../../display.v
+F../../display.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vhours_counter
+R1
+!i10b 1
+!s100 XO<`[R[>hKkTQl^K03:Z=3
+IW_k]Pe;T4Oc5::=;8cK:80
+R2
+R0
+w1679183265
+8../../hours_counter.v
+F../../hours_counter.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vhours_counter_tb
+R1
+!i10b 1
+!s100 <74El5W=FYAVz4RJElD291
+I2<U36hkYRz6ADI[S:H@jG3
+R2
+R0
+w1679182252
+8hours_counter_tb.v
+Fhours_counter_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R9
+!i113 1
+R7
+vminutes_counter
+R1
+!i10b 1
+!s100 QHiDG8?i6LD7FR?32;AcK2
+I[eig`B]O]RA=3F[MbCzLf1
+R2
+R0
+w1679130852
+8../../minutes_counter.v
+F../../minutes_counter.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vminutes_counter_tb
+R1
+!i10b 1
+!s100 b@DR4dGm^AF[dMd?N<Lal0
+I<S^<V_YgY;l<D<nIQmf=G0
+R2
+R0
+w1679182306
+8minutes_counter_tb.v
+Fminutes_counter_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R9
+!i113 1
+R7
+vseconds_counter
+R1
+!i10b 1
+!s100 j5Z56dIW2AbIG3AH]BETj3
+I[TQCM]6:8B9<NBa1jcAz20
+R2
+R0
+w1679019053
+8../../seconds_counter.v
+F../../seconds_counter.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vseconds_counter_tb
+R1
+!i10b 1
+!s100 bEnHH2B582nO1[<[bfkIT0
+IZa@hWe09fifoj[eRBfjdF3
+R2
+R0
+w1679019493
+8seconds_counter_tb.v
+Fseconds_counter_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R8
+R9
+!i113 1
+R7
+vseg_7
+R1
+!i10b 1
+!s100 QEfM8LE_FbclkgdH3b7VU2
+Ie1AhM<jk;hc:9=P8eI@gm1
+R2
+R0
+w1679074906
+8../../seg_7.v
+F../../seg_7.v
+L0 22
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7

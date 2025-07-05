@@ -1,0 +1,35 @@
+`timescale 1ns / 1ps
+
+module main_FSM_tb;
+
+	reg clk, rst, b3, b2, b1, b0;
+	reg [2:0]left_in, right_in;
+	reg [5:0]haz_in, leds;
+
+	wire L, H, R;
+
+	main_FSM T1(clk, rst, b3, b2, b1, b0, left_in, haz_in, right_in, L, H, R, leds);
+	
+	
+	initial
+		begin
+			clk <= 1'b0;
+			rst <= 1'b0;
+			{b3, b2, b1, b0} <= 4'b0000;
+			{left_in, right_in} <= 6'b000000;
+			{haz_in, leds} <= 12'b000000000000;
+			
+			
+			
+			#2777 rst <= 1'b1;
+			#1 rst <= 1'b0;
+		end
+		
+		
+	always
+		begin
+			#1 clk <= ~clk;
+		end
+		
+		
+endmodule

@@ -1,0 +1,14 @@
+module Lab1(
+	input a,
+	input b,
+	output c
+);
+
+
+	input_num U1(a);
+	input_num U2(b);
+	
+	adder U3(a, b, c);
+
+
+endmodule

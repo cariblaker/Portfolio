@@ -1,0 +1,59 @@
+
+
+
+module clock_control(
+	input clk,
+	input rst,
+	input set, set_h, set_m,				//going to try without inputs/outputs for actual numbers... if it doesn't sink, try taking the outputs from the counters and bringing them in as inputs here and outputting them from this module
+	output setting, 							//will stop all counts
+	output setting_h,							//will increase hours only
+	output setting_m							//will increase minutes only
+);
+
+	
+	initial
+		begin
+			setting <= 0;
+			setting_h <= 0;
+			setting_m <= 0;
+		end
+
+	
+	always @(posedge clk)
+		begin
+			
+			casex ({set, set_h, set_m}) 					//active low buttons
+				3'b111 : 	state <= run;
+				3'b011 : 	state <= stop;
+				3'b00x : 	state <= change_mins;
+				3'b0x0 : 	state <= change_hrs;
+				default : 	state <= run;
+			endcase
+		
+		end
+		
+	always @(posedge clk or posedge rst)
+		begin
+		
+			if (rst)
+				begin
+					{setting, setting_h, setting_m} <= 3'b000;
+				end
+				
+			else
+				begin
+				
+					case (state)
+						run 			: {setting, setting_h, setting_m} <= 3'b000;
+						stop 			: {setting, setting_h, setting_m} <= 3'b100;
+						change_mins : {setting, setting_h, setting_m} <= 3'b101;
+						change_hrs 	: {setting, setting_h, setting_m} <= 3'b110;
+						default 		: {setting, setting_h, setting_m} <= 3'b000;
+					endcase
+					
+				end
+		
+		end
+
+
+endmodule

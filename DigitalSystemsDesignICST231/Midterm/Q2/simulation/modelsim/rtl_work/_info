@@ -1,0 +1,196 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/carib/CST 231/Midterm/Q2/simulation/modelsim
+vBCD_ones
+Z1 !s110 1677796846
+!i10b 1
+!s100 :iH`eXCa50kHY5]G6PeBZ0
+IVU`iV2F6:O@UGOM[SO7I00
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1677796749
+8../../BCD_ones.v
+F../../BCD_ones.v
+Z3 L0 19
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1677796846.000000
+Z6 !s107 ../../sensor_FSM.v|../../seg_7.v|../../lot_counter.v|../../BCD_tens.v|../../BCD_ones.v|
+Z7 !s90 -reportprogress|300|../../BCD_ones.v|../../BCD_tens.v|../../lot_counter.v|../../seg_7.v|../../sensor_FSM.v|
+!i113 1
+Z8 tCvgOpt 0
+n@b@c@d_ones
+vBCD_ones_tb
+R1
+!i10b 1
+!s100 74[@OTlN7OB43Z4CMz4a50
+I2:BIz>KR2MH;ZnnU;;d5e3
+R2
+R0
+w1677784680
+8BCD_ones_tb.v
+FBCD_ones_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 sensor_FSM_tb.v|lot_counter_tb.v|BCD_tens_tb.v|BCD_ones_tb.v|
+Z10 !s90 -reportprogress|300|BCD_ones_tb.v|BCD_tens_tb.v|lot_counter_tb.v|sensor_FSM_tb.v|
+!i113 1
+R8
+n@b@c@d_ones_tb
+vBCD_tens
+R1
+!i10b 1
+!s100 NGO9iDRG>nD[CN8A]EAoj3
+IWB^MfKW_`NFYIB=^4?AT13
+R2
+R0
+Z11 w1677796750
+8../../BCD_tens.v
+F../../BCD_tens.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+n@b@c@d_tens
+vBCD_tens_tb
+R1
+!i10b 1
+!s100 5ze5<WO];06>[R5njF_OZ3
+IYHUbzNd2A8ohc`O6]8=R[1
+R2
+R0
+w1677786347
+8BCD_tens_tb.v
+FBCD_tens_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R10
+!i113 1
+R8
+n@b@c@d_tens_tb
+vlot_counter
+R1
+!i10b 1
+!s100 1o8:b8nXhUWoGmEjfDlO12
+IPbi[7klYBMjE2R3_FOG?>2
+R2
+R0
+w1677796751
+8../../lot_counter.v
+F../../lot_counter.v
+Z12 L0 17
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vlot_counter_tb
+R1
+!i10b 1
+!s100 5D]i?zaN_W=IDI<>_?5840
+IO6?QeOl`;j3`JKURf:VNS3
+R2
+R0
+w1677795204
+8lot_counter_tb.v
+Flot_counter_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R10
+!i113 1
+R8
+vseg_7
+R1
+!i10b 1
+!s100 M2@8zj8M48WK>UYWMz_Ca2
+IIC]k5l=i9<ln61EmaUnl:0
+R2
+R0
+R11
+8../../seg_7.v
+F../../seg_7.v
+L0 18
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+vsensor_FSM
+R1
+!i10b 1
+!s100 z0d=9L=GY3mO4X8`7c>j<0
+Ie2iMX0A2z_io;K6c]9I9m2
+R2
+R0
+w1677796748
+8../../sensor_FSM.v
+F../../sensor_FSM.v
+R12
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+nsensor_@f@s@m
+vsensor_FSM_tb
+R1
+!i10b 1
+!s100 22D^TUhj_1I[4h8I>`78o3
+Ie17J@9zDHiklFGTU060@^0
+R2
+R0
+w1677735257
+8sensor_FSM_tb.v
+Fsensor_FSM_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R10
+!i113 1
+R8
+nsensor_@f@s@m_tb
