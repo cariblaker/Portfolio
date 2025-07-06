@@ -1,0 +1,200 @@
+//this should be the final version of the graph app for the smart stepper.
+//created 2/20/24
+
+
+
+// Constants
+const COLORS = {
+  GREEN: "#00FF00",
+  RED: "#FF0000",
+  BLACK: "#000000"
+};
+  
+const BAR_SPACING = 2;                                    //space between left & right is always 2 pixels
+const BAR_WIDTH = 7;                                      //width of bar is always 7 pixels
+const STARTING_X = 10;                                    //initial X position is always 10 pixels
+const STARTING_DAY = 7;                                   //Today is the seventh day on the graph
+const STARTING_Y = 150;                                   //initial Y position is always 150 pixels
+const DAYS_OF_WEEK = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; //Sun = 0, Sat = 6
+
+//create a bar class
+//accepts a date to associate with a bar and "num" which is the number of the day in relation to today (today = 0, yesterday = 1, etc.)
+class Bar {
+  constructor(day, date, num){
+    this.day = day;
+    this.date = date;
+    this.day_relation = num;
+    //read the file contents into a string
+    this.file_contents = require("Storage").read(date);
+
+    if (this.file_contents){    //if the file exists and is not empty, then parse it into left & right foot info
+      this.parse_file(file_contents);
+    }
+
+    else {                      //otherwise, assign 0's to all the left & right foot steps
+      this.left = new Foot(0, 0, num * STARTING_X);
+      this.right = new Foot(0, 0, ( (num * STARTING_X) + BAR_SPACING + BAR_WIDTH ) );
+    }
+    this.highest_total = (this.left.total >= this.right.total) ? this.left.total : this.right.total;
+  }
+  
+  parse_file(contents){
+    let lines = contents.split("\n");
+    let leftValues = lines[0].split(" ");
+    let rightValues = lines[1].split(" ");
+    this.left = new Foot( parseInt(leftValues[0], 10), parseInt(leftValues[1], 10), num * STARTING_X );
+    this.right = new Foot( parseInt(rightValues[3], 10), parseInt(rightValues[4], 10), ( (num * STARTING_X) + BAR_SPACING + BAR_WIDTH ) );
+  }
+  
+  update(){
+    let temp = require("Storage").read(this.date);
+    if (temp != this.file_contents){
+      temp.split("\n").split(" ");
+      this.left.update(parseInt(temp[0], 10), parseInt(temp[1], 10));
+      this.right.update(parseInt(temp[3], 10), parseInt(temp[4], 10));
+      //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<make sure this ends up working rightttt
+      let newData = `${this.left.good} ${this.left.bad}\n${this.right.good} ${this.right.bad}`;
+      require("Storage").write(this.date, newData);
+    }
+  }
+}
+ 
+//foot class keeps track of good steps, bad steps, totals, front/behind colors, and x, y positionings
+class Foot {
+  constructor(good, bad, x){
+      //assign step tallies
+      this.good += good;
+      this.bad += bad;
+      this.total = this.good + this.bad;
+      this.bottom_steps = ( this.bad > this.good ) ? this.good : this.bad;
+      this.top_steps = (this.bad > this.good ) ? this.bad : this.good;
+      //assign bar colors--the "top" bar represents the larger type of step (good[green]/bad[red])
+      this.bottom_color = ( this.bad > this.good ) ? GREEN : RED;
+      this.top_color = (this.bad > this.good ) ? RED : GREEN;
+      //assign bar positions
+      this.x_start = x;
+      this.x_finish = x + BAR_WIDTH;
+      this.y_bottom_start = STARTING_Y;
+      this.y_top_start = 0;
+      this.y_bottom_finish = 0;
+      this.y_top_finish = 0;
+    }
+  
+  set_y_bottom_finish(y){
+    this.y_top_start = y;
+    this.y_bottom_finish = y;
+  }
+  set_y_top_finish(y){
+    this.y_top_finish = y;
+  }
+  
+  update(good, bad){
+      //assign step tallies
+      this.good += good;
+      this.bad += bad;
+      this.total = this.good + this.bad;
+      this.bottom_steps = ( this.bad > this.good ) ? this.good : this.bad;
+      this.top_steps = (this.bad > this.good ) ? this.bad : this.good;
+      //assign bar colors--the "top" bar represents the larger type of step (good[green]/bad[red])
+      this.bottom_color = ( this.bad > this.good ) ? GREEN : RED;
+      this.top_color = (this.bad > this.good ) ? RED : GREEN;
+  }
+  
+  
+}
+
+//create an array of the relevant dates
+//start by getting today's date, & putting it into a string.
+let todays_date = new Date();
+let year = todays_date.getFullYear();
+let month = todays_date.getMonth() + 1;             //returns 0-based, must add 1
+let day_of_month = todays_date.getDate();
+let day = todays_date.getDay();
+
+var date_string = day_of_month + '-' + month + '-' + year;
+
+// Calculate the date strings for the six previous days & get all date strings into an array together
+var DateStrings = [];
+DateStrings.push(date_string);
+
+//create array to hold all 7 days of bars
+let bars = [];
+bars[7] = new Bar(day, date_string, 7);
+let j = 6;
+for (let i = 1; i < 7; i++) {              //this loop creates the rest of the date strings AND the bars!
+    previousDate = new Date();
+    previousDate.setDate(day_of_month - i);
+    new_day = previousDate.getDay();
+    new_day_of_month = previousDate.getDate();
+    new_month = previousDate.getMonth() + 1;
+    new_year = previousDate.getFullYear();
+    new_date_string = new_day_of_month + '-' + new_month + '-' + year;
+    DateStrings.push(new_date_string);
+    bars[j] = new Bar(new_day, new_date_string, j);
+    j--;
+}
+
+//the format of file names will be D-M-Y, as in the DateStrings array.
+
+function prepGraph(){
+  //figure out the max steps, and pixels per step for this graph
+  let max_steps = 0;
+  bars.forEach(function(bar) {
+    if (bar.highest_total > max_steps) {
+      max_steps = bar.highest_total;
+    }
+  });
+
+  let pix_per_step = (STARTING_Y / max_steps);
+
+  bars.forEach(function(bar) {
+    bar.left.set_y_bottom_finish( bar.left.y_bottom_start - (bar.left.bottom_steps * pix_per_step) );
+    bar.left.set_y_top_finish( bar.left.y_top_start - (bar.left.top_steps * pix_per_step) );
+    bar.right.set_y_bottom_finish(bar.right.y_bottom_start - (bar.right.bottom_steps * pix_per_step) );
+    bar.right.set_y_top_finish(bar.right.y_top_start - (bar.right.top_steps * pix_per_step) );
+  });
+    // Set up the Bangle.JS LCD screen
+  g.clear();
+  g.setFont("6x8");
+}
+
+
+
+// Draw the graph
+function drawGraph() {
+  bars.forEach(function(bar){
+    //draw both left bars
+    g.setColor(bar.left.bottom_color);
+    g.fillRect(bar.left.x_start, bar.left.y_bottom_start, bar.left.x_finish, bar.left.y_bottom_finish);
+    g.setColor(bar.left.top_color);
+    g.fillRect(bar.left.x_start, bar.left.y_top_start, bar.left.x_finish, bar.left.y_top_finish);
+    //draw the L label
+    g.setColor(BLACK);
+    g.setFont("4x6");
+    g.drawString("L", bar.left.x_start, bar.left.y_bottom_start + 3);
+    //draw both right bars
+    g.setColor(bar.right.bottom_color);
+    g.fillRect(bar.right.x_start, bar.right.y_bottom_start, bar.right.x_finish, bar.right.y_bottom_finish);
+    g.setColor(bar.right.top_color);
+    g.fillRect(bar.right.x_start. bar.right.y_top_start, bar.right.x_finish, bar.right.y_top_finish);
+    //draw the R label
+    g.setColor(BLACK);
+    g.setFont("4x6");
+    g.drawString("R", bar.right.x_start, bar.right.y_bottom_start + 3);
+    //draw the day label beneath day's steps on X axis
+    g.setColor(BLACK);
+    g.setFont("4x6");
+    g.drawString(bar.day, bar.left.x_start, STARTING_Y + 5);
+  });
+  g.flip();
+}
+
+//display time & battery info<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+//surround all of this in a loop that refreshes every minute<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+               
+while (true){//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<figure this out
+    bar[7].update();
+    prepGraph();
+    drawGraph();
+  }

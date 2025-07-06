@@ -1,0 +1,240 @@
+// Initialize data for the week's steps
+let left_steps_data = require("Storage").readJSON("stepsData.json") || [];
+if (!left_steps_data.length) {
+  // Provide default data if the file is not found or invalid
+  left_steps_data = [
+    { day: 'Mon', steps: { good: 50, bad: 100 } },
+    { day: 'Tue', steps: { good: 700, bad: 150 } },
+    { day: 'Wed', steps: {good: 800, bad: 50 } },
+    { day: 'Thr', steps: { good: 900, bad: 76 } },
+    { day: 'Fri', steps: { good: 950, bad: 90 } },
+    { day: 'Sat', steps: { good: 1000, bad: 50 } },
+    { day: 'Sun', steps: { good: 200, bad: 200 } }
+  ];
+}
+
+let right_steps_data = require("Storage").readJSON("stepsData.json") || [];
+if (!right_steps_data.length) {
+  // Provide default data if the file is not found or invalid
+  right_steps_data = [
+    { day: 'Mon', steps: { good: 100, bad: 50 } },
+    { day: 'Tue', steps: { good: 100, bad: 150 } },
+    { day: 'Wed', steps: { good: 200, bad: 50 } },
+    { day: 'Thr', steps: { good: 300, bad: 76 } },
+    { day: 'Fri', steps: { good: 90, bad: 90 } },
+    { day: 'Sat', steps: { good: 10, bad: 500 } },
+    { day: 'Sun', steps: { good: 20, bad: 200 } }
+  ];
+}
+
+const green = "#00FF00";
+const red = "#FF0000";
+const screen_size = 240;
+const y_offset = 150;
+const num_labels = 5;
+//const y_div = screen_size / 5;
+
+
+
+
+class Bar {  //the class that constructs a day's bar on the graph, including good/bad, left/right steps for the day
+
+  constructor(data_left, data_right, x, y){
+    if (data_left.day != data_right.day){ 
+      console.log("ERROR!!!! Days for feet do not match!!!!");
+    }
+    this.day = data_left.day;          //the day that will be printed on the X axis under the bar
+    this.left_good = data_left.steps.good;
+    this.left_bad = data_left.steps.bad;
+    this.right_good = data_right.steps.good;
+    this.right_bad = data_right.steps.bad;
+    this.front_num = (this.left_good > this.left_bad) ? this.left_bad : this.left_good;  //gives number of steps for front bar
+    this.behind_num = (this.left_good > this.left_bad) ? this.left_good : this.left_bad;  //gives number of steps for behind bar
+    this.left_front = (this.left_bad >= this.left_good) ? green : red;
+    this.left_behind = (this.left_bad >= this.left_good) ? red : green;
+    this.right_front = (this.right_bad >= this.right_good) ? green : red;
+    this.right_behind = (this.right_bad >= this.right_good) ? red : green;
+    this.left_total = this.left_good + this.left_bad;
+    this.right_total = this.right_good + this.right_bad;
+    //bar positioning
+    this.x_pos_left = x;
+    this.width = 10;
+    this.x_pos_right = x + this.width;
+    this.y_pos_front = y;
+    //this.y_pos_behind =              <<<<<<<<<<<not really possible to calculate here the way things are....
+
+    this.space = 2;
+  }
+
+}
+
+//create the Bar objects for the graph, put them in an array called "bars"
+    let bars = [];
+    let x = 5;
+    for (i = 0; i < 7; i++){                                                  //y stays the same 
+      bars[i] = new Bar(left_steps_data[i], right_steps_data[i], x, y_offset);
+      x += bars[i].x_pos_right + (bars[i].width * 2) + bars[i].space;                        //x grows by the position of the last bar, plus the two bars of the last day, plus the space to be put in between days.
+        }
+
+
+  //figure out the max steps, and pixels per step for this graph
+let max_steps = 0;
+
+bars.forEach(function(bar) {
+  if (bar.left_total > max_steps) {
+    max_steps = bar.left_total;
+  }
+
+  if (bar.right_total > max_steps) {
+    max_steps = bar.right_total;
+  }
+});
+
+let pix_per_step = y_offset / max_steps;
+
+  // Set up the Bangle.JS LCD screen
+g.clear();
+g.setFont("6x8");
+
+
+// Draw the graph
+function drawGraph() {
+  
+  bars.forEach(function(bar){
+
+    // Draw left foot front bar
+    g.setColor(bar.left_front);
+    g.fillRect(bar.x_pos_front, bar.y_pos_front, (bar.x_pos_front + bar.width), (bar.y_pos_front - (bar.front_num * pix_per_step) ) );
+
+  //Draw left foot behind bar
+    g.setColor(bar.left_behind);
+    let y_front_start = bar.y_pos_front - (bar.front_num * pix_per_step);
+    let x_front_end = bar.x_pos_behind + bar.width;
+    let y_front_end = (bar.y_pos_front - (bar.front_num & pix_per_step) - ( bar.left_behind * pix_per_step ));
+    g.fillRect( bar.x_pos_behind, y_front_start, x_front_end, y_front_end );      ///////////restart here... just trying to figure out how all of the variables for the bar class come into play here.... I think the x position doesn't need a front/behind, but it does need a left/right, and y needs a front/behind, but doesn't need a left/right. need to fix.
+
+    /*// Draw right foot front bar
+    g.setColor(rightFrontColor);
+    g.fillRect(x + graphWidth, yOffset - (day.right.good / maxSteps) * (yOffset - 20), x + 2 * graphWidth, yOffset);
+    
+    //Draw right foot behind bar
+
+    // Display day label beneath day's steps on the x-axis
+    g.setColor("#000000");
+    g.drawString(day.day, x + graphWidth / 2, yOffset + 10);
+  }
+*/
+  });
+  // Add Y-axis labels
+    const yIncrement = max_steps / num_labels;
+    for (let i = 0; i <= num_labels; i++) {
+      const labelValue = Math.round(i * yIncrement);
+      const yPosition = y_offset - i * (y_offset - 20) / num_labels;
+      g.setColor("#000000");
+      g.drawString(labelValue.toString(), 5, yPosition);
+    }
+
+  // Update the screen
+  g.flip();
+}
+
+// Draw the initial graph
+drawGraph();
+
+
+/*
+// Initialize data for the week's steps
+let stepsData = require("Storage").readJSON("stepsData.json") || [];
+if (!stepsData.length) {
+  // Provide default data if the file is not found or invalid
+  stepsData = [
+    { day: 'Mon', left: { good: 50, bad: 100 }, right: { good: 600, bad: 5000 } },
+    { day: 'Tue', left: { good: 700, bad: 150 }, right: { good: 400, bad: 80 } },
+    { day: 'Wed', left: { good: 800, bad: 100 }, right: { good: 800, bad: 50 } },
+    { day: 'Thr', left: { good: 900, bad: 76 }, right: { good: 900, bad: 76 } },
+    { day: 'Fri', left: { good: 950, bad: 90 }, right: { good: 950, bad: 90 } },
+    { day: 'Sat', left: { good: 1000, bad: 50 }, right: { good: 950, bad: 200 } },
+    { day: 'Sun', left: { good: 200, bad: 200 }, right: { good: 600, bad: 300 } },
+  ];
+}
+
+// Set up the Bangle.JS LCD screen
+g.clear();
+g.setFont("6x8");
+
+// Set graph parameters
+const graphWidth = 10;     // Width of each bar
+const dayGap = 2;          // Spacing between days
+const yOffset = 150;       // Y-axis offset
+
+// Determine the maximum steps value for scaling
+const maxSteps = Math.max(
+  ...stepsData.map(day => Math.max(day.left.good, day.left.bad, day.right.good, day.right.bad))
+);
+
+// Calculate the number of Y-axis labels
+const numLabels = 5;
+
+// Calculate the increment for Y-axis labels
+const labelIncrement = maxSteps / (numLabels - 1);
+
+// Draw the graph
+function drawGraph() {
+  for (let index = 0; index < stepsData.length; index++) {
+    const day = stepsData[index];
+    const x = index * (2 * (graphWidth + dayGap));
+
+    // Determine color for left foot bars
+    const leftGoodColor = "#00FF00";
+    const leftBadColor = "#FF0000";
+    const leftFrontColor = day.left.good > day.left.bad ? leftGoodColor : leftBadColor;
+
+    // Draw left foot bar
+    g.setColor(leftFrontColor);
+    g.fillRect(x, yOffset - (day.left.good / maxSteps) * (yOffset - 20), x + graphWidth, yOffset);
+
+    // Determine color for right foot bars
+    const rightGoodColor = "#00FF00";
+    const rightBadColor = "#FF0000";
+    const rightFrontColor = day.right.good > day.right.bad ? rightGoodColor : rightBadColor;
+
+    // Draw right foot bar without additional gap
+    g.setColor(rightFrontColor);
+    g.fillRect(x + graphWidth, yOffset - (day.right.good / maxSteps) * (yOffset - 20), x + 2 * graphWidth, yOffset);
+
+    // Display day label beneath each bar on the x-axis
+    g.setColor("#000000");
+    g.drawString(day.day, x + graphWidth / 2, yOffset + 10);
+  }
+
+  // Add Y-axis labels
+  const yIncrement = maxSteps / numLabels;
+  for (let i = 0; i <= numLabels; i++) {
+    const labelValue = Math.round(i * yIncrement);
+    const yPosition = yOffset - i * (yOffset - 20) / numLabels;
+    g.setColor("#000000");
+    g.drawString(labelValue.toString(), 5, yPosition);
+  }
+
+  // Update the screen
+  g.flip();
+}
+
+// Draw the initial graph
+drawGraph();
+*/
+  //the date or day of week the bar represents
+  /*day;
+  //number of good steps each foot, & bad steps each foot
+  left_good;
+  left_bad;
+  right_good;
+  right_bad;
+  //the color that will appear in "front" on the bar, per foot, and color that will appear "behind", per foot
+  left_front; 
+  left_behind;
+  right_front;
+  right_behind;
+  //total steps per foot
+  left_total;
+  right_total;*/

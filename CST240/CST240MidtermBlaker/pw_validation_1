@@ -1,0 +1,73 @@
+#!/bin/perl
+#Cari Blaker
+#CST240 Midterm #1
+
+use strict;
+use warnings;
+
+print "\nEnter a password: ";
+
+my $pw = <STDIN>;
+chomp($pw);
+
+sub verify {        #subroutine to confirm all of the password qualifications
+    my $pw = shift;
+    if ($pw !~ /[A-Z]/){
+        print "\nError: password must contain capital letter\n";
+        return 0;
+    }
+
+    if ($pw !~ /[a-z]/){
+        print "\nError: password must contain lowercase letter\n";
+        return 0;
+    }
+
+    if ($pw !~ /[0-9]/){
+        print "\nError: password must contain number\n";
+        return 0;
+    }
+
+    if ($pw !~ /[a-z]/){
+        print "\nError: password must contain lowercase letter\n";
+        return 0;
+    }
+
+    if ($pw !~ /[#\$\%\^\*\-]/){
+        print "\nError: password must contain special character\n";
+        return 0;
+    }
+
+    my $len = length($pw);
+
+    if ($len < 8){
+        print "\nError: password must be between 8 & 16 characters\n";
+        return 0;
+    }
+
+    if ($len > 18){
+        print "\nError: password must be between 8 & 16 characters\n";
+        return 0;
+    }
+
+    else {
+        return 1;
+    }
+
+}
+
+
+if (verify($pw)){               #call the subroutine
+    open(my $output_file, ">", "encrypted_PW.txt");
+    foreach my $chars (split //, $pw) {
+        my $ascii = ord($chars);
+        my $shifted_ascii = $ascii + 3;
+        print $output_file $shifted_ascii;
+    }
+    close $output_file;
+    print "\nPassword valid. Stored in file: encrypted_PW.txt\n";
+ }
+else {
+    print "\nPassword invalid. Try again.\n";
+}
+
+

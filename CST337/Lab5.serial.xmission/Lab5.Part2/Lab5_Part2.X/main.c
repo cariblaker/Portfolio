@@ -1,0 +1,323 @@
+
+
+//Cari Blaker
+//CST337 Lab5, part 2, using interrupts
+//This lab writes and reads data from and to the 25LC256 32Kbyte SPI serial EEProm
+
+
+// PIC32MZ2048ECG144, EFM144 or or EFG144 based HMZ144 board Configuration Bit Settings
+// DEVCFG2
+#if defined(__32MZ2048EFG144__) || defined(__32MZ2048EFM144__)
+#pragma config FPLLIDIV = DIV_4 // System PLL Input Divider (4x Divider) for 24MHz clock
+(Rev C1 board w EFG) 24MHz / 4 = 6MHz // also 24MHz clock rev C board w EFM (weird - went back to C. rev D also is EFM but with Osc)
+#pragma config UPLLFSEL = FREQ_24MHZ // USB PLL Input Frequency Selection (USB PLL input is 24 MHz)
+#else
+#pragma config FPLLIDIV = DIV_2 // System PLL Input Divider (2x Divider) for 12 MHz crystal (Rev B and C boards w ECG) 12MHz/2 = 6MHz
+#pragma config UPLLEN = OFF // USB PLL Enable (USB PLL is disabled)
+#endif
+#pragma config FPLLRNG = RANGE_5_10_MHZ // System PLL Input Range (5-10 MHz Input)
+#pragma config FPLLICLK = PLL_POSC // System PLL Input Clock Selection (POSC is input to the System PLL)
+#pragma config FPLLMULT = MUL_112 // System PLL Multiplier (PLL Multiply by 112) 6MHz * 112 = 672MHz
+#pragma config FPLLODIV = DIV_8 // System PLL Output Clock Divider (8x Divider) 672MHz / 2 = 84MHz
+// DEVCFG1
+#pragma config FNOSC = SPLL // Oscillator Selection Bits (Primary Osc (HS,EC))
+#pragma config FSOSCEN = OFF // Secondary Oscillator Enable (Disable SOSC)
+#if defined(__32MZ2048EFG144__)
+#pragma config POSCMOD = EC // Primary Oscillator Configuration EC - External clock osc
+// Rev C1 board w EFG uses an Oscillator (Rev D boards too))
+#else
+#pragma config POSCMOD = HS // Primary Oscillator Configuration HS - Crystal osc
+// Rev B and C (w ECG or EFM) use Crystals
+#endif
+#pragma config FCKSM = CSDCMD // Clock Switching and Monitor Selection (Clock Switch Disabled, FSCM Disabled)
+#pragma config FWDTEN = OFF // Watchdog Timer Enable (WDT Disabled)
+#pragma config FDMTEN = OFF // Deadman Timer Enable (Deadman Timer is disabled)
+#pragma config DMTINTV = WIN_127_128 // Default DMT Count Window Interval (Window/Interval value is 127/128 counter value)
+#pragma config DMTCNT = DMT31 // Max Deadman Timer count = 2^31
+// DEVCFG0
+#pragma config JTAGEN = OFF // JTAG Enable (JTAG Disabled)
+#pragma config ICESEL = ICS_PGx2 // ICD/ICE is on PGEC2/PGED2 pins
+
+
+#include <xc.h>
+#include <sys/attribs.h>
+#include <string.h>
+        
+#define ADDRS 0xBEBE
+
+        
+const uint8_t WRITE = 0b00000010;
+const uint8_t READ = 0b00000011;
+const uint8_t WRITE_ENABLE = 0b00000110;
+const uint8_t READ_STATUS = 0b00000101;
+const uint8_t WRITE_STATUS = 0b00000001;
+
+const uint8_t WIP = 0x01;
+const uint8_t WEL = 0x02;
+
+const uint8_t DUMMY = 0xFF;
+
+int EEPromSysBusy = 0;
+uint8_t OPERATION;
+int N_BYTES;
+uint16_t ADDRESS;
+unsigned char* RBUFFER;
+unsigned char* WBUFFER;
+unsigned int buff_read;
+int my_interrupt_count = 0;
+int num_dummies = 0;
+int num_read = 0;
+int num_writ = 0;
+int STATE = 0; 
+
+        
+void ReadEEProm(int, uint16_t, unsigned char*);
+void WriteEEProm(int, uint16_t, unsigned char*);
+
+        
+uint8_t readStatus();
+uint8_t read(uint16_t);
+void write(uint16_t, uint8_t);
+void writeEnable();
+
+
+
+int main() {
+    //turn prefetch on & reduce wait states to 1
+    PRECON = (1 & _PRECON_PFMWS_MASK) | ((2 << _PRECON_PREFEN_POSITION) & _PRECON_PREFEN_MASK);     
+    asm("di");
+    //clock configuration
+    SYSKEY = 0;                                                 //LOCK
+    SYSKEY = 0xAA996655;                                        //WRITE KEY 1
+    SYSKEY = 0x556699AA;                                        //WRITE KEY 2
+    PB2DIV = _PB2DIV_ON_MASK | 0 & _PB2DIV_PBDIV_MASK;          //DIV BY 0 so that PBCLK3 has 1:1 prescaling from SYSCLK
+    SYSKEY = 0;                                                 //RELOCK
+    
+    
+    asm("ei");
+
+    
+    //turn off analog functionality of RPB3 before mapping it
+    ANSELBCLR = 0x8;                                            //clear bit 3 in the ANSELB register
+    
+    
+    //PPS register mapping for input/output
+    SDI4R = 0b1000;                                             //SDI4 mapped to RPB3
+    RPF2R = 0b1000;                                             //SD04 mapped to RPF2
+    
+    
+     //disable all SPI4 interrupts before configuring SPI4
+    IEC5CLR = _IEC5_SPI4EIE_MASK | _IEC5_SPI4TXIE_MASK | _IEC5_SPI4RXIE_MASK;
+    
+    
+    //SPI4 configuration
+    LATFSET = _LATF_LATF8_MASK;                                 //set LATF bit 8 to ensure CS line is driven high, leaving 25LC256 un-selected, safeguard to high before enabling for output
+    SPI4CON = _SPI4CON_MSTEN_MASK | _SPI4CON_CKP_MASK;          //turn SPI4 off, enable master, un-framed, 8-bit, SMP 0, CKE 0, & CKP 1, MSSEN bit cleared (that and above and below lines to configure software control of CS)
+    TRISFCLR = _TRISF_TRISF8_MASK;                              //clear TRISF bit 8 to enable CS line for output
+    
+    SPI4BRG = 20;//8;                                           //84M/(2*20+1) = 2.0487804878048780 MHz... 84M/(2*(7+1)) = 4.67 MHz, which is a 214.29 ns period
+    
+    SPI4BUF;                                                    //read/clear any data from SPI4BUF to start clean
+    SPI4STATCLR = _SPI4STAT_SPIROV_MASK;                        //clear any previous overflow
+ 
+    
+    INTCONSET = _INTCON_MVEC_MASK;
+    //Clear any pending interrupts
+    IFS5CLR = _IFS5_SPI4RXIF_MASK;
+    IEC5SET = _IEC5_SPI4RXIE_MASK;                              //enable RX interrupts 
+    
+    //set priority 7 & subpriority 0
+    IPC41CLR = _IPC41_SPI4RXIP_MASK | _IPC41_SPI4RXIS_MASK;
+    IPC41SET = (7 << _IPC41_SPI4RXIP_POSITION) & _IPC41_SPI4RXIP_MASK;
+    PRISS = (7 << _PRISS_PRI7SS_POSITION) & _PRISS_PRI7SS_MASK; //give priority 7 interrupts register set 7, all others reg set 0
+    
+    
+    SPI4CONSET = _SPI4CON_ON_MASK;                              //Turn on the SPI unit!
+    
+    //TEST CODE WEEEEE
+    char rbuf[64], wbuf[64];
+	int  n = 1, count = 0, data = 0x20;
+	while(count < 64) {                         // initialize rbuf and wbuf
+    	wbuf[count] = data++;
+    	rbuf[count] = 0x00;
+    	count++;
+	}
+
+	ReadEEProm(64, ADDRS, rbuf);                  // initial read to see what is in the EEPROM at ADDRS
+	//while(EEPromSysBusy);                       // wait for read to be done
+
+	while(n <= 64) {                            // loop to write 1,2,3 and 64 unique items
+        WriteEEProm(n,ADDRS,wbuf+64-n);
+        ReadEEProm(n,ADDRS,rbuf);
+        while(EEPromSysBusy); // wait for read to be done
+		n++; // Go to the next n (can also breakpoint here)
+    	if(n > 3) n = 64;
+	}
+
+
+}
+
+
+
+void ReadEEProm(int nbytes, uint16_t eeprom_address, unsigned char* readbuffer){
+    while (EEPromSysBusy);
+    EEPromSysBusy = 1;
+    OPERATION = READ;
+    N_BYTES = nbytes;
+    ADDRESS = eeprom_address;
+    RBUFFER = readbuffer;
+    IFS5SET = _IFS5_SPI4RXIF_MASK;
+    
+    return;
+}
+
+
+void WriteEEProm(int nbytes, uint16_t eeprom_address, unsigned char* writebuffer){
+    while (EEPromSysBusy);
+    EEPromSysBusy = 1;
+    OPERATION = WRITE;
+    ADDRESS = eeprom_address;
+    WBUFFER = writebuffer;
+    N_BYTES = nbytes;
+    IFS5SET = _IFS5_SPI4RXIF_MASK;
+    return;
+}
+
+
+void __ISR_AT_VECTOR(_SPI4_RX_VECTOR, IPL7SRS) SPI4_Handler(void) {
+    my_interrupt_count++;
+    switch (STATE){
+        
+        case 0:         //Begin Read Status:
+            LATFCLR = _LATF_LATF8_MASK;                                             //assert CS line
+            SPI4BUF = READ_STATUS;                                                  //write read status command to SPI4BUF, which gets xmitted to 25LC256
+            while ( !(SPI4STAT & _SPI4STAT_SPITBE_MASK) );                          //wait for transmit buffer empty
+            SPI4BUF = DUMMY;                                                        //Write dummy 
+            STATE = 1;                                                              //move to next state for "wait for RBF"
+            break;
+            
+        case 1:         //Mid ReadStatus:
+            SPI4BUF;                                                                //read dummy data sent while read status was sent
+            STATE = 2;
+            
+            break;
+            
+            
+        case 2://end readStatus and start write enable OR Read n bytes OR restart ReadStatus
+            buff_read = SPI4BUF;                                                        //read status byte now here while dummy data clocked out at step 3
+            LATFSET = _LATF_LATF8_MASK;                                                 //negate CS
+            if (buff_read & WIP){                                                       //if there is a write in progress, must repeat read status until done
+                LATFCLR = _LATF_LATF8_MASK;                                                 //assert CS line
+                SPI4BUF = READ_STATUS;                                                  //write read status command to SPI4BUF, which gets xmitted to 25LC256
+                while ( !(SPI4STAT & _SPI4STAT_SPITBE_MASK) );                          //wait for transmit buffer empty
+                SPI4BUF = DUMMY;                                                        //Write dummy 
+                STATE = 1;                                                              //move to next state for "wait for RBF"
+                break;
+            }
+            else if (OPERATION == WRITE){                                               //means there is no WIP & the goal is to write
+                LATFCLR = _LATF_LATF8_MASK;                                                 //assert CS line
+                SPI4BUF = WRITE_ENABLE;                                                 //send the write enable command
+                LATFSET = _LATF_LATF8_MASK;                                             //negate CS
+                STATE = 3;
+                break;
+            }
+            else{                                                                       //means there is no WIP & the goal is to read
+                LATFCLR = _LATF_LATF8_MASK;                                             //assert CS line
+                SPI4BUF = READ;                                                         //send read command
+                while ( !(SPI4STAT & _SPI4STAT_SPITBE_MASK) );                          //wait for transmit buffer empty
+                SPI4BUF = (ADDRESS >> 8);                                               //send most significant address
+                STATE = 4;                                                              //state 6 is read N BYTES
+            }
+            
+            break;
+            
+        case 3: //end write enable, start write
+            SPI4BUF;                                                                //read dummy from write enable command sent
+            LATFSET = _LATF_LATF8_MASK;                                             //negate CS
+            asm volatile ("nop");
+            asm volatile ("nop");
+            
+            //STATE = 0;          //we're gonna read the status after doing this write enable to make sure for sure it's working
+            //break;              //these two lines should be taken out once write enable is actually working, and the comented code below should be uncommented
+            
+            LATFCLR = _LATF_LATF8_MASK;                                             //assert CS line
+            SPI4BUF = WRITE;                                                        //send write command
+            while ( !(SPI4STAT & _SPI4STAT_SPITBE_MASK) );                          //wait for TBE
+            
+            SPI4BUF = (ADDRESS >> 8);                                               //write MSA
+            STATE = 4;
+            
+            break;
+            
+            
+            
+        case 4:     //Write LSA:
+            SPI4BUF;                                                                //read dummy coming from write command
+            SPI4BUF = ADDRESS;                                                      //send least significant address byte 
+            if (OPERATION == READ){
+                STATE = 5;
+            }
+            else{
+                STATE = 7;  //write operation state
+            }
+            
+            break;
+           
+            
+        case 5:         //READ two initial dummies before getting to data
+            if (num_dummies < 2) {
+                num_dummies++;
+                SPI4BUF;
+                SPI4BUF = DUMMY;
+            }
+            else {
+                num_dummies = 0;
+                STATE = 6;
+            }         
+            break;
+            
+        case 6:                //reading N BYTES
+            if (num_read < N_BYTES - 1){
+                RBUFFER[num_read] = SPI4BUF;                                        //read data into buffer array until n-1
+                num_read++;
+                SPI4BUF = DUMMY;                                                    //write dummies until n-1
+            }
+            else if (num_read == N_BYTES - 1){                                      //now we're at n - 1, so no dummy necessary
+                RBUFFER[num_read] = SPI4BUF;  
+                num_read++;
+            }
+            else {                                                                  //at n, we're all done with SPI READ
+                RBUFFER[num_read] = SPI4BUF;                                        //buffer[0] gets the last byte of data
+                num_read = 0;                                                       //we've reached the end, reset num_read
+                LATFSET = _LATF_LATF8_MASK;                                         //negate CS
+                EEPromSysBusy = 0;                                                  //no longer busy, allow other reads/writes
+                STATE = 0;                                                          //back to idle state
+                IFS5CLR = _IFS5_SPI4RXIF_MASK;                                      //clear the interrupt flag DUH
+                break;                                        
+            }
+            break;
+            
+        case 7:                 //write n bytes
+            if (num_writ < N_BYTES - 1){
+                SPI4BUF;                                                                        //read dummy
+                SPI4BUF = WBUFFER[num_writ];                                                    //write current byte
+                num_writ++;
+            }
+            else if (num_writ == N_BYTES - 1){
+                SPI4BUF;
+                STATE = 8;
+            }
+            
+            break;
+        case 8:                 //last write state
+            SPI4BUF;                                                                            //read one last dummy for write op
+            LATFSET = _LATF_LATF8_MASK;                                                         //negate CS
+            num_writ = 0;                                                                       //reset written bytes variable for next time
+            EEPromSysBusy = 0;
+            STATE = 0;                                                                          //back to idle
+            IFS5CLR = _IFS5_SPI4RXIF_MASK;                                                      //clear the interrupt flag DUH
+                                                       
+    }
+     
+}
+

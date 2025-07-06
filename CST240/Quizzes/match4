@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $mystring;
+$mystring = "Hello world!";
+if ($mystring =~ m/World/) { print "Yes 1\n"; }
+if ($mystring =~ m/World/i) { print "Yes 2\n"; }
+$mystring =~ s/world/OIT/;
+print "$mystring\n";
+$mystring =~ s/hello/Goodbye/;
+print "$mystring\n";
+$mystring =~ s/hello/Goodbye/i;
+print "$mystring\n";

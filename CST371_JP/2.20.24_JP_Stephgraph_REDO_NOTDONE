@@ -1,0 +1,81 @@
+//this should be the final version of the graph app for the smart stepper.
+//created 2/20/24
+
+
+//globals
+const BAR_SPACING = 2;                                    //space between left & right is always 2 pixels
+const BAR_WIDTH = 7;                                      //width of bar is always 7 pixels
+const STARTING_X = 10;                                    //initial X position is always 10 pixels
+const STARTING_DAY = 7;                                   //Today is the seventh day on the graph
+const STARTING_Y = 150;                                   //initial Y position is always 150 pixels
+let DAYS_OF_WEEK = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+
+
+//start by getting today's date, & putting it into a string.
+let todays_date = new Date();
+let year = todays_date.getFullYear();
+let month = todays_date.getMonth() + 1;             //returns 0-based, must add 1
+let day = todays_date.getDate();
+
+var date_string = day + '-' + month + '-' + year;
+
+//if it is before the 7th day of the month, then we'll have to adjust some #s
+// Calculate the date strings for the six previous days
+var DateStrings = [];
+DateStrings.push(date_string);
+
+//to correctly establish previous days, start with today's info
+let prevDay = day;
+let prevMonth = month;
+let prevYear = year;
+for (let i = 1; i <= 6; i++) {
+    previousDate = new Date();
+    prevDay = (prevDay >= 7 ? prevDay - 1 : getDateRight(
+    prevMonth = previousDate.getMonth() + 1;
+    prevYear = previousDate.getFullYear();
+    prevDateString = prevDay + '-' + prevMonth + '-' + prevYear;
+    DateStrings.push(prevDateString);
+}
+
+console.log("Today's date string:", date_string);
+DateStrings.forEach(function(date){
+  console.log(date)}
+  );
+
+
+//create a bar class
+//accepts a date to associate with a bar and "num" which is the number of the day in relation to today (today = 0, yesterday = 1, etc.)
+class Bar {
+  constructor(date, num){
+    this.date = date;
+    this.day_relation = num;
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<day of week?? 
+    //read the file! put info into below left/right feet fosho
+    //
+    this.left = new Foot(num * STARTING_X, STARTING_Y);
+    this.right = new Foot( ( (num * STARTING_X) + BAR_SPACING + BAR_WIDTH ), STARTING_Y);
+    
+    
+  }
+};
+  
+  
+class Foot {
+  constructor(x, y){
+      
+    }
+
+  
+};
+
+//create an array of the relevant dates
+
+
+//create an array of bars, for (i = 7; i == 1; i--) bars.pushBack(new Bar(date[i], i)
+
+//print bars
+
+//display time & battery info
+
+//surround all of this in a loop that refreshes every minute
