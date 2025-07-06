@@ -1,0 +1,143 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 13 19:45:53 2025
+# Process ID: 7784
+# Current directory: C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SIM
+# Command line: xsim.exe -mode tcl -source {xsim.dir/duv_tb_snapshot/xsim_script.tcl}
+# Log file: C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SIM/xsim.log
+# Journal file: C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SIM\xsim.jou
+# Running On: Matt_Dell_Taco, OS: Windows, CPU Frequency: 3072 MHz, CPU Physical cores: 16, Host memory: 33777 MB
+#-----------------------------------------------------------
+source xsim.dir/duv_tb_snapshot/xsim_script.tcl
+# xsim {duv_tb_snapshot} -autoloadwcfg -tclbatch {xsim_cfg.tcl}
+Time resolution is 1 ps
+source xsim_cfg.tcl
+## log_wave -recursive *
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## run all
+-------------------------
+- [ Generator ] 
+-------------------------
+- a = 58, b = 196
+- operation = 3
+- out = 0
+-------------------------
+-------------------------
+- [ Generator ] 
+-------------------------
+- a = 10, b = 181
+- operation = 0
+- out = 0
+-------------------------
+-------------------------
+- [ Generator ] 
+-------------------------
+- a = 83, b = 169
+- operation = 3
+- out = 0
+-------------------------
+-------------------------
+- [ Generator ] 
+-------------------------
+- a = 127, b = 87
+- operation = 1
+- out = 0
+-------------------------
+[DUT] op_start = 1 | opcode = 3, A = 58, B = 196, OUT = x
+Result is as Expected
+-------------------------
+- [ Scoreboard ] 
+-------------------------
+- a = 58, b = 196
+- operation = 3
+- out = 0
+-------------------------
+-------------------------
+- [ Driver ] 
+-------------------------
+- a = 58, b = 196
+- operation = 3
+- out = 0
+-------------------------
+-------------------------
+- [ Monitor ] 
+-------------------------
+- a = 58, b = 196
+- operation = 3
+- out = 0
+-------------------------
+[DUT] op_start = 1 | opcode = 0, A = 10, B = 181, OUT = 0
+Result is as Expected
+-------------------------
+- [ Scoreboard ] 
+-------------------------
+- a = 10, b = 181
+- operation = 0
+- out = 191
+-------------------------
+-------------------------
+- [ Driver ] 
+-------------------------
+- a = 10, b = 181
+- operation = 0
+- out = 191
+-------------------------
+-------------------------
+- [ Monitor ] 
+-------------------------
+- a = 10, b = 181
+- operation = 0
+- out = 191
+-------------------------
+[DUT] op_start = 1 | opcode = 3, A = 83, B = 169, OUT = 191
+Result is as Expected
+-------------------------
+- [ Scoreboard ] 
+-------------------------
+- a = 83, b = 169
+- operation = 3
+- out = 1
+-------------------------
+-------------------------
+- [ Driver ] 
+-------------------------
+- a = 83, b = 169
+- operation = 3
+- out = 1
+-------------------------
+-------------------------
+- [ Monitor ] 
+-------------------------
+- a = 83, b = 169
+- operation = 3
+- out = 1
+-------------------------
+[DUT] op_start = 1 | opcode = 1, A = 127, B = 87, OUT = 1
+Result is as Expected
+-------------------------
+- [ Scoreboard ] 
+-------------------------
+- a = 127, b = 87
+- operation = 1
+- out = 11049
+-------------------------
+-------------------------
+- [ Driver ] 
+-------------------------
+- a = 127, b = 87
+- operation = 1
+- out = 11049
+-------------------------
+-------------------------
+- [ Monitor ] 
+-------------------------
+- a = 127, b = 87
+- operation = 1
+- out = 11049
+-------------------------
+$finish called at time : 115 ns : File "C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/environment.sv" Line 59
+## exit
+INFO: [Common 17-206] Exiting xsim at Thu Mar 13 19:45:55 2025...

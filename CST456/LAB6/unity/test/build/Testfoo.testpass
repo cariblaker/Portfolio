@@ -1,0 +1,14 @@
+tests/Testfoo.c:13:testTEST_ASSERT_TRUE:PASS
+tests/Testfoo.c:20:testTEST_ASSERT_FALSE:PASS
+tests/Testfoo.c:27:testTEST_ASSERT_EQUAL_INT8:PASS
+tests/Testfoo.c:34:testTEST_ASSERT_EQUAL_UINT8:PASS
+tests/Testfoo.c:41:testTEST_ASSERT_EQUAL_HEX8:PASS
+tests/Testfoo.c:47:testTEST_ASSERT_UINT_WITHIN:PASS
+tests/Testfoo.c:53:testTEST_ASSERT_BITS:PASS
+tests/Testfoo.c:59:testTEST_ASSERT_BITS_HIGH:PASS
+tests/Testfoo.c:65:testTEST_ASSERT_BIT_HIGH:PASS
+tests/Testfoo.c:72:testsquareNumber:PASS
+
+-----------------------
+10 Tests 0 Failures 0 Ignored 
+OK

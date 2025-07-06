@@ -1,0 +1,7 @@
+Running: xsim.dir/duv_tb_snapshot/xsimk.exe -simmode gui -wdb duv_tb_snapshot.wdb -simrunnum 0 -socket 64944
+Design successfully loaded
+Design Loading Memory Usage: 9072 KB (Peak: 9072 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 17776 KB (Peak: 17776 KB)
+Simulation CPU Usage: 5312 ms

@@ -1,0 +1,10 @@
+tests/test_temp_tools.c:13:test_f_to_c_error_once_low:PASS
+tests/test_temp_tools.c:19:test_f_c_zero:PASS
+tests/test_temp_tools.c:25:test_f_to_c_error_any_low:PASS
+tests/test_temp_tools.c:34:test_error_response_once_high:PASS
+tests/test_temp_tools.c:40:test_f_to_c_any_legal:PASS
+tests/test_temp_tools.c:53:test_f_to_c_error_any_high:PASS
+
+-----------------------
+6 Tests 0 Failures 0 Ignored 
+OK

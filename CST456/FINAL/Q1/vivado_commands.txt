@@ -1,0 +1,14 @@
+simulation:  (https://itsembedded.com/dhd/vivado_sim_1/)
+
+call C:\Xilinx\Vivado\2022.1\bin\xvlog --sv ../SRC/duv.sv ../SRC/tb.sv
+
+call C:\Xilinx\Vivado\2022.1\bin\xelab -debug typical -top tb -snapshot duv_tb_snapshot
+
+call C:\Xilinx\Vivado\2022.1\bin\xsim duv_tb_snapshot -R
+
+
+call C:\Xilinx\Vivado\2022.1\bin\xsim  duv_tb_snapshot --tclbatch xsim_cfg.tcl
+
+call C:\Xilinx\Vivado\2022.1\bin\xsim --gui  duv_tb_snapshot.wdb
+
+

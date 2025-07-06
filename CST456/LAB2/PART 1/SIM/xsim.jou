@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Feb 17 16:37:47 2025
+# Process ID: 16996
+# Current directory: C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 1/SIM
+# Command line: xsim.exe -source {xsim.dir/duv_tb_snapshot.wdb/xsim_script.tcl}
+# Log file: C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 1/SIM/xsim.log
+# Journal file: C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 1/SIM\xsim.jou
+# Running On: Matt_Dell_Taco, OS: Windows, CPU Frequency: 3072 MHz, CPU Physical cores: 16, Host memory: 33777 MB
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/duv_tb_snapshot.wdb/xsim_script.tcl
+add_wave {{/tb/clk}} {{/tb/op_start}} {{/tb/operation}} {{/tb/operand_a}} {{/tb/operand_b}} {{/tb/op}} {{/tb/result}} {{/tb/num_loops}} 
+close_sim

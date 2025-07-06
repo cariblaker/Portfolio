@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Feb  4 14:58:06 2025
+# Process ID: 16436
+# Current directory: C:/Users/carib/OneDrive/Desktop/CST456/LAB1/SIM
+# Command line: xsim.exe -mode tcl -source {xsim.dir/duv_tb_snapshot/xsim_script.tcl}
+# Log file: C:/Users/carib/OneDrive/Desktop/CST456/LAB1/SIM/xsim.log
+# Journal file: C:/Users/carib/OneDrive/Desktop/CST456/LAB1/SIM\xsim.jou
+# Running On: Matt_Dell_Taco, OS: Windows, CPU Frequency: 3072 MHz, CPU Physical cores: 16, Host memory: 33777 MB
+#-----------------------------------------------------------
+source xsim.dir/duv_tb_snapshot/xsim_script.tcl
+# xsim {duv_tb_snapshot} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+FAIL_UNLESS_EQUAL[ ]: Expected 00000000 but actual value is fe01.
+$finish called at time : 1542 ns : File "C:/Users/carib/OneDrive/Desktop/CST456/LAB1/SRC/tb.sv" Line 61
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Feb  4 14:58:09 2025...

@@ -1,0 +1,52 @@
+Copy and paste the conv_f_to_c function that passes test_f_to_c_error_once_low.
+--------------
+int8_t conv_f_to_c (int8_t deg_f)
+{
+    return 0x7F; 						 // the initial test only checks for 0x7F, so the minimal amount of code is just passing it 0x7F.
+
+}
+
+Copy and paste the conv_f_to_c function that passes test_f_c_zero.
+--------------
+int8_t conv_f_to_c (int8_t deg_f)
+{
+    return ((deg_f == 32) ? 0 : 0x7F); 	// the second test only checks for 0, so to pass both tests 1 & 2, this is the minimal amt of code
+}
+
+
+Copy and paste the conv_f_to_c function that passes test_f_to_c_error_any_low.
+--------------
+int8_t conv_f_to_c (int8_t deg_f)
+{
+    return ((deg_f == 32) ? 0 : 0x7F); 	// the third test only checks for return of 0x7F, so to pass all three tests, this is the minimal amt of code
+}
+
+
+Copy and paste the conv_f_to_c function that passes test_error_response_once_high.
+--------------
+int8_t conv_f_to_c (int8_t deg_f)
+{
+    return ((deg_f == 32) ? 0 : 0x7F); 	// the fourth test also only checks for return of 0x7F, so to pass all three tests, this is the minimal amt of code
+}
+
+
+Copy and paste the conv_f_to_c function that passes test_f_to_c_any_legal.
+--------------
+int8_t conv_f_to_c (int8_t deg_f)
+{
+if (deg_f < -100 || deg_f > 100) {
+        return 0x7F; 						 // return 127 if x<-100 or x>100
+    }
+    return ((int8_t)((deg_f - 32) * 5 / 9));  // to pass this test and all the rest, must actually perform conversion AND 
+}
+
+
+Copy and paste the conv_f_to_c function that passes test_f_to_c_error_any_high.
+--------------
+int8_t conv_f_to_c (int8_t deg_f)
+{
+if (deg_f < -100 || deg_f > 100) {
+        return 0x7F; 						 // return 127 if x<-100 or x>100
+    }
+    return ((int8_t)((deg_f - 32) * 5 / 9));  // perform conversion
+}

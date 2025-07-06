@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/driver.sv,1741920137,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/duv.sv,1741919956,systemVerilog,C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/interface.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/random_test.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/tb.sv,C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/tb.sv,,$unit_duv_sv_1875363929;duv,,UVM,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/environment.sv,1741919365,verilog,,,C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/transaction.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/generator.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/driver.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/monitor.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/scoreboard.sv,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/generator.sv,1741919365,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/interface.sv,1741917294,verilog,,,,intf,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/monitor.sv,1741919715,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/random_test.sv,1741920690,verilog,,,C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/environment.sv,test,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/scoreboard.sv,1741921082,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/tb.sv,1741918041,systemVerilog,,,C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/interface.sv;C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/random_test.sv,tb,,UVM,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/FINAL/Q1/SRC/transaction.sv,1741916808,verilog,,,,,,,,,,,,

@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_bfm.sv,1740515293,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_if.sv,1740513535,verilog,,,,alu_if,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_sb.sv,1740521336,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_trxn.sv,1740513850,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/duv.sv,1740514923,systemVerilog,C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_if.sv;C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/tb.sv,C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/tb.sv,,$unit_duv_sv_1875363929;duv,,UVM,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/tb.sv,1740514978,systemVerilog,,,C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_if.sv;C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_trxn.sv;C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_bfm.sv;C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_sb.sv,tb,,UVM,,,,,,

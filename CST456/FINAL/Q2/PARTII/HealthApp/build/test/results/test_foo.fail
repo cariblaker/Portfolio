@@ -1,0 +1,19 @@
+---
+:source:
+  :file: test/test_foo.c
+  :dirname: test
+  :basename: test_foo.c
+:successes: []
+:failures:
+- :test: test_updateAlertStatus_withI2C
+  :line: 29
+  :message: Expected 0 Was 2
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 1
+  :passed: 0
+  :failed: 1
+  :ignored: 0
+:stdout: []
+:time: 1.1809101999970153

@@ -1,0 +1,22 @@
+simulation:  (https://itsembedded.com/dhd/vivado_sim_1/)
+ -
+call C:\Xilinx\Vivado\2023.2\bin\xvlog --sv ../SRC/duv.sv ../SRC/tb.sv  -L UVM
+
+call C:\Xilinx\Vivado\2023.2\bin\xelab -debug typical -top tb -snapshot duv_tb_snapshot
+
+call C:\Xilinx\Vivado\2023.2\bin\xsim duv_tb_snapshot -R
+
+
+call C:\Xilinx\Vivado\2023.2\bin\xsim  duv_tb_snapshot --tclbatch xsim_cfg.tcl
+
+call C:\Xilinx\Vivado\2023.2\bin\xsim --gui  duv_tb_snapshot.wdb
+
+
+---------------------------------
+covarage report:  (https://docs.xilinx.com/r/en-US/ug900-vivado-logic-simulation/Code-Coverage-Support)
+
+call C:\Xilinx\Vivado\2023.2\bin\xelab -svlog ../SRC/duv.sv -svlog ../SRC/tb.sv -cc_type sbct -cc_db DB1 -cc_dir ./cRun1 -R
+
+call C:\Xilinx\Vivado\2023.2\bin\xcrg -cc_db DB1 -cc_dir ./cRun1 -cc_report ./cReport1
+
+start firefox ./cReport1/dashboard.html &

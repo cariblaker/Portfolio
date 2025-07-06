@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/duv.sv,1739843348,systemVerilog,,,,duv,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/interface.sv,1739850821,verilog,,,,intf,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/macro.svh,1510201476,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/tb.sv,1739851278,systemVerilog,,C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/duv.sv,C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/macro.svh;C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/interface.sv,tb,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/typedef_pkg.sv,1517700006,systemVerilog,C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/interface.sv;C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/tb.sv,C:/Users/carib/OneDrive/Desktop/CST456/LAB2/PART 2/SRC/tb.sv,,typedef_pkg,,,,,,,,

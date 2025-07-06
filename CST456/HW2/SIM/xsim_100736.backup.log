@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Feb 24 22:42:45 2025
+# Process ID: 100736
+# Current directory: C:/Users/carib/OneDrive/Desktop/CST456/HW2/SIM
+# Command line: xsim.exe -mode tcl -source {xsim.dir/duv_tb_snapshot/xsim_script.tcl}
+# Log file: C:/Users/carib/OneDrive/Desktop/CST456/HW2/SIM/xsim.log
+# Journal file: C:/Users/carib/OneDrive/Desktop/CST456/HW2/SIM\xsim.jou
+# Running On: Matt_Dell_Taco, OS: Windows, CPU Frequency: 3072 MHz, CPU Physical cores: 16, Host memory: 33777 MB
+#-----------------------------------------------------------
+source xsim.dir/duv_tb_snapshot/xsim_script.tcl
+# xsim {duv_tb_snapshot} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Info: bfm: op=MULT op_a = 00, op_b = bd
+Time: 0 ps  Iteration: 0  Process: /$unit_duv_sv_1875363929/alu_trxn::print_trxn  Scope: \$unit_duv_sv_1875363929 .\alu_trxn::print_trxn   File: C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_trxn.sv Line: 17
+Info: bfm: op=ADD op_a = 04, op_b = 15
+Time: 10 ns  Iteration: 0  Process: /$unit_duv_sv_1875363929/alu_trxn::print_trxn  Scope: \$unit_duv_sv_1875363929 .\alu_trxn::print_trxn   File: C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_trxn.sv Line: 17
+Fatal: op = ADD, a = xx, out = xx, expected_out = xxxx    x
+Time: 10 ns  Iteration: 1  Process: /$unit_duv_sv_1875363929/alu_sb::check  Scope: \$unit_duv_sv_1875363929 .\alu_sb::compute_expected_value   File: C:/Users/carib/OneDrive/Desktop/CST456/HW2/SRC/alu_sb.sv Line: 33
+$finish called at time : 10 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Feb 24 22:42:49 2025...

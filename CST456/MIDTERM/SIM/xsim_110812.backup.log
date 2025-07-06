@@ -1,0 +1,907 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Feb 26 21:30:05 2025
+# Process ID: 110812
+# Current directory: C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SIM
+# Command line: xsim.exe -mode tcl -source {xsim.dir/duv_tb_snapshot/xsim_script.tcl}
+# Log file: C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SIM/xsim.log
+# Journal file: C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SIM\xsim.jou
+# Running On: Matt_Dell_Taco, OS: Windows, CPU Frequency: 3072 MHz, CPU Physical cores: 16, Host memory: 33777 MB
+#-----------------------------------------------------------
+source xsim.dir/duv_tb_snapshot/xsim_script.tcl
+# xsim {duv_tb_snapshot} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UVM_INFO C:XilinxVivadÿ‚3.2data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test_1011...
+UVM_INFO C:XilinxVivadÿ‚3.2data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 30000: uvm_test_top.e0.sb0 [SCBD] No match: 0, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 30000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 50000: uvm_test_top.e0.sb0 [SCBD] No match: 0, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 50000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 70000: uvm_test_top.e0.sb0 [SCBD] No match: 0, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 70000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+about to start sequence!
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 90000: uvm_test_top.e0.sb0 [SCBD] No match: 0, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 90000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 110000: uvm_test_top.e0.sb0 [SCBD] No match: 0, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 110000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 130000: uvm_test_top.e0.sb0 [SCBD] No match: 1, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 150000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 170000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 190000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 190000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 210000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 210000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 230000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 230000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 250000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 270000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 270000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 290000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 290000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 310000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 310000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 330000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 330000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 350000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 350000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 370000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 390000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 390000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 410000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 410000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 430000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 450000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 470000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 470000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 490000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 490000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 510000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 510000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 530000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 530000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 550000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 550000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 570000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 570000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 590000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 590000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 610000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 610000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 630000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 650000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 650000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 670000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 670000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 690000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 710000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 710000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 730000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 730000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 750000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 750000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 770000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 770000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 790000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 790000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 810000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 810000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 830000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 830000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 850000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 850000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 870000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 890000: uvm_test_top.e0.sb0 [SCBD] No match: 10, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 910000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 910000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 930000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 930000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 950000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 970000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 990000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 990000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1010000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1010000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1030000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1030000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1050000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1050000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1070000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1070000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1090000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1090000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1110000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1110000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1130000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1150000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1170000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1190000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1190000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1210000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1210000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1230000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1230000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1250000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1270000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1270000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1290000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1290000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1310000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1310000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1330000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1330000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1350000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1350000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1370000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1370000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1390000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1390000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1410000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1410000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1430000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1450000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1450000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1470000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1470000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1490000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1490000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1510000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1510000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1530000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1530000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1550000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1550000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1570000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1570000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1590000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1590000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1610000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1610000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1630000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1650000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1650000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1670000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1670000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1690000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1710000: uvm_test_top.e0.sb0 [SCBD] No match: 100, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1710000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1730000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1730000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1750000: uvm_test_top.e0.sb0 [SCBD] No match: 10, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1750000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1770000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1770000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1790000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1790000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1810000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1810000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1830000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1830000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1850000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1850000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1870000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1890000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1910000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1910000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1930000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1930000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1950000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1950000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 1970000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 1970000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 1990000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 1990000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2010000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2010000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2030000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2030000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2050000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2050000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2070000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2070000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 2090000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2090000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2110000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2110000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2130000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2150000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2170000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2190000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2190000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2210000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2210000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2230000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2230000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2250000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2250000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 2270000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2270000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2290000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2290000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2310000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2310000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2330000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2330000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 2350000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2350000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2370000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2390000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2390000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2410000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2410000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2430000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2450000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2470000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2470000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 2490000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2490000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2510000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2510000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2530000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2530000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2550000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2550000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2570000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2570000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2590000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2590000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 2610000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2610000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2630000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2650000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2650000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2670000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2670000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2690000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2710000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2710000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2730000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2730000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2750000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2750000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2770000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2770000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2790000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2790000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2810000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2810000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2830000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2830000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2850000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2850000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2870000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2890000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2910000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2910000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 2930000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 2930000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2950000: uvm_test_top.e0.sb0 [SCBD] No match: 1000, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2970000: uvm_test_top.e0.sb0 [SCBD] No match: 1, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 2990000: uvm_test_top.e0.sb0 [SCBD] No match: 10, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 2990000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3010000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3010000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3030000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3030000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3050000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3050000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3070000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3070000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3090000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3090000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3110000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3110000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3130000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3150000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3170000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3170000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3190000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3190000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3210000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3210000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3230000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3230000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3250000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3270000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3270000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3290000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3290000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3310000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3310000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3330000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3330000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3350000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3350000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3370000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3390000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3390000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3410000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3410000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3430000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3430000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3450000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3450000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3470000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3470000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3490000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3490000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3510000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3510000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3530000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3530000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3550000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3550000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3570000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3570000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3590000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3590000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3610000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3610000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3630000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3650000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3650000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3670000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3670000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3690000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3710000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3710000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3730000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3730000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3750000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3750000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3770000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3770000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3790000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3790000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3810000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3810000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3830000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3830000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3850000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3850000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3870000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3890000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3910000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3910000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 3930000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3930000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3950000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3970000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 3970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 3990000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 3990000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4010000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4010000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4030000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4030000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4050000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4050000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 4070000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4070000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4090000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4090000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 4110000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4110000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4130000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4150000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4170000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4190000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4190000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4210000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4210000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4230000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4230000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4250000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4270000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4270000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4290000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4290000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4310000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4310000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 4330000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4330000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4350000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4350000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4370000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4390000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4390000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4410000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4410000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4430000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4450000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4470000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4470000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4490000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4490000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4510000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4510000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4530000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4530000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4550000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4550000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 4570000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4570000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4590000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4590000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4610000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4610000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4630000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4650000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4650000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4670000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4670000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4690000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4710000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4710000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4730000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4730000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 4750000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 4750000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4770000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4770000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4790000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4790000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4810000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4810000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4830000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4830000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4850000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4850000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4870000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4890000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4910000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4910000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4930000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4930000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4950000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4970000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 4990000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 4990000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5010000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5010000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5030000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5030000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5050000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5050000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5070000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5070000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5090000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5090000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5110000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5110000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5130000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5130000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5150000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5150000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5170000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5170000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5190000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5190000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5210000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5210000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5230000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5230000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5250000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5270000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5270000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5290000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5290000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5310000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5310000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5330000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5330000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5350000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5350000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5370000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5370000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5390000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5390000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5410000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5410000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5430000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5450000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5470000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5470000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5490000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5490000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5510000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5510000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5530000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5530000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5550000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5550000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5570000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5570000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5590000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5590000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5610000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5610000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5630000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5650000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5650000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5670000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5670000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5690000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5710000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5710000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5730000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5730000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5750000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5750000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 5770000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 5770000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5790000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5790000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5810000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5810000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5830000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5830000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5850000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5850000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5870000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5890000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5910000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5910000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5930000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5930000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5950000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5970000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 5990000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 5990000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6010000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6010000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6030000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6030000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6050000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6050000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6070000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6070000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6090000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6090000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 6110000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6110000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6130000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6150000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6170000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6190000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6190000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6210000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6210000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 6230000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6230000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6250000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6270000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6270000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6290000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6290000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6310000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6310000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6330000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6330000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6350000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6350000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6370000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6390000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6390000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6410000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6410000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 6430000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6430000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6450000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6470000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6470000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6490000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6490000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6510000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6510000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6530000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6530000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6550000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6550000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6570000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6570000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6590000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6590000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 6610000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6610000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6630000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6630000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6650000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6650000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 6670000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6670000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6690000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6690000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6710000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6710000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6730000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6730000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6750000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6750000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6770000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6770000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6790000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6790000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6810000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6810000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6830000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6830000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6850000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6850000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6870000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6870000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6890000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6890000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6910000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6910000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6930000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6930000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6950000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6970000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 6970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 6990000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 6990000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7010000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7010000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7030000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7030000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7050000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7050000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7070000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7070000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7090000: uvm_test_top.e0.sb0 [SCBD] No match: 1010, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7090000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7110000: uvm_test_top.e0.sb0 [SCBD] No match: 100, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7110000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7130000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7150000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7170000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7190000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7190000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7210000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7210000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7230000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7230000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7250000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7270000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7270000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7290000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7290000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7310000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7310000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7330000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7330000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7350000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7350000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7370000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7390000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7390000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7410000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7410000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7430000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7450000: uvm_test_top.e0.sb0 [SCBD] No match: 10, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7470000: uvm_test_top.e0.sb0 [SCBD] No match: 101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7470000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7490000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7490000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7510000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7510000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7530000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7530000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7550000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7550000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7570000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7570000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7590000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7590000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7610000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7610000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7630000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7630000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7650000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7650000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7670000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7670000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7690000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7690000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7710000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7710000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7730000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7730000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7750000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7750000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7770000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7770000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7790000: uvm_test_top.e0.sb0 [SCBD] No match: 1000, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7790000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7810000: uvm_test_top.e0.sb0 [SCBD] No match: 1, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7810000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7830000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7830000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7850000: uvm_test_top.e0.sb0 [SCBD] No match: 110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7850000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7870000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7870000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 7890000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7890000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7910000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7910000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7930000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7930000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7950000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7950000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7970000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 7970000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 7990000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 7990000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 8010000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1100, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 8010000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8030000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8030000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8050000: uvm_test_top.e0.sb0 [SCBD] No match: 10, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8050000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8070000: uvm_test_top.e0.sb0 [SCBD] No match: 100, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8070000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8090000: uvm_test_top.e0.sb0 [SCBD] No match: 1001, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8090000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8110000: uvm_test_top.e0.sb0 [SCBD] No match: 11, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8110000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8130000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8130000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8150000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8150000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8170000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8170000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8190000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8190000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8210000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8210000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8230000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8230000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8250000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8250000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8270000: uvm_test_top.e0.sb0 [SCBD] No match: 1110, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 8270000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/gen_item_seq.sv(20) @ 8270000: uvm_test_top.e0.a0.s0@@seq [SEQ] Done generation of 409 items
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8290000: uvm_test_top.e0.sb0 [SCBD] No match: 1101, next out should be 0
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 8290000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=1 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(48) @ 8310000: uvm_test_top.e0.sb0 [SCBD] Pattern found: 1011, next out should be 1
+UVM_ERROR C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(56) @ 8310000: uvm_test_top.e0.sb0 [SCBD] ERROR ! out=0 exp=1
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8330000: uvm_test_top.e0.sb0 [SCBD] No match: 111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8330000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8350000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8350000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8370000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8370000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8390000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8390000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8410000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8410000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8430000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8430000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8450000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8450000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:XilinxVivadÿ‚3.2data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 8470000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(51) @ 8470000: uvm_test_top.e0.sb0 [SCBD] No match: 1111, next out should be 0
+UVM_INFO C:/Users/carib/OneDrive/Desktop/CST456/MIDTERM/SRC/scoreboard.sv(58) @ 8470000: uvm_test_top.e0.sb0 [SCBD] PASS ! out=0 exp=0
+UVM_INFO C:XilinxVivadÿ‚3.2data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 8470000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  699
+UVM_WARNING :    0
+UVM_ERROR :  152
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[SCBD]   846
+[SEQ]     1
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+
+$finish called at time : 8470 ns : File "C:\Xilinx\Vivado\2023.2\data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Feb 26 21:30:08 2025...

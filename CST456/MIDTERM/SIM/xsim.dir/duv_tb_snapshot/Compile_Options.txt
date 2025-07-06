@@ -1,0 +1,1 @@
+-debug "typical" -top "tb" -snapshot "duv_tb_snapshot" 

@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/duv.sv,1706838950,systemVerilog,,C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/tb.sv,,duv,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/macro.svh,1517883960,verilog,,,,,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/tb.sv,1740351947,systemVerilog,,,C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/macro.svh;C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/typedef_pkg.sv,tb,,,,,,,,
+C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/typedef_pkg.sv,1517700006,verilog,C:/Users/carib/OneDrive/Desktop/CST456/LAB4/SRC/tb.sv,,,typedef_pkg,,,,,,,,

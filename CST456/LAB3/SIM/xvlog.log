@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carib/OneDrive/Desktop/CST456/LAB3/SRC/typedef_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carib/OneDrive/Desktop/CST456/LAB3/SRC/duv.sv" into library work
+INFO: [VRFC 10-311] analyzing module duv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/carib/OneDrive/Desktop/CST456/LAB3/SRC/tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb
