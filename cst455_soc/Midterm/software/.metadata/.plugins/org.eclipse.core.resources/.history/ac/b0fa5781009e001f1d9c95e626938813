@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include "system.h"
+#include "io.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
+#include "semphr.h"
+
+#define TASK_STACKSIZE 2048
+#define LED_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
+
+int ms_slept = 750 / portTICK_PERIOD_MS;
+
+SemaphoreHandle_t g_mutex;
+
+void led_task(void* pvParameters){
+	uint16_t count = 0;
+	int ms_slept = (*((int*)pvParameters));
+	while (1){
+		xSemaphoreTake(g_mutex, portMAX_DELAY);
+		IOWR(LEDS_BASE, 0, count);
+		printf("Count = %u\r\n", count);
+		count++;
+		if (count == 1024)
+			count = 0;
+		xSemaphoreGive(g_mutex);
+		vTaskDelay(ms_slept);
+	}
+}
+
+void seg7_task(void* pvParameters) {
+	uint16_t SW_OP, num1, num2;
+	uint16_t most_sig1, least_sig1, most_sig2, least_sig2;
+
+	while (1) {
+		xSemaphoreTake(g_mutex, portMAX_DELAY);
+		printf("Hellooooo from seg7 task!!!!\n");
+		// Get the operation code from switches 8 & 9
+		SW_OP = (IORD(SWITCHES_0_BASE, 0) >> 8) & 0x03;
+
+		// Get the first number from switches 0 - 3
+		num1 = IORD(SWITCHES_0_BASE, 0) & 0x0F;
+
+		// Get the second number from switches 4 - 7
+		num2 = (IORD(SWITCHES_0_BASE, 0) >> 4) & 0x0F;
+
+		// Decode num1 and num2 to most and least significant digits
+		most_sig1 = num1 / 10;
+		least_sig1 = num1 % 10;
+		most_sig2 = num2 / 10;
+		least_sig2 = num2 % 10;
+
+		// Display num1 on SEG7S_2_BASE and SEG7S_3_BASE
+		IOWR(SEG7S_2_BASE, 0, most_sig1);
+		IOWR(SEG7S_3_BASE, 0, least_sig1);
+
+		// Display num2 on SEG7S_4_BASE and SEG7S_5_BASE
+		IOWR(SEG7S_4_BASE, 0, most_sig2);
+		IOWR(SEG7S_5_BASE, 0, least_sig2);
+
+		// Debug print
+		printf("Hello from seg7 task\n");
+
+		// Release the semaphore
+		xSemaphoreGive(g_mutex);
+
+		// Delay to avoid rapid polling
+		vTaskDelay(ms_slept);
+	}
+}
+
+
+
+
+
+//two tasks. one for led stuff, one for 7seg stuff.
+
+int main(){
+	printf("Hello FreeRTOS from main! \n");
+
+	g_mutex = xSemaphoreCreateMutex();
+
+	if (pdFAIL == xTaskCreate( led_task, "led_task", TASK_STACKSIZE, &ms_slept, LED_TASK_PRIORITY, NULL) )
+	{
+		printf("LED task creation failed...\n");
+	}
+
+	if (pdFAIL == xTaskCreate( seg7_task, "seg7_task", TASK_STACKSIZE, &ms_slept, LED_TASK_PRIORITY, NULL) )
+	{
+		printf("Seven Segment task creation failed...\n");
+	}
+
+	vTaskStartScheduler();
+
+
+	while (1) { }
+	return 0;
+}

@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hex0_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex4_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex5_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_export[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

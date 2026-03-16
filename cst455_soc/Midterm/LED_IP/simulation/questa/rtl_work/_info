@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/cari/cst455_soc/Midterm/LED_IP/simulation/questa
+T_opt
+Z2 !s110 1730860038
+V9lTM2cgnkM:O75g32AO0?1
+04 16 4 work testbench_LED_IP fast 0
+=1-000ae431a4f1-672ad406-b9dae-8d47
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vLED_IP
+2../../LED_IP.v
+R2
+!i10b 1
+!s100 _VWhW=F_TJIYHCN:98nE<2
+IeJX^hKh[;ke8MN0DQ<kK73
+R1
+w1730859347
+8../../LED_IP.v
+F../../LED_IP.v
+!i122 3
+L0 1 28
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1730860038.000000
+!s107 ../../LED_IP.v|
+!s90 -reportprogress|300|../../LED_IP.v|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+n@l@e@d_@i@p
+vtestbench_LED_IP
+2testbench_LED_IP.v
+R2
+!i10b 1
+!s100 LK]o1PjSRn5^iW8f<79:L1
+I7J[dzOF?;PLf2i4h6jKdn2
+R1
+w1730859870
+8testbench_LED_IP.v
+Ftestbench_LED_IP.v
+!i122 4
+L0 4 43
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 testbench_LED_IP.v|
+!s90 -reportprogress|300|testbench_LED_IP.v|
+!i113 0
+R7
+R3
+ntestbench_@l@e@d_@i@p

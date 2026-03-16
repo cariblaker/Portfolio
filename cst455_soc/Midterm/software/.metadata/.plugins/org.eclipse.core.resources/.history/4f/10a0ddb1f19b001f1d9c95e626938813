@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
+#include "semphr.h"
+
+#define TASK_STACKSIZE 2048
+#define LED_TASK_PRIORITY (tskIDLE_PRIORITY +1);
+
+int ms_slept = 750 / portTICK_PERIOD_MS;
+
+SemaphoreHandle_t g_mutex;
+
+void led_task(void* pvParameters){
+	uint16_t count = 0;
+	int ms_slept = (*((int*)pvParameters));
+	while (1){
+		xSemaphoreTake(g_mutex, portMAX_DELAY);
+		IOWR(LEDS_BASE, 0, count);
+		printf("Count = %u\r\n", count);
+		count++;
+		if (count == 1024)
+			count = 0;
+		xSemaphoreGive(g_mutex);
+		vTaskDelay(ms_slept);
+	}
+}
+
+
+
+//two tasks. one for led stuff, one for 7seg stuff.
+
+int main(){
+	printf("Hello FreeRTOS from main! \n");
+
+	g_mutex = xSemaphoreCreateMutex;
+
+	if (pdFAIL == xTaskCreate( led_task, "led_task", TASK_STACKSIZE, &t1_ms_slept, LED_TASK_PRIORITY, NULL) )
+	{
+		printf("LED task creation failed...\n");
+	}
+
+	vTaskStartScheduler();
+
+
+	while (1) { }
+	return 0;
+}

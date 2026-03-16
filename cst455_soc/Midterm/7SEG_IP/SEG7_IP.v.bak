@@ -1,0 +1,52 @@
+module SEG7_IP(
+	 input [1:0] address,
+	 input chipselect,
+	 input clk,
+    input reset_n,
+	 input write,
+	 input read,
+    input [31:0] writedata,
+    output [6:0] seg_out,
+	 output [31:0] readdata);
+
+    reg [3:0] DATA;
+    wire [31:0] read_mux_out;
+
+    assign read_mux_out = {10 {(address == 0)}} & DATA;
+
+ always @(posedge clk or negedge reset_n)
+    begin
+        if (reset_n == 0)
+            DATA <= 0;
+        else if (chipselect && write && (address == 0))
+            DATA <= writedata[3:0];
+    end
+	 
+always @(DATA)
+	 begin
+		if (reset_n == 0)
+			begin
+				seg_out <= 7'b1000000;  //0
+			end
+		else
+			begin
+				case (DATA)
+					4'd0: seg_data = 7'b1000000; // 0
+					4'd1: seg_data = 7'b1111001; // 1
+					4'd2: seg_data = 7'b0100100; // 2
+					4'd3: seg_data = 7'b0110000; // 3
+					4'd4: seg_data = 7'b0011001; // 4
+					4'd5: seg_data = 7'b0010010; // 5
+					4'd6: seg_data = 7'b0000010; // 6
+					4'd7: seg_data = 7'b1111000; // 7
+					4'd8: seg_data = 7'b0000000; // 8
+					4'd9: seg_data = 7'b0010000; // 9
+					default: seg_data = 7'b1111111; // Blank or undefined input
+			  endcase
+			end
+	 end
+
+    assign readdata = {32'b0 | read_mux_out};
+    
+
+endmodule

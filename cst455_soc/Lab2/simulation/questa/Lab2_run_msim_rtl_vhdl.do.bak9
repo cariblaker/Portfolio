@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/cari/cst455_soc/Lab2/adder.vhd}
+vcom -93 -work work {/home/cari/cst455_soc/Lab2/sev_seg_decoder.vhd}
+

@@ -1,0 +1,12 @@
+module Lab1(
+	SW[0:3],
+	sevSeg[0:6]
+);
+
+	always @(SW)
+	begin
+	
+		casex (SW)
+			4'b0000 :
+				begin
+					sevSeg = 7'b

@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include "system.h"
+#include "io.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+
+#define TASK_STACKSIZE 2048
+#define BUTTON_TASK_PRIORITY (tskIDLE_PRIORITY)
+#define LED_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
+
+int ms_slept = 750 / portTICK_PERIOD_MS;
+
+// Queue handle for communication between button and LED tasks
+QueueHandle_t modeQueue;
+
+void led_task(void* pvParameters) {
+    uint16_t count = 0;             // For the up-counter
+    uint16_t cylon_count = 0;       // For the cylon pattern
+    uint8_t custom_count = 0;       // Separate counter for the custom LED pattern
+    uint8_t mode = 0;               // Initial mode: Blink
+
+    while (1) {
+        // Wait for a new mode message from the button task
+        if (xQueueReceive(modeQueue, &mode, 0)) {
+            printf("LED Task: Mode changed to %d\n", mode);
+        }
+
+        // Set LEDs based on the current mode
+        switch (mode) {
+            case 0:
+                // Blink LEDs
+                IOWR(LEDS_BASE, 0, 0xFF); // All LEDs ON
+                vTaskDelay(ms_slept);
+                IOWR(LEDS_BASE, 0, 0x00); // All LEDs OFF
+                break;
+
+            case 1:
+                // Cylon pattern
+                IOWR(LEDS_BASE, 0, 1 << (cylon_count % 10));
+                cylon_count++;
+                if (cylon_count >= 10) cylon_count = 0;
+                break;
+
+            case 2:
+                // Up-counter pattern
+                IOWR(LEDS_BASE, 0, count);
+                count++;
+                if (count == 1024) count = 0;
+                break;
+
+            case 3:
+                // Custom expanding and contracting pattern
+                switch (custom_count) {
+                    case 0: IOWR(LEDS_BASE, 0, 0x201); break;
+                    case 1: IOWR(LEDS_BASE, 0, 0x303); break;
+                    case 2: IOWR(LEDS_BASE, 0, 0x387); break;
+                    case 3: IOWR(LEDS_BASE, 0, 0x3CF); break;
+                    case 4: IOWR(LEDS_BASE, 0, 0x3FF); break;
+                    case 5: IOWR(LEDS_BASE, 0, 0x1FE); break;
+                    case 6: IOWR(LEDS_BASE, 0, 0x0FC); break;
+                    case 7: IOWR(LEDS_BASE, 0, 0x078); break;
+                    case 8: IOWR(LEDS_BASE, 0, 0x030); break;
+                    case 9: IOWR(LEDS_BASE, 0, 0x000); break;
+                }
+                custom_count++;
+                if (custom_count >= 10) custom_count = 0; // Reset custom_count after completing the pattern
+                break;
+        }
+
+        vTaskDelay(ms_slept); // Delay for smooth transitions
+    }
+}
+
+void button_task(void* pvParameters) {
+    uint8_t mode = 0;               // 0: Blink, 1: Cylon, 2: Up-counter, 3: Custom pattern
+    uint32_t button_state;
+    uint32_t prev_button_state = 0;
+
+    while (1) {
+        // Read the current button state
+        button_state = IORD(BUTTONS_0_BASE, 0);
+
+        // Check for button releases by looking for a high-to-low transition
+        if ((prev_button_state & 0x1) && !(button_state & 0x1)) { // Button 0 released
+            mode = 0; // Blink LEDs
+        }
+        else if ((prev_button_state & 0x2) && !(button_state & 0x2)) { // Button 1 released
+            mode = 1; // Cylon pattern
+        }
+        else if ((prev_button_state & 0x4) && !(button_state & 0x4)) { // Button 2 released
+            mode = 2; // Up-counter pattern
+        }
+        else if ((prev_button_state & 0x8) && !(button_state & 0x8)) { // Button 3 released
+            mode = 3; // Custom pattern
+        }
+
+        // Send the new mode to the LED task via the queue
+        if (xQueueSend(modeQueue, &mode, portMAX_DELAY) != pdPASS) {
+            printf("Button Task: Failed to send mode to queue\n");
+        } else {
+            printf("Button Task: Sent mode %d to queue\n", mode);
+        }
+
+        // Update previous button state
+        prev_button_state = button_state;
+
+        vTaskDelay(ms_slept);
+    }
+}
+
+int main() {
+    printf("Hello FreeRTOS from main!\n");
+
+    // Create the message queue
+    modeQueue = xQueueCreate(10, sizeof(uint8_t));
+    if (modeQueue == NULL) {
+        printf("Failed to create queue\n");
+        return -1;
+    }
+
+    // Create the LED task
+    if (pdFAIL == xTaskCreate(led_task, "LED Task", TASK_STACKSIZE, NULL, LED_TASK_PRIORITY, NULL)) {
+        printf("LED task creation failed...\n");
+    }
+
+    // Create the Button task
+    if (pdFAIL == xTaskCreate(button_task, "Button Task", TASK_STACKSIZE, NULL, BUTTON_TASK_PRIORITY, NULL)) {
+        printf("Button task creation failed...\n");
+    }
+
+    // Start the scheduler
+    vTaskStartScheduler();
+
+    while (1) {}
+    return 0;
+}

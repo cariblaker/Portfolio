@@ -1,0 +1,139 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do SEG7_IP_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying /opt/IntelFPGA/questa_fse/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/cari/cst455_soc/Midterm/7SEG_IP/simulation/questa {/home/cari/cst455_soc/Midterm/7SEG_IP/simulation/questa/SEG7_IP.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:29:31 on Nov 06,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/cari/cst455_soc/Midterm/7SEG_IP/simulation/questa" /home/cari/cst455_soc/Midterm/7SEG_IP/simulation/questa/SEG7_IP.v 
+# -- Compiling module SEG7_IP
+# 
+# Top level modules:
+# 	SEG7_IP
+# End time: 19:29:31 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+do testbench_SEG7_IP.tcl
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:29:46 on Nov 06,2024
+# vlog -reportprogress 300 ../../*.v 
+# ** Error: (vlog-7) Failed to open design unit file "../../*.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 19:29:46 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /opt/IntelFPGA/questa_fse/linux_x86_64/vlog failed.
+# Error in macro ./testbench_SEG7_IP.tcl line 5
+# /opt/IntelFPGA/questa_fse/linux_x86_64/vlog failed.
+#     while executing
+# "vlog ../../*.v"
+do testbench_SEG7_IP.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:33:11 on Nov 06,2024
+# vlog -reportprogress 300 ../../SEG7_IP.v 
+# -- Compiling module SEG7_IP
+# 
+# Top level modules:
+# 	SEG7_IP
+# End time: 19:33:11 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:33:11 on Nov 06,2024
+# vlog -reportprogress 300 testbench_SEG7_IP.v 
+# -- Compiling module testbench_SEG7_IP
+# 
+# Top level modules:
+# 	testbench_SEG7_IP
+# End time: 19:33:11 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench_SEG7_IP -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work -voptargs=""+acc"" 
+# Start time: 19:33:11 on Nov 06,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.testbench_SEG7_IP(fast)
+# Loading work.SEG7_IP(fast)
+do testbench_SEG7_IP.tcl
+# End time: 19:41:04 on Nov 06,2024, Elapsed time: 0:07:53
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:41:05 on Nov 06,2024
+# vlog -reportprogress 300 ../../SEG7_IP.v 
+# -- Compiling module SEG7_IP
+# 
+# Top level modules:
+# 	SEG7_IP
+# End time: 19:41:05 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:41:05 on Nov 06,2024
+# vlog -reportprogress 300 testbench_SEG7_IP.v 
+# -- Compiling module testbench_SEG7_IP
+# 
+# Top level modules:
+# 	testbench_SEG7_IP
+# End time: 19:41:05 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench_SEG7_IP -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work -voptargs=""+acc"" 
+# Start time: 19:41:05 on Nov 06,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.testbench_SEG7_IP(fast)
+# Loading work.SEG7_IP(fast)
+do testbench_SEG7_IP.tcl
+# End time: 19:44:54 on Nov 06,2024, Elapsed time: 0:03:49
+# Errors: 0, Warnings: 1
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:44:54 on Nov 06,2024
+# vlog -reportprogress 300 ../../SEG7_IP.v 
+# -- Compiling module SEG7_IP
+# 
+# Top level modules:
+# 	SEG7_IP
+# End time: 19:44:54 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 19:44:54 on Nov 06,2024
+# vlog -reportprogress 300 testbench_SEG7_IP.v 
+# -- Compiling module testbench_SEG7_IP
+# 
+# Top level modules:
+# 	testbench_SEG7_IP
+# End time: 19:44:54 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench_SEG7_IP -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work -voptargs=""+acc"" 
+# Start time: 19:44:54 on Nov 06,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.testbench_SEG7_IP(fast)
+# Loading work.SEG7_IP(fast)
+# End time: 23:14:49 on Nov 06,2024, Elapsed time: 3:29:55
+# Errors: 0, Warnings: 1

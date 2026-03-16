@@ -1,0 +1,170 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+Z1 !s99 mlopt
+!s11f MIXED_VERSIONS
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/cari/cst455_soc/Lab2/simulation/questa
+T_opt
+!s110 1729142237
+VoKZWgUWCzMelN??L^5Mac3
+04 18 4 work sev_seg_decoder_tb fast 0
+=1-000ae431a4f1-67109ddd-566f6-14f72
+R1
+Z3 !s12b OEM100
+!s124 OEM10U2 
+Z4 o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2023.3;77
+R2
+T_opt1
+Z7 !s110 1729142619
+VA`al@PK4o]kH72GbnLJhV0
+04 9 8 work testbench behavior 1
+=1-000ae431a4f1-67109f5b-6218f-151ce
+R0
+R3
+!s124 OEM10U6 
+R4
+R5
+n@_opt1
+R6
+Eadder
+Z8 w1729040746
+Z9 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z10 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z11 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R2
+Z12 8/home/cari/cst455_soc/Lab2/adder.vhd
+Z13 F/home/cari/cst455_soc/Lab2/adder.vhd
+l0
+L5 1
+VJe]ln?aImX_zgAak9Wk1m1
+!s100 2di1zFz`bz@DzNVWG:<TU3
+Z14 OL;C;2023.3;77
+31
+R7
+!i10b 1
+Z15 !s108 1729142619.000000
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/cari/cst455_soc/Lab2/adder.vhd|
+Z17 !s107 /home/cari/cst455_soc/Lab2/adder.vhd|
+!i113 0
+Z18 o-93 -work work
+Z19 tExplicit 1 CvgOpt 0
+Abehavioral
+R9
+R10
+R11
+DEx4 work 5 adder 0 22 Je]ln?aImX_zgAak9Wk1m1
+!i122 0
+l30
+L16 51
+VjPU_nzGkfFYE?`Cdi==no3
+!s100 @VAgAGnTcd21GXTzPY^CF3
+R14
+31
+R7
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Esev_seg_decoder
+Z20 w1728939602
+R9
+R10
+R11
+!i122 1
+R2
+Z21 8/home/cari/cst455_soc/Lab2/sev_seg_decoder.vhd
+Z22 F/home/cari/cst455_soc/Lab2/sev_seg_decoder.vhd
+l0
+L5 1
+VC`TgAk3XA8BR^8j6=CT<H0
+!s100 mVh:O[mfCA6=hAZiXYCLW0
+R14
+31
+R7
+!i10b 1
+R15
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/cari/cst455_soc/Lab2/sev_seg_decoder.vhd|
+Z24 !s107 /home/cari/cst455_soc/Lab2/sev_seg_decoder.vhd|
+!i113 0
+R18
+R19
+Abehavioral
+R9
+R10
+R11
+DEx4 work 15 sev_seg_decoder 0 22 C`TgAk3XA8BR^8j6=CT<H0
+!i122 1
+l14
+L13 25
+V]F853z[FOo2e1G=N6JPJ=0
+!s100 i:>h28X4`@?kfM[eo=Mfh0
+R14
+31
+R7
+!i10b 1
+R15
+R23
+R24
+!i113 0
+R18
+R19
+Etestbench
+Z25 w1729142595
+R9
+R10
+R11
+!i122 2
+R2
+Z26 8/home/cari/cst455_soc/Lab2/simulation/questa/testbench.vhd
+Z27 F/home/cari/cst455_soc/Lab2/simulation/questa/testbench.vhd
+l0
+L5 1
+VoJ6aR>cU4Z>:Lk@NRmG7=1
+!s100 ?O>l2H:VTXRF7]O@bz>b10
+R14
+31
+R7
+!i10b 1
+R15
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/cari/cst455_soc/Lab2/simulation/questa/testbench.vhd|
+Z29 !s107 /home/cari/cst455_soc/Lab2/simulation/questa/testbench.vhd|
+!i113 0
+R18
+R19
+Abehavior
+R9
+R10
+R11
+DEx4 work 9 testbench 0 22 oJ6aR>cU4Z>:Lk@NRmG7=1
+!i122 2
+l29
+L9 45
+VO2bB<365dLPob?aYMV@z50
+!s100 5OPm8gYR1mK>j4lZiMb3U3
+R14
+31
+R7
+!i10b 1
+R15
+R28
+R29
+!i113 0
+R18
+R19

@@ -1,0 +1,77 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/cari/cst455_soc/Midterm/7SEG_IP/simulation/questa
+T_opt
+Z3 !s110 1730951094
+V`Un022lMkAGlJZ482CT@U2
+04 17 4 work testbench_SEG7_IP fast 0
+=1-000ae431a4f1-672c37b6-a1db4-da36
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L work +acc
+Z4 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vSEG7_IP
+2../../SEG7_IP.v
+R3
+!i10b 1
+!s100 ICLFj8:e[>`hBCXeOD^nj0
+IlQmiL>3`JT0R@4^c288I?2
+R2
+w1730950013
+8../../SEG7_IP.v
+F../../SEG7_IP.v
+!i122 5
+L0 1 45
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1730951094.000000
+!s107 ../../SEG7_IP.v|
+!s90 -reportprogress|300|../../SEG7_IP.v|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@s@e@g7_@i@p
+vtestbench_SEG7_IP
+2testbench_SEG7_IP.v
+R3
+!i10b 1
+!s100 TSn8`:Slk_TLG7]`ERB3@2
+I58=hkDE<JSFYZEoL8Yo<>2
+R2
+w1730951089
+8testbench_SEG7_IP.v
+Ftestbench_SEG7_IP.v
+!i122 6
+L0 3 57
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 testbench_SEG7_IP.v|
+!s90 -reportprogress|300|testbench_SEG7_IP.v|
+!i113 0
+R8
+R4
+ntestbench_@s@e@g7_@i@p

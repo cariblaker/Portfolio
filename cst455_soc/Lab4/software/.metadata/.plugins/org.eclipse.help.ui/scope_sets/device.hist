@@ -1,0 +1,4 @@
+#Tue Nov 26 19:22:10 PST 2024
+__DEFAULT__=false
+expression=device
+org.eclipse.help.ui.localSearch.master=true

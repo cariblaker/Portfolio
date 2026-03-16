@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sum1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sum1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sum1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sum1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sum2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "num1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "num1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "num1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "num1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "num2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "num2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "num2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "num2[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

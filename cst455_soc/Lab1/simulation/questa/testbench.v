@@ -1,0 +1,38 @@
+`timescale 1ns / 1ps
+
+module testbench ();
+	reg clk;
+	reg [3:0]SW;
+	wire [6:0]display;
+	
+	Lab1 	U1(SW, display);
+	
+	always
+	begin
+		#10 clk <= ~clk;
+	end
+	
+	initial
+	begin
+		clk <= 1'b0;
+		SW <= 4'b0000;
+		#10 SW <= 4'b0001;
+		#10 SW <= 4'b0010;
+		#10 SW <= 4'b0011;
+		#10 SW <= 4'b0100;
+		#10 SW <= 4'b0101;
+		#10 SW <= 4'b0110;
+		#10 SW <= 4'b0111;
+		#10 SW <= 4'b1000;
+		#10 SW <= 4'b1001;
+		#10 SW <= 4'b1010;
+		#10 SW <= 4'b1011;
+		#10 SW <= 4'b1100;
+		#10 SW <= 4'b1101;
+		#10 SW <= 4'b1110;
+		#10 SW <= 4'b1111;
+	end
+	
+endmodule
+
+	

@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.seven_seg_pkg.all;  -- Import the package
+
+entity adder is
+	port (
+		num4, num2	: in  std_logic_vector (3 downto 0);
+		Hex4, Hex2	: out std_logic_vector (6 downto 0);
+		SumHex1, SumHex0 : out std_logic_vector (6 downto 0)
+	);
+end adder;
+
+architecture adder_arch of adder is
+begin
+	process(num4, num2)
+		variable sum : std_logic_vector(4 downto 0);
+	begin
+		-- Use the function from the package
+		Hex4 <= to_seven_segment(num4);
+		Hex2 <= to_seven_segment(num2);
+
+		-- Calculate the sum and display the result
+		sum := std_logic_vector(unsigned(num4) + unsigned(num2));
+		SumHex1 <= to_seven_segment(sum(4 downto 4));  -- Upper digit of the sum
+		SumHex0 <= to_seven_segment(sum(3 downto 0));  -- Lower digit of the sum
+	end process;
+end adder_arch;

@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include "system.h"
+#include "io.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
+#include "semphr.h"
+
+#define TASK_STACKSIZE 2048
+#define BUTTON_TASK_PRIORITY (tskIDLE_PRIORITY)
+#define LED_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
+
+int ms_slept = 750 / portTICK_PERIOD_MS;
+
+SemaphoreHandle_t g_mutex;
+volatile uint8_t mode = 0;  // Shared variable for LED mode
+
+void led_task(void* pvParameters) {
+    uint16_t count = 0;        // For the up-counter
+    uint16_t cylon_count = 0;  // For the Cylon pattern
+    uint8_t custom_count = 0;  // Separate counter for the custom LED pattern
+    bool blink_state = false;  // For blinking LEDs in mode 0
+
+    while (1) {
+        xSemaphoreTake(g_mutex, portMAX_DELAY);
+
+        // Set LEDs based on the current mode
+        switch (mode) {
+            case 0:  // Blink LEDs
+                blink_state = !blink_state;
+                IOWR(LEDS_BASE, 0, blink_state ? 0x3FF : 0x000);  // Toggle all LEDs
+                break;
+
+            case 1:  // Cylon pattern
+                IOWR(LEDS_BASE, 0, 1 << (cylon_count % 10));
+                cylon_count++;
+                if (cylon_count >= 10) cylon_count = 0;
+                break;
+
+            case 2:  // Up-counter pattern
+                IOWR(LEDS_BASE, 0, count);
+                count++;
+                if (count == 1024) count = 0;
+                break;
+
+            case 3:  // Custom expanding and contracting pattern
+                switch (custom_count) {
+                    case 0: IOWR(LEDS_BASE, 0, 0x201); break;   // 10 0000 0001
+                    case 1: IOWR(LEDS_BASE, 0, 0x303); break;   // 11 0000 0011
+                    case 2: IOWR(LEDS_BASE, 0, 0x387); break;   // 11 1000 0111
+                    case 3: IOWR(LEDS_BASE, 0, 0x3CF); break;   // 11 1100 1111
+                    case 4: IOWR(LEDS_BASE, 0, 0x3FF); break;   // 1111111111
+                    case 5: IOWR(LEDS_BASE, 0, 0x1FE); break;   // 01 1111 1110
+                    case 6: IOWR(LEDS_BASE, 0, 0x0FC); break;   // 00 1111 1100
+                    case 7: IOWR(LEDS_BASE, 0, 0x078); break;   // 00 0111 1000
+                    case 8: IOWR(LEDS_BASE, 0, 0x030); break;   // 00 0011 0000
+                    case 9: IOWR(LEDS_BASE, 0, 0x000); break;   // 0000000000
+                }
+                custom_count++;
+                if (custom_count >= 10) custom_count = 0;  // Reset custom_count
+                break;
+        }
+
+        printf("Mode = %u\r\n", mode);
+
+        xSemaphoreGive(g_mutex);
+        vTaskDelay(ms_slept);
+    }
+}
+
+void button_task(void* pvParameters) {
+    uint32_t button_state;
+    uint32_t prev_button_state = 0;  // Store the previous button state
+
+    while (1) {
+        xSemaphoreTake(g_mutex, portMAX_DELAY);
+
+        // Read the current button state
+        button_state = IORD(BUTTONS_0_BASE, 0);
+
+        // Check for button releases by looking for a high-to-low transition
+        if ((prev_button_state & 0x1) && !(button_state & 0x1)) {  // Button 0 released
+            mode = 0;  // Blink LEDs
+        } else if ((prev_button_state & 0x2) && !(button_state & 0x2)) {  // Button 1 released
+            mode = 1;  // Cylon pattern
+        } else if ((prev_button_state & 0x4) && !(button_state & 0x4)) {  // Button 2 released
+            mode = 2;  // Up-counter pattern
+        } else if ((prev_button_state & 0x8) && !(button_state & 0x8)) {  // Button 3 released
+            mode = 3;  // Custom pattern
+        }
+
+        prev_button_state = button_state;
+
+        xSemaphoreGive(g_mutex);
+        vTaskDelay(ms_slept);
+    }
+}
+
+int main() {
+    printf("Hello FreeRTOS from main! \n");
+
+    g_mutex = xSemaphoreCreateMutex();
+
+    if (pdFAIL == xTaskCreate(led_task, "led_task", TASK_STACKSIZE, NULL, LED_TASK_PRIORITY, NULL)) {
+        printf("LED task creation failed...\n");
+    }
+
+    if (pdFAIL == xTaskCreate(button_task, "button_task", TASK_STACKSIZE, NULL, BUTTON_TASK_PRIORITY, NULL)) {
+        printf("Button task creation failed...\n");
+    }
+
+    vTaskStartScheduler();
+
+    while (1) {
+    }
+    return 0;
+}

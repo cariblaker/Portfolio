@@ -1,0 +1,35 @@
+module BUTTON_IP(
+	 input [1:0] address,
+	 input chipselect,
+	 input clk,
+    input reset_n,
+	 input write,
+	 input read,
+	 input button_in,
+    input [31:0] writedata,
+	 output [31:0] readdata,
+	 output reg button_out);
+	 
+	 reg button_press;
+
+ always @(posedge clk)
+    begin
+		if ((button_in == 1'b0) && (button_press == 1'b0))			// button press detected
+			begin
+				button_out <= button_out;
+				button_press <= 1'b1;
+         end
+      else if ((button_press == 1'b1) && (button_in == 1'b1))	// Button released
+			begin
+				 button_press <= 1'b0;									//clear press detection reg
+				 button_out <= 1'b1; 									// Send pulse for button press
+            end
+		else 
+			begin
+				button_press <= button_press;							// no change in button state
+				button_out <= 1'b0;										// ensure pulse gets cleared.
+			end
+	end
+	
+	 
+endmodule

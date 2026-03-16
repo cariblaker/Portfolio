@@ -1,0 +1,1923 @@
+!SESSION 2024-11-21 19:33:36.644 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-21 19:37:14.051
+!MESSAGE Indexed 'app' (0 sources, 0 headers) in 0.237 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-21 23:13:34.725
+!MESSAGE Scanning debug probes
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-21 23:13:34.832
+!MESSAGE DebugProbe [deviceName=USB-Blaster-2, serialNumber=1, displayName=DE-SoC [1-3], probeType=null]
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-21 23:23:34.558
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.cdt.core.CCorePlugin.stop() of bundle org.eclipse.cdt.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+!SESSION 2024-11-21 23:25:17.990 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-21 23:25:52.565
+!MESSAGE Error
+!STACK 1
+C Model Exception: C Model Status [Element CMakeScratch does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.CContainer.buildStructure(CContainer.java:159)
+	at org.eclipse.cdt.internal.core.model.Openable.generateInfos(Openable.java:264)
+	at org.eclipse.cdt.internal.core.model.CElement.openWhenClosed(CElement.java:428)
+	at org.eclipse.cdt.internal.core.model.CElement.getElementInfo(CElement.java:306)
+	at org.eclipse.cdt.internal.core.model.CElement.getElementInfo(CElement.java:296)
+	at org.eclipse.cdt.internal.core.model.Parent.getChildren(Parent.java:57)
+	at org.eclipse.cdt.internal.core.model.CElement.accept(CElement.java:525)
+	at org.eclipse.cdt.internal.core.model.CElement.accept(CElement.java:527)
+	at org.eclipse.cdt.internal.core.model.CElement.accept(CElement.java:527)
+	at org.eclipse.cdt.internal.core.model.CElement.accept(CElement.java:527)
+	at org.eclipse.cdt.internal.core.model.CElement.accept(CElement.java:527)
+	at org.eclipse.cdt.internal.core.model.CElement.accept(CElement.java:527)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.createDelegate(PDOMUpdateTask.java:113)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMUpdateTask.run(PDOMUpdateTask.java:88)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2024-11-21 23:25:52.566
+!MESSAGE Element CMakeScratch does not exist.
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-21 23:30:02.752
+!MESSAGE Scanning debug probes
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-21 23:30:02.858
+!MESSAGE DebugProbe [deviceName=USB-Blaster-2, serialNumber=1, displayName=DE-SoC [1-3], probeType=null]
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-21 23:30:34.923
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 43213 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-21 23:30:35.141
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@3e2cb59c): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-21 23:30:35.141
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-21 23:30:35.141
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-21 23:30:35.183
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-21 23:30:35.184
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-21 23:30:35.185
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:07:16.561
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 37627 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:07:16.774
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@1e31ef4a): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:07:16.774
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:07:16.774
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:07:16.777
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:07:16.778
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:07:16.778
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-26 18:11:43.081
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.cdt.core.CCorePlugin.stop() of bundle org.eclipse.cdt.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+!SESSION 2024-11-26 18:12:03.431 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:12:51.272
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 37589 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:12:51.492
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@1009fb08): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:12:51.492
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:12:51.494
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:12:51.529
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:12:51.529
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:12:51.529
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 18:13:53.101
+!MESSAGE Scanning debug probes
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 18:13:53.215
+!MESSAGE DebugProbe [deviceName=USB-Blaster-2, serialNumber=1, displayName=DE-SoC [1-3], probeType=null]
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-26 18:14:33.349
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.cdt.core.CCorePlugin.stop() of bundle org.eclipse.cdt.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+!SESSION 2024-11-26 18:18:06.641 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:18:34.136
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 34819 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:18:34.353
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@756527c1): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:18:34.353
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:18:34.354
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:18:34.375
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:18:34.376
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:18:34.376
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:34:50.354
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 40097 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:34:50.679
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@594d12ea): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:34:50.679
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:34:50.679
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:34:50.682
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:34:50.683
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:34:50.683
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!SESSION 2024-11-26 18:37:52.963 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-11-26 18:37:59.335
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:41:48.312
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 34507 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:41:48.536
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@7db3968c): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:41:48.536
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:41:48.537
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:41:48.551
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:41:48.551
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:41:48.551
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:47:48.506
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 35887 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:47:48.719
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@51761917): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:47:48.719
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:47:48.719
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:47:48.723
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:47:48.723
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:47:48.723
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-26 18:47:52.736
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.cdt.core.CCorePlugin.stop() of bundle org.eclipse.cdt.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+!SESSION 2024-11-26 18:48:39.618 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:49:27.471
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 42131 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:49:27.699
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@6aff8111): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:49:27.699
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:49:27.700
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:49:27.729
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:49:27.729
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:49:27.729
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 18:52:03.799
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device  --auto-detect true --gdb-port 43985 --jtag-frequency 16000KHz --tap-number 1 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-11-26 18:52:04.019
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitorWithProgress@643c37e0): Status ERROR: com.ashling.riscfree.debug.opxd code=0 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+ org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+' resulted in an error.
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:52:04.019
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:52:04.019
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 18:52:04.022
+!MESSAGE Error in GDB server launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at org.eclipse.cdt.dsf.concurrent.Sequence.abortExecution(Sequence.java:599)
+	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleErrorOrWarning(Sequence.java:448)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleFailure(RequestMonitor.java:433)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:393)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:52:04.022
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend.launchGdbServerProcess(GdbServerBackend.java:361)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerStep$2.run(GdbServerBackend.java:763)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 18:52:04.022
+!MESSAGE 
+Ashling GDB Server for RISC-V (ash-riscv-gdb-server).
+v23.4.1, 03-Nov-2023, (c)Ashling Microsystems Ltd 2023.
+
+Error: A target device must be specified, use the --device option.
+
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:11:25.480
+!MESSAGE Scanning debug probes
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:11:25.590
+!MESSAGE DebugProbe [deviceName=USB-Blaster-2, serialNumber=1, displayName=DE-SoC [1-3], probeType=null]
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:11:39.275
+!MESSAGE Detecting scan chain for serial number=1 jtagFreq=16000KHz tapReset=1
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:11:39.437
+!MESSAGE TapDetails [tapNumber=1, irLength=4, idCode=1268778103, name=SOCVHPS, numberOfCores=0, decimalNumberSystem=false]
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:11:39.438
+!MESSAGE TapDetails [tapNumber=2, irLength=10, idCode=47194333, name=5CSEBA6(.|ES)/5CSEMA6/.., numberOfCores=1, decimalNumberSystem=false]
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:11:39.438
+!MESSAGE CoreDetails [coreId=144207360, name=Nios V, coreIndex=0]
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:11:51.648
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 42963 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:11:55.048
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 0 2024-11-26 19:20:39.092
+!MESSAGE Debug session 'app.elf' already started. Terminate the first one before restarting.
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-26 19:21:30.066
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.cdt.core.CCorePlugin.stop() of bundle org.eclipse.cdt.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:895)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	... 13 more
+Root exception:
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runtime.content.IContentTypeManager.removeContentTypeChangeListener(org.eclipse.core.runtime.content.IContentTypeManager$IContentTypeChangeListener)" because the return value of "org.eclipse.core.runtime.Platform.getContentTypeManager()" is null
+	at org.eclipse.cdt.internal.core.model.CModelManager.shutdown(CModelManager.java:1378)
+	at org.eclipse.cdt.core.model.CoreModel.shutdown(CoreModel.java:1156)
+	at org.eclipse.cdt.core.CCorePlugin.stop(CCorePlugin.java:375)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:875)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:867)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1046)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:376)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1893)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1768)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:208)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-11-26 19:21:30.389
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
+!SESSION 2024-11-26 19:21:36.404 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=20.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:22:48.478
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 41353 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:22:51.661
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:22:52.536
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:22:52.537
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:24:05.572
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 42249 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:24:06.728
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:24:07.182
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:24:07.182
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:25:08.892
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 40329 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:25:10.076
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:25:10.474
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:25:10.474
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:27:34.235
+!MESSAGE Scanning debug probes
+
+!ENTRY com.ashling.riscfree.debug.utils 1 0 2024-11-26 19:27:34.352
+!MESSAGE DebugProbe [deviceName=USB-Blaster-2, serialNumber=1, displayName=DE-SoC [1-3], probeType=null]
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:28:09.798
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 40631 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:28:11.144
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:28:11.975
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:28:11.976
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:29:00.709
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 44287 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:29:02.068
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:29:02.816
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:29:02.816
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:30:43.108
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 36741 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:30:44.467
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:32:07.697
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 46323 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:32:09.031
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:32:09.712
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:32:09.712
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:32:49.898
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 44747 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:32:51.207
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-11-26 19:32:54.935
+!MESSAGE IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+!STACK 0
+java.util.concurrent.TimeoutException: IJobChangeListener timeout detected. Further calls to IJobChangeListener may occur in random order and join(family) can return too soon. IJobChangeListener should return within 3000 ms. IJobChangeListener methods should not block. Possible deadlock.
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:106)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:524)
+	at org.eclipse.core.internal.jobs.JobManager.schedule(JobManager.java:1373)
+	at org.eclipse.core.internal.jobs.InternalJob.schedule(InternalJob.java:396)
+	at org.eclipse.core.runtime.jobs.Job.schedule(Job.java:654)
+	at org.eclipse.cdt.dsf.debug.internal.provisional.model.MemoryBlockRetrievalManager.addRmvJobToQueueAndSchedule(MemoryBlockRetrievalManager.java:145)
+	at org.eclipse.cdt.dsf.debug.internal.provisional.model.MemoryBlockRetrievalManager.eventDispatched(MemoryBlockRetrievalManager.java:134)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.cdt.dsf.service.DsfSession.doDispatchEvent(DsfSession.java:541)
+	at org.eclipse.cdt.dsf.service.DsfSession$3.run(DsfSession.java:408)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+!SUBENTRY 1 org.eclipse.core.jobs 4 2 2024-11-26 19:32:54.936
+!MESSAGE Thread that is running the IJobChangeListener: Worker-32: Removing memory blocks
+	at org.eclipse.cdt.dsf.debug.internal.provisional.model.MemoryBlockRetrievalManager$2.done(MemoryBlockRetrievalManager.java:123)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEvent(JobListeners.java:160)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEventsAsync(JobListeners.java:140)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:80)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:524)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:728)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:117)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:83)
+
+All thread infos: 
+"main" prio=6 Id=1 RUNNABLE
+	at org.eclipse.swt.internal.gtk.OS.Call(Native Method)
+	at org.eclipse.swt.widgets.Display.sleep(Display.java:5706)
+	at org.eclipse.ui.application.WorkbenchAdvisor.eventLoopIdle(WorkbenchAdvisor.java:339)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.eventLoopIdle(IDEWorkbenchAdvisor.java:994)
+	at org.eclipse.ui.internal.Workbench$1.eventLoopIdle(Workbench.java:478)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	...
+
+"Reference Handler" daemon prio=10 Id=9 RUNNABLE
+	at java.base@20.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@20.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+	at java.base@20.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" daemon prio=8 Id=10 WAITING on java.lang.ref.NativeReferenceQueue$Lock@46d9527a
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.NativeReferenceQueue$Lock@46d9527a
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+	at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+	at java.base@20.0.1/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+	at java.base@20.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" daemon prio=9 Id=11 RUNNABLE
+
+"Notification Thread" daemon prio=9 Id=18 RUNNABLE
+
+"Common-Cleaner" daemon prio=8 Id=20 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5de3e024
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5de3e024
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+	at java.base@20.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+	at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+	at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+	at java.base@20.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+	...
+
+"Active Thread: Equinox Container: aca9dc7e-fb66-4e61-bbc1-3d9f9b9697f6" prio=5 Id=29 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@59e215cd
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@59e215cd
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+	at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+	at java.base@20.0.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	...
+
+"Framework Event Dispatcher: Equinox Container: aca9dc7e-fb66-4e61-bbc1-3d9f9b9697f6" daemon prio=5 Id=31 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@7d449af0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@7d449af0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+"Start Level: Equinox Container: aca9dc7e-fb66-4e61-bbc1-3d9f9b9697f6" daemon prio=5 Id=32 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@71024da0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@71024da0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+"SCR Component Actor" daemon prio=5 Id=33 WAITING on java.util.LinkedList@33a27164
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.LinkedList@33a27164
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.apache.felix.scr.impl.ComponentActorThread.run(ComponentActorThread.java:83)
+	at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+	at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"EMF Reference Cleaner" daemon prio=5 Id=35 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7a2756a0
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@7a2756a0
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+	at java.base@20.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:67)
+	at java.base@20.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+	...
+
+"Worker-JM" prio=5 Id=36 WAITING on java.util.ArrayList@236dd00e
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.ArrayList@236dd00e
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:61)
+
+"Bundle File Closer" daemon prio=6 Id=42 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@40e1e68e
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@40e1e68e
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+"TCF Timer Dispatcher" daemon prio=6 Id=44 WAITING on java.util.TreeSet@606896a7
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.TreeSet@606896a7
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.tcf.protocol.Protocol$1.run(Protocol.java:107)
+
+"TCF Event Dispatcher" daemon prio=6 Id=43 WAITING on org.eclipse.tcf.EventQueue@20ba4e5c
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.tcf.EventQueue@20ba4e5c
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:93)
+	at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+	at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"TCF Locator Receiver" daemon prio=6 Id=47 RUNNABLE (in native)
+	at java.base@20.0.1/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base@20.0.1/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:789)
+	at java.base@20.0.1/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:765)
+	at java.base@20.0.1/sun.nio.ch.DatagramChannelImpl.trustedBlockingReceive(DatagramChannelImpl.java:699)
+	at java.base@20.0.1/sun.nio.ch.DatagramChannelImpl.blockingReceive(DatagramChannelImpl.java:667)
+	at java.base@20.0.1/sun.nio.ch.DatagramSocketAdaptor.receive(DatagramSocketAdaptor.java:241)
+	-  locked java.net.DatagramPacket@6d9a17e5
+	at java.base@20.0.1/java.net.DatagramSocket.receive(DatagramSocket.java:714)
+	at org.eclipse.tcf.internal.services.local.LocatorService$3.run(LocatorService.java:360)
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@6792e07
+
+"TCF Locator Timer" daemon prio=6 Id=45 TIMED_WAITING
+	at java.base@20.0.1/java.lang.Thread.sleep0(Native Method)
+	at java.base@20.0.1/java.lang.Thread.sleep(Thread.java:484)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1.run(LocatorService.java:235)
+
+"TCF Locator DNS Lookup" daemon prio=6 Id=46 TIMED_WAITING on java.util.HashMap@74c3583a
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.HashMap@74c3583a
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.tcf.internal.services.local.LocatorService$2.run(LocatorService.java:260)
+
+"org.eclipse.cdt.internal.ui.text.CReconciler" daemon prio=1 Id=49 TIMED_WAITING on org.eclipse.jface.text.reconciler.DirtyRegionQueue@495b5c78
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.jface.text.reconciler.DirtyRegionQueue@495b5c78
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler.delay(AbstractReconciler.java:572)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:181)
+
+"EventAdmin Async Event Dispatcher Thread" daemon prio=6 Id=52 WAITING on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@69b1b634
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.osgi.framework.eventmgr.EventManager$EventThread@69b1b634
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.getNextEvent(EventManager.java:400)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+"pool-1-thread-1" prio=5 Id=54 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@26f7a413
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@26f7a413
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+	at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"pool-2-thread-1" prio=5 Id=55 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@481b2a7f
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@481b2a7f
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+	at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"pool-3-thread-1" prio=5 Id=69 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5b301798
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5b301798
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+	at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+	...
+
+"Timer-0" prio=6 Id=101 WAITING on java.util.TaskQueue@3fd40adc
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.util.TaskQueue@3fd40adc
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at java.base@20.0.1/java.util.TimerThread.mainLoop(Timer.java:537)
+	at java.base@20.0.1/java.util.TimerThread.run(Timer.java:516)
+
+"Worker-16: Traces Input Job" prio=5 Id=126 WAITING on org.eclipse.ui.console.IOConsoleInputStream@2498f609
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.ui.console.IOConsoleInputStream@2498f609
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:141)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:92)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:114)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.TracingConsole$InputReadJob.run(TracingConsole.java:199)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-18: GDB CLI output Job" prio=5 Id=128 TIMED_WAITING on org.eclipse.cdt.dsf.mi.service.command.LargePipedInputStream@35c16837
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.dsf.mi.service.command.LargePipedInputStream@35c16837
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.io.PipedInputStream.read(PipedInputStream.java:328)
+	at java.base@20.0.1/java.io.PipedInputStream.read(PipedInputStream.java:376)
+	at java.base@20.0.1/java.io.InputStream.read(InputStream.java:217)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$OutputReadJob.run(GdbBasicCliConsole.java:275)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-29" prio=5 Id=185 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-32: Removing memory blocks" prio=5 Id=206 BLOCKED on java.util.LinkedList@12c0c8b2 owned by "org.eclipse.cdt.dsf.gdb - 7" Id=248
+	at org.eclipse.cdt.dsf.debug.internal.provisional.model.MemoryBlockRetrievalManager$2.done(MemoryBlockRetrievalManager.java:123)
+	-  blocked on java.util.LinkedList@12c0c8b2
+	at org.eclipse.core.internal.jobs.JobListeners$$Lambda$104/0x0000000801193360.notify(Unknown Source)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEvent(JobListeners.java:160)
+	at org.eclipse.core.internal.jobs.JobListeners.sendEventsAsync(JobListeners.java:140)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:80)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:524)
+	at org.eclipse.core.internal.jobs.JobManager.endJob(JobManager.java:728)
+	at org.eclipse.core.internal.jobs.WorkerPool.endJob(WorkerPool.java:117)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@710b4024
+
+"Worker-33" prio=5 Id=209 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-34" prio=5 Id=216 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:258)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-35: Launching app.elf" prio=5 Id=217 WAITING on org.eclipse.cdt.dsf.concurrent.Query$QueryRm@2c7e9a0d
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.dsf.concurrent.Query$QueryRm@2c7e9a0d
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:103)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.cleanupLaunch(GdbLaunchDelegate.java:310)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:377)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	...
+
+"Worker-36" prio=5 Id=223 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-37" prio=5 Id=224 TIMED_WAITING on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.core.internal.jobs.WorkerPool@6e9635c0
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at org.eclipse.core.internal.jobs.WorkerPool.sleep(WorkerPool.java:200)
+	at org.eclipse.core.internal.jobs.WorkerPool.startJob(WorkerPool.java:242)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:58)
+
+"Worker-38: Ashling Opella-XD GDB server Monitor" prio=5 Id=225 WAITING on org.eclipse.cdt.utils.spawner.Spawner@58b8f650
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.utils.spawner.Spawner@58b8f650
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.cdt.utils.spawner.Spawner.waitFor(Spawner.java:299)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$PushBackProcess.waitFor(GdbServerBackend.java:675)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$GdbServerMonitorJob.run(GdbServerBackend.java:1029)
+	-  locked com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$PushBackProcess@73199277
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-39: GDB CLI Input Job" prio=5 Id=227 WAITING on org.eclipse.ui.console.IOConsoleInputStream@4c2930ad
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.ui.console.IOConsoleInputStream@4c2930ad
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:141)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:92)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:114)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-40: GDB CLI error output Job" prio=5 Id=228 TIMED_WAITING on org.eclipse.cdt.dsf.mi.service.command.LargePipedInputStream@145f75d7
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.dsf.mi.service.command.LargePipedInputStream@145f75d7
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.io.PipedInputStream.read(PipedInputStream.java:328)
+	at java.base@20.0.1/java.io.PipedInputStream.read(PipedInputStream.java:376)
+	at java.base@20.0.1/java.io.InputStream.read(InputStream.java:217)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$ErrorReadJob.run(GdbBasicCliConsole.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"Worker-41: Process Console Input Job" prio=5 Id=229 WAITING on org.eclipse.ui.console.IOConsoleInputStream@2b6ad701
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.ui.console.IOConsoleInputStream@2b6ad701
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:141)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:92)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:114)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:908)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+"process reaper" daemon prio=10 Id=233 TIMED_WAITING on java.util.concurrent.SynchronousQueue$TransferStack@347fbe4a
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.SynchronousQueue$TransferStack@347fbe4a
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@20.0.1/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+	at java.base@20.0.1/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base@20.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+	...
+
+"org.eclipse.cdt.dsf.gdb - 7" prio=5 Id=248 RUNNABLE
+	at java.management@20.0.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@20.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:540)
+	at java.management@20.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:527)
+	at org.eclipse.core.internal.jobs.JobListeners.waitAndSendEvents(JobListeners.java:120)
+	at org.eclipse.core.internal.jobs.JobManager.withWriteLock(JobManager.java:524)
+	at org.eclipse.core.internal.jobs.JobManager.schedule(JobManager.java:1373)
+	at org.eclipse.core.internal.jobs.InternalJob.schedule(InternalJob.java:396)
+	at org.eclipse.core.runtime.jobs.Job.schedule(Job.java:654)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.ThreadPoolExecutor$Worker@79d62e8e
+
+"Spawner Reaper" daemon prio=5 Id=250 RUNNABLE (in native)
+	at org.eclipse.cdt.utils.spawner.Spawner.waitFor(Native Method)
+	at org.eclipse.cdt.utils.spawner.Spawner$Reaper.waitFor(Spawner.java:633)
+	at org.eclipse.cdt.utils.spawner.Spawner$Reaper.run(Spawner.java:654)
+
+"Output Stream Monitor app.elf" daemon prio=1 Id=252 RUNNABLE (in native)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read0(Native Method)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read(SpawnerInputStream.java:64)
+	at java.base@20.0.1/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base@20.0.1/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+	at java.base@20.0.1/java.io.BufferedInputStream.read1(BufferedInputStream.java:311)
+	at java.base@20.0.1/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base@20.0.1/java.io.BufferedInputStream.read(BufferedInputStream.java:365)
+	at java.base@20.0.1/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@31565c30
+
+"Error Stream Monitor app.elf" daemon prio=1 Id=253 RUNNABLE (in native)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read0(Native Method)
+	at org.eclipse.cdt.utils.spawner.SpawnerInputStream.read(SpawnerInputStream.java:64)
+	at java.base@20.0.1/java.io.BufferedInputStream.read1(BufferedInputStream.java:311)
+	at java.base@20.0.1/java.io.BufferedInputStream.implRead(BufferedInputStream.java:386)
+	at java.base@20.0.1/java.io.BufferedInputStream.read(BufferedInputStream.java:365)
+	at java.base@20.0.1/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:249)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:225)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@5e486600
+
+"Input Stream Monitor app.elf" daemon prio=5 Id=254 WAITING on java.lang.Object@23677017
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.Object@23677017
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.writeNext(InputStreamMonitor.java:199)
+	at org.eclipse.debug.internal.core.InputStreamMonitor.write(InputStreamMonitor.java:169)
+	at org.eclipse.debug.internal.core.InputStreamMonitor$$Lambda$1155/0x0000000801ac0218.run(Unknown Source)
+	at java.base@20.0.1/java.lang.Thread.runWith(Thread.java:1636)
+	at java.base@20.0.1/java.lang.Thread.run(Thread.java:1623)
+
+"Process monitor app.elf" daemon prio=5 Id=255 WAITING on org.eclipse.cdt.utils.spawner.Spawner@58b8f650
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.utils.spawner.Spawner@58b8f650
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.cdt.utils.spawner.Spawner.waitFor(Spawner.java:299)
+	at com.ashling.riscfree.debug.opxd.dsf.GdbServerBackend$PushBackProcess.waitFor(GdbServerBackend.java:675)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:496)
+
+"MI TX Thread" prio=5 Id=257 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6aa317df
+	at java.base@20.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6aa317df
+	at java.base@20.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+	at java.base@20.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+	at java.base@20.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1707)
+	at java.base@20.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$TxThread.run(AbstractMIControl.java:738)
+
+"GDB Command Timer Thread" prio=5 Id=260 WAITING on org.eclipse.cdt.dsf.gdb.service.command.GdbCommandTimeoutManager$TimerThread@69977167
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.dsf.gdb.service.command.GdbCommandTimeoutManager$TimerThread@69977167
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.cdt.dsf.gdb.service.command.GdbCommandTimeoutManager$TimerThread.halted(GdbCommandTimeoutManager.java:128)
+	at org.eclipse.cdt.dsf.gdb.service.command.GdbCommandTimeoutManager$TimerThread.doRun(GdbCommandTimeoutManager.java:117)
+	at org.eclipse.cdt.dsf.gdb.service.command.GdbCommandTimeoutManager$TimerThread.run(GdbCommandTimeoutManager.java:111)
+
+"Process monitor app.elf" daemon prio=5 Id=261 WAITING on org.eclipse.cdt.dsf.concurrent.Query$QueryRm@74727233
+	at java.base@20.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on org.eclipse.cdt.dsf.concurrent.Query$QueryRm@74727233
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@20.0.1/java.lang.Object.wait(Object.java:339)
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:103)
+	at org.eclipse.cdt.dsf.mi.service.command.MIBackendCLIProcess.waitFor(MIBackendCLIProcess.java:121)
+	at org.eclipse.debug.core.model.RuntimeProcess$ProcessMonitorThread.run(RuntimeProcess.java:496)
+
+
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:32:54.950
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:32:54.950
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:33:19.358
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 44981 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:33:20.729
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2024-11-26 19:33:21.391
+!MESSAGE Error in final launch sequence:
+
+Error downloading the program to target!
+!STACK 1
+org.eclipse.core.runtime.CoreException: Error downloading the program to target!
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:359)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:116)
+	at com.ashling.riscfree.debug.opxd.ui.launch.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:806)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:717)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ashling.riscfree.debug.opxd 4 0 2024-11-26 19:33:21.392
+!MESSAGE Error downloading the program to target!
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:34:33.714
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 32851 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:34:35.033
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:40:16.069
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 34041 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:40:17.257
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:45:05.334
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 44465 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:45:06.525
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf
+
+!ENTRY com.ashling.riscfree.debug.opxd 1 0 2024-11-26 19:49:15.682
+!MESSAGE GDB SERVER COMMAND :/opt/IntelFPGA/riscfree/debugger/gdbserver-riscv/ash-riscv-gdb-server --probe-type usb-blaster-2 --transport-type jtag --device 0x02D020DD --auto-detect true --gdb-port 35407 --jtag-frequency 16000KHz --tap-number 2 --core-number 0 --instance 1 --attach-mode OFF
+
+!ENTRY org.eclipse.embedcdt.debug.gdbjtag.core 4 1 2024-11-26 19:49:16.812
+!MESSAGE /opt/IntelFPGA/riscfree/RiscFree//../toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gdb --interpreter=mi2 --nx /home/cari/cst455_soc/Lab4/software/app/build/Debug/app.elf

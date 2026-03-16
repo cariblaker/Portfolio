@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element BUTTONS_0
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element BUTTONS_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174464";
+         type = "String";
+      }
+   }
+   element CLOCKS
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element DEBUG
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element DEBUG.avalon_jtag_slave
+   {
+      datum baseAddress
+      {
+         value = "67174608";
+         type = "String";
+      }
+   }
+   element LEDs
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element LEDs.avalon_slave_0_1
+   {
+      datum baseAddress
+      {
+         value = "67174480";
+         type = "String";
+      }
+   }
+   element NiosV_FreeRTOS
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element NiosV_FreeRTOS.dm_agent
+   {
+      datum baseAddress
+      {
+         value = "67108864";
+         type = "String";
+      }
+   }
+   element NiosV_FreeRTOS.timer_sw_agent
+   {
+      datum baseAddress
+      {
+         value = "67174400";
+         type = "String";
+      }
+   }
+   element SDRAM
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element SDRAM.s1
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
+      }
+   }
+   element SEG7s_0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element SEG7s_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174592";
+         type = "String";
+      }
+   }
+   element SEG7s_1
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element SEG7s_1.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174576";
+         type = "String";
+      }
+   }
+   element SEG7s_2
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element SEG7s_2.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174560";
+         type = "String";
+      }
+   }
+   element SEG7s_3
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element SEG7s_3.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174544";
+         type = "String";
+      }
+   }
+   element SEG7s_4
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element SEG7s_4.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174528";
+         type = "String";
+      }
+   }
+   element SEG7s_5
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element SEG7s_5.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174512";
+         type = "String";
+      }
+   }
+   element SWITCHES_0
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element SWITCHES_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "67174496";
+         type = "String";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6D6F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="Midterm.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="buttons"
+   internal="BUTTONS_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="hex0" internal="SEG7s_0.conduit_end" type="conduit" dir="end" />
+ <interface name="hex1" internal="SEG7s_1.conduit_end" type="conduit" dir="end" />
+ <interface name="hex2" internal="SEG7s_2.conduit_end" type="conduit" dir="end" />
+ <interface name="hex3" internal="SEG7s_3.conduit_end" type="conduit" dir="end" />
+ <interface name="hex4" internal="SEG7s_4.conduit_end" type="conduit" dir="end" />
+ <interface name="hex5" internal="SEG7s_5.conduit_end" type="conduit" dir="end" />
+ <interface name="leds" internal="LEDs.conduit_end" type="conduit" dir="end" />
+ <interface name="sdram_clk" internal="CLOCKS.sdram_clk" type="clock" dir="start" />
+ <interface name="sdram_wire" internal="SDRAM.wire" type="conduit" dir="end" />
+ <interface
+   name="switches"
+   internal="SWITCHES_0.conduit_end"
+   type="conduit"
+   dir="end" />
+ <module name="BUTTONS_0" kind="BUTTONS" version="1.0" enabled="1" />
+ <module
+   name="CLOCKS"
+   kind="altera_up_avalon_sys_sdram_pll"
+   version="18.0"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="5CSXFC6D6F31C6" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6_H6" />
+  <parameter name="CIII_boards" value="DE0" />
+  <parameter name="CIV_boards" value="DE2-115" />
+  <parameter name="CV_boards" value="DE10-Standard" />
+  <parameter name="MAX10_boards" value="DE10-Lite" />
+  <parameter name="device_family" value="Cyclone V" />
+  <parameter name="gui_outclk" value="50.0" />
+  <parameter name="gui_refclk" value="50.0" />
+  <parameter name="other_boards" value="None" />
+ </module>
+ <module
+   name="DEBUG"
+   kind="altera_avalon_jtag_uart"
+   version="23.1"
+   enabled="1">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="clkFreq" value="50000000" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">NO_INTERACTIVE_WINDOWS</parameter>
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
+ </module>
+ <module name="LEDs" kind="LEDs" version="1.0" enabled="1" />
+ <module
+   name="NiosV_FreeRTOS"
+   kind="intel_niosv_m"
+   version="2.0.0"
+   enabled="1">
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="3" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="3" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6D6F31C6" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6_H6" />
+  <parameter name="AUTO_PLATFORM_IRQ_RX_INTERRUPTS_USED" value="1" />
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM.s1' start='0x0' end='0x4000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='NiosV_FreeRTOS.dm_agent' start='0x4000000' end='0x4010000' type='intel_niosv_m.dm_agent' /><slave name='NiosV_FreeRTOS.timer_sw_agent' start='0x4010000' end='0x4010040' type='intel_niosv_m.timer_sw_agent' /><slave name='BUTTONS_0.avalon_slave_0' start='0x4010040' end='0x4010050' type='BUTTONS.avalon_slave_0' /><slave name='LEDs.avalon_slave_0_1' start='0x4010050' end='0x4010060' type='LEDs.avalon_slave_0_1' /><slave name='SWITCHES_0.avalon_slave_0' start='0x4010060' end='0x4010070' type='SWITCHES.avalon_slave_0' /><slave name='SEG7s_5.avalon_slave_0' start='0x4010070' end='0x4010080' type='SEG7s.avalon_slave_0' /><slave name='SEG7s_4.avalon_slave_0' start='0x4010080' end='0x4010090' type='SEG7s.avalon_slave_0' /><slave name='SEG7s_3.avalon_slave_0' start='0x4010090' end='0x40100A0' type='SEG7s.avalon_slave_0' /><slave name='SEG7s_2.avalon_slave_0' start='0x40100A0' end='0x40100B0' type='SEG7s.avalon_slave_0' /><slave name='SEG7s_1.avalon_slave_0' start='0x40100B0' end='0x40100C0' type='SEG7s.avalon_slave_0' /><slave name='SEG7s_0.avalon_slave_0' start='0x40100C0' end='0x40100D0' type='SEG7s.avalon_slave_0' /><slave name='DEBUG.avalon_jtag_slave' start='0x40100D0' end='0x40100D8' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="deviceFamily" value="Cyclone V" />
+  <parameter name="enableDebug" value="true" />
+  <parameter name="enableDebugReset" value="true" />
+  <parameter name="enableECCLite" value="false" />
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='SDRAM.s1' start='0x0' end='0x4000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='NiosV_FreeRTOS.dm_agent' start='0x4000000' end='0x4010000' type='intel_niosv_m.dm_agent' /></address-map>]]></parameter>
+  <parameter name="numGpr" value="32" />
+  <parameter name="pipelineArch" value="true" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="resetSlave" value="SDRAM.s1" />
+  <parameter name="useResetReq" value="false" />
+ </module>
+ <module
+   name="SDRAM"
+   kind="altera_avalon_new_sdram_controller"
+   version="20.1"
+   enabled="1">
+  <parameter name="TAC" value="5.4" />
+  <parameter name="TMRD" value="2" />
+  <parameter name="TRCD" value="15.0" />
+  <parameter name="TRFC" value="70.0" />
+  <parameter name="TRP" value="15.0" />
+  <parameter name="TWR" value="14.0" />
+  <parameter name="casLatency" value="3" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="columnWidth" value="10" />
+  <parameter name="componentName" value="$${FILENAME}_SDRAM" />
+  <parameter name="dataWidth" value="16" />
+  <parameter name="generateSimulationModel" value="false" />
+  <parameter name="initNOPDelay" value="0.0" />
+  <parameter name="initRefreshCommands" value="2" />
+  <parameter name="masteredTristateBridgeSlave" value="0" />
+  <parameter name="model">single_Micron_MT48LC4M32B2_7_chip</parameter>
+  <parameter name="numberOfBanks" value="4" />
+  <parameter name="numberOfChipSelects" value="1" />
+  <parameter name="pinsSharedViaTriState" value="false" />
+  <parameter name="powerUpDelay" value="100.0" />
+  <parameter name="refreshPeriod" value="7.8125" />
+  <parameter name="registerDataIn" value="true" />
+  <parameter name="rowWidth" value="13" />
+ </module>
+ <module name="SEG7s_0" kind="SEG7s" version="1.0" enabled="1" />
+ <module name="SEG7s_1" kind="SEG7s" version="1.0" enabled="1" />
+ <module name="SEG7s_2" kind="SEG7s" version="1.0" enabled="1" />
+ <module name="SEG7s_3" kind="SEG7s" version="1.0" enabled="1" />
+ <module name="SEG7s_4" kind="SEG7s" version="1.0" enabled="1" />
+ <module name="SEG7s_5" kind="SEG7s" version="1.0" enabled="1" />
+ <module name="SWITCHES_0" kind="SWITCHES" version="1.0" enabled="1" />
+ <module name="clk_0" kind="clock_source" version="23.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="DEBUG.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x040100d0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SEG7s_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x040100c0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SEG7s_1.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x040100b0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SEG7s_2.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x040100a0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SEG7s_3.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010090" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SEG7s_4.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010080" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SEG7s_5.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010070" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SWITCHES_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="BUTTONS_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="LEDs.avalon_slave_0_1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="NiosV_FreeRTOS.dm_agent">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="SDRAM.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.data_manager"
+   end="NiosV_FreeRTOS.timer_sw_agent">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04010000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.instruction_manager"
+   end="NiosV_FreeRTOS.dm_agent">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x04000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NiosV_FreeRTOS.instruction_manager"
+   end="SDRAM.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="23.1" start="clk_0.clk" end="CLOCKS.ref_clk" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="NiosV_FreeRTOS.clk" />
+ <connection kind="clock" version="23.1" start="CLOCKS.sys_clk" end="DEBUG.clk" />
+ <connection kind="clock" version="23.1" start="CLOCKS.sys_clk" end="SDRAM.clk" />
+ <connection kind="clock" version="23.1" start="CLOCKS.sys_clk" end="LEDs.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SEG7s_0.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SEG7s_1.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SEG7s_2.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SEG7s_3.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SEG7s_4.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SEG7s_5.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="SWITCHES_0.clock" />
+ <connection
+   kind="clock"
+   version="23.1"
+   start="CLOCKS.sys_clk"
+   end="BUTTONS_0.clock" />
+ <connection
+   kind="interrupt"
+   version="23.1"
+   start="NiosV_FreeRTOS.platform_irq_rx"
+   end="DEBUG.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="CLOCKS.ref_reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="NiosV_FreeRTOS.reset" />
+ <connection kind="reset" version="23.1" start="clk_0.clk_reset" end="DEBUG.reset" />
+ <connection kind="reset" version="23.1" start="clk_0.clk_reset" end="SDRAM.reset" />
+ <connection kind="reset" version="23.1" start="clk_0.clk_reset" end="LEDs.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SEG7s_0.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SEG7s_1.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SEG7s_2.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SEG7s_3.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SEG7s_4.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SEG7s_5.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="SWITCHES_0.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="BUTTONS_0.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="NiosV_FreeRTOS.dbg_reset_out"
+   end="clk_0.clk_in_reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="NiosV_FreeRTOS.dbg_reset_out"
+   end="NiosV_FreeRTOS.ndm_reset_in" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

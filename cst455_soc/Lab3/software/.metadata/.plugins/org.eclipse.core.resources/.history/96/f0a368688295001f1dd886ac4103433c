@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"  // For IORD and IOWR macros
+
+
+const int zero = 0b1111111;
+
+// Lookup table for hexadecimal digits 0x0 - 0xF for seven-segment encoding (inverted for common anode)
+const int hex_to_seven_segment[16] = {
+    0xC0, // 0
+    0xF9, // 1
+    0xA4, // 2
+    0xB0, // 3
+    0x99, // 4
+    0x92, // 5
+    0x82, // 6
+    0xF8, // 7
+    0x80, // 8
+    0x90, // 9
+    0x88, // A
+    0x83, // b
+    0xC6, // C
+    0xA1, // d
+    0x86, // E
+    0x8E  // F
+};
+
+// Function to convert binary input from switches to hex and output on 7-segment displays
+void convert_to_hex(int switch_value) {
+    // Mask out switch0 and shift right to ignore the reset switch
+    int masked_value = (switch_value & 0xFE);
+
+    // Extract the lower nibble (4 bits) for the first display, upper nibble for the second
+    int lower_digit = masked_value & 0xF;         // Lower nibble
+    int upper_digit = (masked_value >> 4) & 0xF;  // Upper nibble
+
+    // Convert each nibble to seven-segment encoding
+    int display_lower = hex_to_seven_segment[lower_digit];
+    int display_upper = hex_to_seven_segment[upper_digit];
+
+    // Output to 7-segment displays
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, display_lower); // Assumes HEX0 is the lower digit
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, display_upper); // Assumes HEX1 is the upper digit
+}
+
+int main(void) {
+    while (true) {
+    	IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, zero);
+    	IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, zero);
+    	IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, zero);
+    	IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, zero);
+        // Read switch input and pass to convert_to_hex
+        int switch_value = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
+        convert_to_hex(switch_value);
+    }
+    return 0;
+}
