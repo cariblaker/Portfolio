@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Build",
+      "setup": "cmake -B build -S .",
+      "run": "cmake --build build",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
