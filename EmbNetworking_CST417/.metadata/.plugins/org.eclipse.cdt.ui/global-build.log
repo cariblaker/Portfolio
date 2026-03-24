@@ -1,0 +1,596 @@
+23:00:15 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80240	    140	  35416	 115796	  1c454	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+23:27:42 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/mongoose.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mongoose.d" -MT"Core/Src/mongoose.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mongoose.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80196	    140	  35416	 115752	  1c428	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+23:35:51 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80204	    140	  35416	 115760	  1c430	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+23:37:23 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80204	    140	  35416	 115760	  1c430	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+23:42:00 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80204	    140	  35416	 115760	  1c430	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+23:45:27 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80216	    140	  35416	 115772	  1c43c	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+16:40:33 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  80216	    140	  35416	 115772	  1c43c	Lab4.elf
+Finished building: default.size.stdout
+ 
+16:46:35 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+16:51:21 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+16:52:18 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+16:55:29 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84088	    140	  35416	 119644	  1d35c	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+16:56:02 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84088	    140	  35416	 119644	  1d35c	Lab4.elf
+Finished building: default.size.stdout
+ 
+16:56:36 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84088	    140	  35416	 119644	  1d35c	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:04:21 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:05:41 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:06:24 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:07:10 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:09:20 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:15:17 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:16:11 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:16:41 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:18:06 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  80216	    140	  35416	 115772	  1c43c	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:18:57 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  80216	    140	  35416	 115772	  1c43c	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:21:52 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:26:51 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:28:05 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84108	    140	  35416	 119664	  1d370	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:32:40 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84088	    140	  35416	 119644	  1d35c	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:34:38 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:35:07 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+17:38:48 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84112	    140	  35416	 119668	  1d374	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:43:42 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84128	    140	  35416	 119684	  1d384	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+17:43:54 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84128	    140	  35416	 119684	  1d384	Lab4.elf
+Finished building: default.size.stdout
+ 
+18:12:23 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84128	    140	  35416	 119684	  1d384	Lab4.elf
+Finished building: default.size.stdout
+ 
+18:15:31 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84128	    140	  35416	 119684	  1d384	Lab4.elf
+Finished building: default.size.stdout
+ 
+18:18:35 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84104	    140	  35416	 119660	  1d36c	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:21:48 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84104	    140	  35416	 119660	  1d36c	Lab4.elf
+Finished building: default.size.stdout
+ 
+18:25:32 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84104	    140	  35416	 119660	  1d36c	Lab4.elf
+Finished building: default.size.stdout
+ 
+18:34:17 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:22:
+../Core/Src/main.c: In function 'fn':
+../Core/Src/main.c:397:64: error: 'struct mg_str' has no member named 'ptr'
+  397 |         MG_INFO(("Request URI: %.*s", (int)hm->uri.len, hm->uri.ptr));          //debug
+      |                                                                ^
+../Core/Inc/mongoose.h:1040:14: note: in definition of macro 'MG_LOG'
+ 1040 |       mg_log args;                                          \
+      |              ^~~~
+../Core/Src/main.c:397:9: note: in expansion of macro 'MG_INFO'
+  397 |         MG_INFO(("Request URI: %.*s", (int)hm->uri.len, hm->uri.ptr));          //debug
+      |         ^~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+18:34:52 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84196	    140	  35416	 119752	  1d3c8	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:36:01 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:22:
+../Core/Src/main.c: In function 'fn':
+../Core/Src/main.c:395:46: error: 'hm' undeclared (first use in this function); did you mean 'tm'?
+  395 |           MG_INFO(("Request URI: %.*s", (int)hm->uri.len, hm->uri));            //debug
+      |                                              ^~
+../Core/Inc/mongoose.h:1040:14: note: in definition of macro 'MG_LOG'
+ 1040 |       mg_log args;                                          \
+      |              ^~~~
+../Core/Src/main.c:395:11: note: in expansion of macro 'MG_INFO'
+  395 |           MG_INFO(("Request URI: %.*s", (int)hm->uri.len, hm->uri));            //debug
+      |           ^~~~~~~
+../Core/Src/main.c:395:46: note: each undeclared identifier is reported only once for each function it appears in
+  395 |           MG_INFO(("Request URI: %.*s", (int)hm->uri.len, hm->uri));            //debug
+      |                                              ^~
+../Core/Inc/mongoose.h:1040:14: note: in definition of macro 'MG_LOG'
+ 1040 |       mg_log args;                                          \
+      |              ^~~~
+../Core/Src/main.c:395:11: note: in expansion of macro 'MG_INFO'
+  395 |           MG_INFO(("Request URI: %.*s", (int)hm->uri.len, hm->uri));            //debug
+      |           ^~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+18:36:23 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84196	    140	  35416	 119752	  1d3c8	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:37:30 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84220	    140	  35416	 119776	  1d3e0	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:38:44 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84216	    140	  35416	 119772	  1d3dc	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:41:35 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-size  Lab4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  84216	    140	  35416	 119772	  1d3dc	Lab4.elf
+Finished building: default.size.stdout
+ 
+18:42:52 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84212	    140	  35416	 119768	  1d3d8	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:43:31 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84196	    140	  35416	 119752	  1d3c8	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+18:56:09 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:22:
+../Core/Src/main.c: In function 'fn':
+../Core/Src/main.c:396:61: error: 'struct mg_str' has no member named 'ptr'
+  396 |     MG_INFO(("Request URI: %.*s", (int) hm->uri.len, hm->uri.ptr));
+      |                                                             ^
+../Core/Inc/mongoose.h:1040:14: note: in definition of macro 'MG_LOG'
+ 1040 |       mg_log args;                                          \
+      |              ^~~~
+../Core/Src/main.c:396:5: note: in expansion of macro 'MG_INFO'
+  396 |     MG_INFO(("Request URI: %.*s", (int) hm->uri.len, hm->uri.ptr));
+      |     ^~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+18:58:48 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84516	    140	  35416	 120072	  1d508	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+19:01:18 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84624	    140	  35416	 120180	  1d574	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 
+19:03:06 **** Incremental Build of configuration Debug for project Lab4 ****
+make -j22 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG '-DMG_ARCH = MG_ARCH_CMSIS_RTOS2' '-DMG_ENABLE_TCPIP = 1' '-DMG_ENABLE_DRIVER_STM32F = 1' -DUSE_HAL_DRIVER -DSTM32F439xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Lab4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\carib\OneDrive\Desktop\CST417\Lab4\STM32F439ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Lab4.elf
+ 
+arm-none-eabi-size  Lab4.elf 
+arm-none-eabi-objdump -h -S Lab4.elf  > "Lab4.list"
+   text	   data	    bss	    dec	    hex	filename
+  84596	    140	  35416	 120152	  1d558	Lab4.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab4.list
+ 

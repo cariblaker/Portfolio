@@ -1,0 +1,107 @@
+2025-05-26 22:18:12,175 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-05-26 22:18:15,804 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 4363mS.
+2025-05-26 22:18:15,806 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 2mS.
+2025-05-26 22:18:15,808 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-26 22:18:16,917 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2025-05-26 22:18:16,922 [INFO] ApiDb:448 - Save user favorites file C:\Users\carib/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2025-05-26 22:18:16,923 [INFO] ApiDb:452 - User favorites MCUs=[]
+2025-05-26 22:18:16,926 [INFO] ApiDb:448 - Save user favorites file C:\Users\carib/.stm32cubeide/favorites.boards.txt: 1 item(s)
+2025-05-26 22:18:16,926 [INFO] ApiDb:452 - User favorites Boards=[NUCLEO-F439ZI]
+2025-05-26 22:20:28,844 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-26 22:20:33,305 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-26 22:21:18,827 [INFO] RtosManager:967 - Current active RTOS is FREERTOS [Cortex-M4NS]
+2025-05-26 22:21:19,820 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-05-26 22:21:19,927 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-05-26 22:22:13,448 [ERROR] RtosPanel:558 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2025-05-26 22:23:11,702 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-05-26 22:23:11,703 [WARN] TasksAndQueuesTab:763 - 128 128
+2025-05-26 22:23:11,703 [WARN] TasksAndQueuesTab:775 - max value is: 3840.0
+2025-05-26 22:23:18,359 [INFO] EditThreadDialog:704 - RAM SIZE (in KB): 192
+2025-05-26 22:23:18,359 [INFO] EditThreadDialog:706 - RAM SIZE (in words): 49152
+2025-05-26 22:23:23,810 [INFO] TasksAndQueuesTab:757 - Dynamic
+2025-05-26 22:23:23,810 [WARN] TasksAndQueuesTab:763 - 512 128
+2025-05-26 22:23:23,810 [WARN] TasksAndQueuesTab:775 - max value is: 3840.0
+2025-05-26 22:24:14,916 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x349,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-05-26 22:43:15,611 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 988920072 Bytes (1073741824)
+2025-05-26 22:43:17,664 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 702673440 Bytes (1073741824)
+2025-05-26 22:43:27,336 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 965866016 Bytes (1073741824)
+2025-05-26 22:43:28,123 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: FREERTOS
+2025-05-26 22:43:28,123 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-05-26 22:43:28,123 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-05-26 22:43:28,123 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USB_OTG_FS
+2025-05-26 22:43:28,123 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-05-26 22:43:28,123 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-05-26 22:43:28,126 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-05-26 22:43:28,126 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ETH
+2025-05-26 22:43:28,127 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.0.202502271554\\db\
+2025-05-26 22:43:28,310 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\license.tmp_save
+2025-05-26 22:43:28,666 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\license.tmp
+2025-05-26 22:43:28,746 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\gpio.tmp_save
+2025-05-26 22:43:28,926 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\gpio.tmp
+2025-05-26 22:43:29,251 [WARN] IPConfigManager:3174 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2025-05-26 22:43:29,318 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2025-05-26 22:43:29,329 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_inc.tmp_save
+2025-05-26 22:43:29,452 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_inc.tmp
+2025-05-26 22:43:29,459 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelInit.tmp_save
+2025-05-26 22:43:29,589 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelInit.tmp
+2025-05-26 22:43:29,597 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-05-26 22:43:29,682 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelStart.tmp
+2025-05-26 22:43:29,688 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_typedefs.tmp_save
+2025-05-26 22:43:29,779 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_typedefs.tmp
+2025-05-26 22:43:29,791 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_vars.tmp_save
+2025-05-26 22:43:29,899 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_vars.tmp
+2025-05-26 22:43:29,909 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_pfp.tmp_save
+2025-05-26 22:43:29,998 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_pfp.tmp
+2025-05-26 22:43:30,006 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-05-26 22:43:30,088 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_obj_creat.tmp
+2025-05-26 22:43:30,098 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_default_thread.tmp_save
+2025-05-26 22:43:30,179 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_default_thread.tmp
+2025-05-26 22:43:30,187 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_threads.tmp_save
+2025-05-26 22:43:30,267 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_threads.tmp
+2025-05-26 22:43:30,287 [INFO] Middleware:1452 - No code input for Bsp Dependency
+2025-05-26 22:43:30,298 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_inc.tmp_save
+2025-05-26 22:43:30,371 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_inc.tmp
+2025-05-26 22:43:30,377 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelInit.tmp_save
+2025-05-26 22:43:30,456 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelInit.tmp
+2025-05-26 22:43:30,462 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelStart.tmp_save
+2025-05-26 22:43:30,534 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_kernelStart.tmp
+2025-05-26 22:43:30,541 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_typedefs.tmp_save
+2025-05-26 22:43:30,615 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_typedefs.tmp
+2025-05-26 22:43:30,623 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_vars.tmp_save
+2025-05-26 22:43:30,705 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_vars.tmp
+2025-05-26 22:43:30,712 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_pfp.tmp_save
+2025-05-26 22:43:30,787 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_pfp.tmp
+2025-05-26 22:43:30,794 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_obj_creat.tmp_save
+2025-05-26 22:43:30,872 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_obj_creat.tmp
+2025-05-26 22:43:30,883 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_default_thread.tmp_save
+2025-05-26 22:43:30,964 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_default_thread.tmp
+2025-05-26 22:43:30,972 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_threads.tmp_save
+2025-05-26 22:43:31,044 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\rtos_threads.tmp
+2025-05-26 22:43:31,052 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\FreeRTOSConfig.h_save
+2025-05-26 22:43:31,173 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\FreeRTOSConfig.h
+2025-05-26 22:43:31,184 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\freertos.c_save
+2025-05-26 22:43:31,279 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\freertos.c
+2025-05-26 22:43:31,300 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\stm32f4xx_it.c_save
+2025-05-26 22:43:31,538 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\stm32f4xx_it.c
+2025-05-26 22:43:31,546 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\stm32f4xx_it.h_save
+2025-05-26 22:43:31,653 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\stm32f4xx_it.h
+2025-05-26 22:43:31,678 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\stm32f4xx_hal_msp.c_save
+2025-05-26 22:43:31,875 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\stm32f4xx_hal_msp.c
+2025-05-26 22:43:31,882 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\system.tmp_save
+2025-05-26 22:43:32,032 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\MXTmpFiles\system.tmp
+2025-05-26 22:43:32,039 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2025-05-26 22:43:32,141 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\stm32f4xx_hal_timebase_tim.c
+2025-05-26 22:43:32,158 [INFO] CodeEngine:319 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\stm32f4xx_hal_conf.h_save
+2025-05-26 22:43:32,242 [INFO] CodeEngine:343 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\stm32f4xx_hal_conf.h
+2025-05-26 22:43:32,292 [WARN] IPConfigManager:3747 - IP not found : USB_OTG
+2025-05-26 22:43:32,295 [WARN] CodeGenerator:4198 - IP not found : null
+2025-05-26 22:43:32,310 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\main.h_save
+2025-05-26 22:43:32,434 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Inc\main.h
+2025-05-26 22:43:32,445 [INFO] CodeEngine:263 - oldGeneratedFile, C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\main.c_save
+2025-05-26 22:43:32,644 [INFO] CodeEngine:287 - Generated code: C:\Users\carib\OneDrive\Desktop\CST417\Lab4\Core\Src\main.c
+2025-05-26 22:43:33,150 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 300mS.
+2025-05-26 22:43:33,158 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0-B36
+2025-05-26 22:43:33,246 [INFO] ConfigFileManager:1590 - The Die is : DIE419
+2025-05-26 22:43:34,813 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 1655mS.
+2025-05-26 22:43:34,814 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-05-26 22:43:34,851 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.

@@ -1,0 +1,4 @@
+#Tue May 06 12:12:34 PDT 2025
+__DEFAULT__=false
+expression=netif_set
+org.eclipse.help.ui.localSearch.master=true
